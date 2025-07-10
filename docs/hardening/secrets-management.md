@@ -1,6 +1,6 @@
-# Pillar 5: Secrets & Credential Hygiene
+# Secrets & Credential Management
 
-This pillar addresses the secure management of API keys, credentials, and sensitive configuration data used by MCP servers and AI agents, preventing credential theft and unauthorized access.
+This section addresses the secure management of API keys, credentials, and sensitive configuration data used by MCP servers and AI agents, preventing credential theft and unauthorized access.
 
 ## Key Practices
 

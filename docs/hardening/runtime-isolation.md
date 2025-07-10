@@ -1,6 +1,6 @@
-# Pillar 3: Runtime Isolation
+# Runtime Isolation
 
-This pillar establishes secure execution environments for MCP servers using containerization, virtualization, and system-level isolation techniques to limit the impact of compromised or malicious code.
+This section establishes secure execution environments for MCP servers using containerization, virtualization, and system-level isolation techniques to limit the impact of compromised or malicious code.
 
 ## Key Practices
 

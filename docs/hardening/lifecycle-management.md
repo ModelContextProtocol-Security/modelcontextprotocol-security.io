@@ -1,6 +1,6 @@
-# Pillar 10: Update & Retirement Strategy
+# Lifecycle Management
 
-This pillar establishes secure lifecycle management for MCP servers including update procedures, deprecation processes, and retirement strategies to maintain security over time while avoiding disruption to AI agent operations.
+This section establishes secure lifecycle management for MCP servers including update procedures, deprecation processes, and retirement strategies to maintain security over time while avoiding disruption to AI agent operations.
 
 ## Key Practices
 

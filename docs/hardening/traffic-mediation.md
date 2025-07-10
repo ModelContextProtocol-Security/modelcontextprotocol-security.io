@@ -1,6 +1,6 @@
-# Pillar 4: Traffic Mediation
+# Traffic Mediation
 
-This pillar focuses on implementing visibility and control over MCP server network communications through API gateways, proxies, and network monitoring to detect and prevent malicious activity.
+This section focuses on implementing visibility and control over MCP server network communications through API gateways, proxies, and network monitoring to detect and prevent malicious activity.
 
 ## Key Practices
 

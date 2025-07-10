@@ -1,6 +1,6 @@
 # Tools & Scripts
 
-This section provides open-source security tools, utilities, and automation scripts developed by the MCP security community. These tools help implement the security pillars, automate auditing processes, and streamline secure MCP deployments.
+This section provides open-source security tools, utilities, and automation scripts developed by the MCP security community. These tools help implement the security framework, automate auditing processes, and streamline secure MCP deployments.
 
 ## Community Discussion
 
@@ -16,7 +16,7 @@ This section provides open-source security tools, utilities, and automation scri
 - **MCP Inspector** - Automated vulnerability scanning (Coming Soon)
 - **Configuration Validators** - Scripts to verify secure configurations
 - **Dependency Analyzers** - Tools to assess supply chain security
-- **Compliance Checkers** - Utilities to verify adherence to security pillars
+- **Compliance Checkers** - Utilities to verify adherence to security best practices
 
 #### Deployment Automation
 - **Secure Deployment Scripts** - Automated setup following security best practices

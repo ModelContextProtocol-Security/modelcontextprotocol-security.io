@@ -1,6 +1,6 @@
-# Pillar 6: Backup & Versioning
+# Backup & Versioning
 
-This pillar ensures the availability and recoverability of critical MCP components including AI-generated prompts, model configurations, and runtime data through comprehensive backup and versioning strategies.
+This section ensures the availability and recoverability of critical MCP components including AI-generated prompts, model configurations, and runtime data through comprehensive backup and versioning strategies.
 
 ## Key Practices
 

@@ -1,6 +1,6 @@
-# Pillar 2: Code Integrity & Auditing
+# Code Integrity & Auditing
 
-This pillar covers the systematic review and validation of MCP server code to identify security vulnerabilities, backdoors, and quality issues before deployment.
+This section covers the systematic review and validation of MCP server code to identify security vulnerabilities, backdoors, and quality issues before deployment.
 
 ## Key Practices
 

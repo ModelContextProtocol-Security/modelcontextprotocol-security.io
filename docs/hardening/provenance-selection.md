@@ -1,6 +1,6 @@
-# Pillar 1: Provenance & Selection
+# Provenance & Selection
 
-This pillar focuses on verifying the origin and integrity of MCP servers before deployment. Proper provenance tracking prevents supply chain attacks and ensures you're deploying trusted code.
+This section focuses on verifying the origin and integrity of MCP servers before deployment. Proper provenance tracking prevents supply chain attacks and ensures you're deploying trusted code.
 
 ## Key Practices
 

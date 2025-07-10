@@ -4,7 +4,7 @@ This printable checklist provides a comprehensive assessment framework for MCP s
 
 ## Quick Assessment
 
-This checklist covers all ten security pillars with yes/no questions and risk ratings. Organizations can use this for:
+This checklist covers all security areas with yes/no questions and risk ratings. Organizations can use this for:
 - Initial security assessments
 - Audit preparation
 - Continuous improvement tracking

@@ -1,6 +1,6 @@
-# Pillar 9: Payments & Wallet Security
+# Payments & Wallet Security
 
-This pillar addresses the unique security challenges of AI agents that can initiate payments, manage cryptocurrency wallets, and participate in financial transactions, requiring specialized controls to prevent fraud and financial loss.
+This section addresses the unique security challenges of AI agents that can initiate payments, manage cryptocurrency wallets, and participate in financial transactions, requiring specialized controls to prevent fraud and financial loss.
 
 ## Key Practices
 

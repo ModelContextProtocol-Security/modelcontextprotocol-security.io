@@ -1,6 +1,6 @@
-# Pillar 7: Observability & Logging
+# Observability & Logging
 
-This pillar establishes comprehensive monitoring, logging, and alerting capabilities for MCP deployments to enable incident detection, forensic analysis, and security operations.
+This section establishes comprehensive monitoring, logging, and alerting capabilities for MCP deployments to enable incident detection, forensic analysis, and security operations.
 
 ## Key Practices
 

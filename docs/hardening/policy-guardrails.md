@@ -1,6 +1,6 @@
-# Pillar 8: Negotiated Policy & Guardrails
+# Policy & Guardrails
 
-This pillar implements dynamic security controls that allow AI agents to negotiate permissions and justify actions while maintaining security boundaries through policy engines and human-in-the-loop approvals.
+This section implements dynamic security controls that allow AI agents to negotiate permissions and justify actions while maintaining security boundaries through policy engines and human-in-the-loop approvals.
 
 ## Key Practices
 
