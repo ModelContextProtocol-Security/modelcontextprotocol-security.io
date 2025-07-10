@@ -1,3 +1,9 @@
+---
+title: "Policy & Guardrails"
+parent: "Hardening Guide"
+nav_order: 8
+---
+
 # Policy & Guardrails
 
 This section implements dynamic security controls that allow AI agents to negotiate permissions and justify actions while maintaining security boundaries through policy engines and human-in-the-loop approvals.

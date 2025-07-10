@@ -1,3 +1,9 @@
+---
+title: "Provenance & Selection"
+parent: "Hardening Guide"
+nav_order: 1
+---
+
 # Provenance & Selection
 
 This section focuses on verifying the origin and integrity of MCP servers before deployment. Proper provenance tracking prevents supply chain attacks and ensures you're deploying trusted code.

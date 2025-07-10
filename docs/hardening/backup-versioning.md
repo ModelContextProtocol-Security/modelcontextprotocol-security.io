@@ -1,3 +1,9 @@
+---
+title: "Backup & Versioning"
+parent: "Hardening Guide"
+nav_order: 7
+---
+
 # Backup & Versioning
 
 This section ensures the availability and recoverability of critical MCP components including AI-generated prompts, model configurations, and runtime data through comprehensive backup and versioning strategies.

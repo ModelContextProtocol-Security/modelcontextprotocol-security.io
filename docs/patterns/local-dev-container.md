@@ -1,3 +1,9 @@
+---
+title: "Local Dev Container"
+parent: "Reference Patterns"
+nav_order: 2
+---
+
 # Local Development Container Pattern
 
 This pattern establishes a secure development environment for MCP servers using Docker containers with proper security controls, enabling developers to build and test MCP integrations safely on their local machines.

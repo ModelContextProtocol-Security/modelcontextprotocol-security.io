@@ -1,3 +1,9 @@
+---
+title: "Network Controls"
+parent: "Operations Guide"
+nav_order: 2
+---
+
 # Network Controls
 
 This guide provides comprehensive guidance for implementing network-level security controls for Model Context Protocol (MCP) servers using iptables, network namespaces, and traffic redirection techniques. These controls provide defense-in-depth security for MCP deployments.

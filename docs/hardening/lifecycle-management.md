@@ -1,3 +1,9 @@
+---
+title: "Lifecycle Management"
+parent: "Hardening Guide"
+nav_order: 10
+---
+
 # Lifecycle Management
 
 This section establishes secure lifecycle management for MCP servers including update procedures, deprecation processes, and retirement strategies to maintain security over time while avoiding disruption to AI agent operations.

@@ -1,3 +1,9 @@
+---
+title: "Payments & Wallets"
+parent: "Hardening Guide"
+nav_order: 9
+---
+
 # Payments & Wallet Security
 
 This section addresses the unique security challenges of AI agents that can initiate payments, manage cryptocurrency wallets, and participate in financial transactions, requiring specialized controls to prevent fraud and financial loss.

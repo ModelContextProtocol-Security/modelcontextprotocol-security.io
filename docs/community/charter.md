@@ -1,3 +1,9 @@
+---
+title: "Charter"
+parent: "Community"
+nav_order: 1
+---
+
 # Project Charter
 
 ## Mission

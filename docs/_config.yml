@@ -86,6 +86,15 @@ exclude:
   - vendor/ruby/
   - README.md
   - LICENSE
+  - "*.sh"
+  - NAVIGATION_FIX.md
+  - SETUP_COMPLETE.md
+  - make-executable.sh
+  - make-scripts-executable.sh
+  - deploy-navigation-fix.sh
+  - setup.sh
+  - setup-cleanup.sh
+  - serve.sh
 
 # Markdown settings
 markdown: kramdown
@@ -126,53 +135,3 @@ defaults:
       path: ""
     values:
       layout: default
-  - scope:
-      path: "why"
-    values:
-      parent: "Why MCP Security?"
-      nav_order: 1
-  - scope:
-      path: "hardening"
-    values:
-      parent: "Hardening Guide"
-      nav_order: 2
-  - scope:
-      path: "operations"
-    values:
-      parent: "Operations Guide"
-      nav_order: 3
-  - scope:
-      path: "patterns"
-    values:
-      parent: "Reference Patterns"
-      nav_order: 4
-  - scope:
-      path: "audit"
-    values:
-      parent: "Audit Tools"
-      nav_order: 5
-  - scope:
-      path: "tools"
-    values:
-      parent: "Tools & Scripts"
-      nav_order: 6
-  - scope:
-      path: "vulnerability-db"
-    values:
-      parent: "Vulnerability Database"
-      nav_order: 7
-  - scope:
-      path: "community"
-    values:
-      parent: "Community"
-      nav_order: 8
-  - scope:
-      path: "blog"
-    values:
-      parent: "Blog"
-      nav_order: 9
-  - scope:
-      path: "events"
-    values:
-      parent: "Events"
-      nav_order: 10

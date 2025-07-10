@@ -1,3 +1,9 @@
+---
+title: "LLM Heaven VPS"
+parent: "Reference Patterns"
+nav_order: 3
+---
+
 # LLM Heaven VPS Pattern
 
 This pattern implements an isolated cloud-based development and execution environment for MCP servers using dedicated virtual private servers (VPS) with comprehensive security controls and monitoring.

@@ -1,3 +1,9 @@
+---
+title: "Remote Deployment"
+parent: "Operations Guide"
+nav_order: 3
+---
+
 # Remote Deployment
 
 This guide provides comprehensive guidance for securely deploying and operating Model Context Protocol (MCP) servers on remote infrastructure. Remote deployments require specific security considerations to ensure safe operation while maintaining performance and reliability.

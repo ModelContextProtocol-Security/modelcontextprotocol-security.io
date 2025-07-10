@@ -1,3 +1,9 @@
+---
+title: "Traffic Mediation"
+parent: "Hardening Guide"
+nav_order: 4
+---
+
 # Traffic Mediation
 
 This section focuses on implementing visibility and control over MCP server network communications through API gateways, proxies, and network monitoring to detect and prevent malicious activity.

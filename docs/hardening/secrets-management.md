@@ -1,3 +1,9 @@
+---
+title: "Secrets Management"
+parent: "Hardening Guide"
+nav_order: 5
+---
+
 # Secrets & Credential Management
 
 This section addresses the secure management of API keys, credentials, and sensitive configuration data used by MCP servers and AI agents, preventing credential theft and unauthorized access.

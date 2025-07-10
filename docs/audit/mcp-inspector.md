@@ -1,3 +1,9 @@
+---
+title: "MCP Inspector"
+parent: "Audit Tools"
+nav_order: 1
+---
+
 # MCP Inspector - Automated Security Scanning
 
 **Status: Coming Soon (Q4 2025)**

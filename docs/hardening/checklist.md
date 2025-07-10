@@ -1,3 +1,9 @@
+---
+title: "Security Checklist"
+parent: "Hardening Guide"
+nav_order: 11
+---
+
 # Security Checklist
 
 This printable checklist provides a comprehensive assessment framework for MCP security implementations. Use this to evaluate your current security posture and identify areas for improvement.

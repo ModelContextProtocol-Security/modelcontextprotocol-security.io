@@ -11,23 +11,64 @@ $csa-light-gray: #f8f9fa;
 $csa-dark-gray: #333333;
 $csa-medium-gray: #6c757d;
 $csa-border-gray: #e1e4e8;
+$csa-text-gray: #586069;
+$csa-very-light-blue: #f0f8ff;
+$csa-pale-blue: rgba(31, 78, 121, 0.08);
 
 // Typography
 $body-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 $mono-font-family: "SFMono-Regular", Menlo, Consolas, "Liberation Mono", "Courier New", monospace;
 
+// Base theme colors
+$white: $csa-white;
+$grey-dk-000: $csa-dark-gray;
+$grey-dk-100: $csa-medium-gray;
+$grey-dk-200: $csa-text-gray;
+$grey-dk-250: $csa-text-gray;
+$grey-dk-300: $csa-border-gray;
+$grey-lt-000: $csa-white;
+$grey-lt-100: $csa-light-gray;
+$grey-lt-200: $csa-light-gray;
+$grey-lt-300: $csa-light-gray;
+
+// Primary color (used for links and accents)
+$blue-000: #f7fafc;
+$blue-100: #e3f2fd;
+$blue-200: #90caf9;
+$blue-300: $csa-light-blue;
+$blue-400: $csa-blue;
+
 // Color scheme mapping
 $link-color: $csa-light-blue;
-$btn-primary-color: $csa-blue;
+$link-hover-color: $csa-blue;
+
+// Button colors (toned down)
+$btn-primary-color: $csa-light-blue;
+$btn-primary-hover-color: $csa-blue;
 $base-button-color: $csa-light-gray;
 
-// Navigation colors
-$nav-child-link-color: $csa-medium-gray;
+// Navigation colors (keep subtle)
+$nav-child-link-color: $csa-text-gray;
 $nav-child-link-hover-color: $csa-blue;
+$nav-list-item-bg-color: transparent;
+$nav-list-item-hover-color: $csa-light-gray;
+
+// FIXED: Active page navigation styling (much more subtle)
+$navigation-list-link-color-active: $csa-dark-gray;
+$navigation-list-link-color-active-hover: $csa-blue;
+$navigation-list-link-bg-color-active: $csa-pale-blue;
+$navigation-list-link-bg-color-active-hover: $csa-light-gray;
+
+// Alternative approach - override specific Just the Docs variables
+$nav-child-link-color-active: $csa-dark-gray;
+$nav-child-link-color-active-hover: $csa-blue;
+$nav-list-item-bg-color-active: $csa-pale-blue;
+$nav-list-item-bg-color-active-hover: $csa-light-gray;
 
 // Search colors
 $search-background-color: $csa-white;
 $search-border-color: $csa-border-gray;
+$search-border-color-focused: $csa-light-blue;
 
 // Code colors
 $code-background-color: $csa-light-gray;
@@ -35,8 +76,8 @@ $code-border-color: $csa-border-gray;
 
 // Table colors
 $table-background-color: $csa-white;
-$table-header-background-color: $csa-blue;
-$table-header-text-color: $csa-white;
+$table-header-background-color: $csa-light-gray;
+$table-header-text-color: $csa-dark-gray;
 $table-border-color: $csa-border-gray;
 
 // Feedback colors
@@ -49,4 +90,19 @@ $border-color: $csa-border-gray;
 // Background colors
 $sidebar-color: $csa-white;
 $content-background-color: $csa-white;
-$main-background-color: $csa-light-gray;
+$main-background-color: $csa-white;
+$body-background-color: $csa-white;
+
+// Header colors (keep clean)
+$header-background-color: $csa-white;
+$header-text-color: $csa-dark-gray;
+
+// Override any aggressive theme colors
+$purple-000: $csa-light-gray;
+$purple-100: $csa-light-gray;
+$purple-200: $csa-light-blue;
+$purple-300: $csa-blue;
+
+// Focus colors
+$focus-color: $csa-light-blue;
+$focus-shadow: rgba(31, 78, 121, 0.25);

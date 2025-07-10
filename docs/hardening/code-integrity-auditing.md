@@ -1,3 +1,9 @@
+---
+title: "Code Integrity & Auditing"
+parent: "Hardening Guide"
+nav_order: 2
+---
+
 # Code Integrity & Auditing
 
 This section covers the systematic review and validation of MCP server code to identify security vulnerabilities, backdoors, and quality issues before deployment.

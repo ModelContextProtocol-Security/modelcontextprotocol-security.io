@@ -1,3 +1,9 @@
+---
+title: "Observability & Logging"
+parent: "Hardening Guide"
+nav_order: 6
+---
+
 # Observability & Logging
 
 This section establishes comprehensive monitoring, logging, and alerting capabilities for MCP deployments to enable incident detection, forensic analysis, and security operations.

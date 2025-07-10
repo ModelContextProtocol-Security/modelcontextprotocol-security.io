@@ -1,3 +1,9 @@
+---
+title: "Step-by-Step Guide"
+parent: "Audit Tools"
+nav_order: 3
+---
+
 # Step-by-Step MCP Audit Guide
 
 This comprehensive guide walks you through the process of manually auditing Model Context Protocol servers for security vulnerabilities and compliance with best practices. Use this guide to perform thorough security assessments and contribute findings to our community audit database.

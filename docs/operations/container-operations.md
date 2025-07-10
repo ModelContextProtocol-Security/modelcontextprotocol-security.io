@@ -1,3 +1,9 @@
+---
+title: "Container Operations"
+parent: "Operations Guide"
+nav_order: 1
+---
+
 # Container Operations
 
 This guide provides comprehensive guidance for securely operating Model Context Protocol (MCP) servers in Docker containers. Containerization provides essential isolation and security benefits for MCP deployments, but requires specific operational security practices.

@@ -1,3 +1,9 @@
+---
+title: "Incident Response"
+parent: "Operations Guide"
+nav_order: 5
+---
+
 # Incident Response
 
 This guide provides comprehensive incident response procedures specifically designed for Model Context Protocol (MCP) security incidents. MCP environments present unique challenges that require specialized response procedures beyond traditional web application incident response.

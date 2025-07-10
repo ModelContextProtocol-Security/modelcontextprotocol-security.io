@@ -1,3 +1,9 @@
+---
+title: "Selection Scorecard"
+parent: "Audit Tools"
+nav_order: 2
+---
+
 # MCP Selection Scorecard
 
 This interactive evaluation framework helps you assess the security posture of Model Context Protocol servers before deployment. The scorecard criteria are based on industry best practices and community-validated security indicators.

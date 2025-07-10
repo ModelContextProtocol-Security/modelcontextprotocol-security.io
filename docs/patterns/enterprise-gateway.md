@@ -1,3 +1,9 @@
+---
+title: "Enterprise Gateway"
+parent: "Reference Patterns"
+nav_order: 1
+---
+
 # Enterprise Gateway Pattern
 
 This pattern implements a corporate-grade MCP security architecture using service mesh technologies, API gateways, and enterprise security controls to provide comprehensive protection for large-scale MCP deployments.

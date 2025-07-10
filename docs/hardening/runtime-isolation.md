@@ -1,3 +1,9 @@
+---
+title: "Runtime Isolation"
+parent: "Hardening Guide"
+nav_order: 3
+---
+
 # Runtime Isolation
 
 This section establishes secure execution environments for MCP servers using containerization, virtualization, and system-level isolation techniques to limit the impact of compromised or malicious code.

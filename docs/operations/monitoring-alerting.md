@@ -1,3 +1,9 @@
+---
+title: "Monitoring & Alerting"
+parent: "Operations Guide"
+nav_order: 4
+---
+
 # Security Monitoring & Alerting
 
 This guide covers setting up comprehensive security monitoring and alerting systems for Model Context Protocol (MCP) servers in production environments. Effective monitoring is critical for detecting security threats, anomalies, and operational issues before they become incidents.

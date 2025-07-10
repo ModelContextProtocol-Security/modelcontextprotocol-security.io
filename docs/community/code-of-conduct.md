@@ -1,3 +1,9 @@
+---
+title: "Code of Conduct"
+parent: "Community"
+nav_order: 2
+---
+
 # Code of Conduct
 
 ## Our Pledge
