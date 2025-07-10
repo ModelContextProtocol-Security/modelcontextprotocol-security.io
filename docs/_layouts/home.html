@@ -1,0 +1,103 @@
+---
+layout: default
+---
+
+<div class="hero">
+  <div class="hero-content">
+    <h1 class="hero-title">{{ page.title | default: site.title }}</h1>
+    <p class="hero-subtitle">{{ page.description | default: site.description }}</p>
+    <div class="hero-actions">
+      <a href="/why/" class="btn btn-primary">Get Started</a>
+      <a href="https://github.com/orgs/ModelContextProtocol-Security/discussions" class="btn btn-outline">Join Discussion</a>
+    </div>
+  </div>
+</div>
+
+<div class="page-content">
+  <div class="wrapper">
+    {{ content }}
+  </div>
+</div>
+
+<style>
+.hero {
+  background: linear-gradient(135deg, #1f4e79 0%, #0066cc 100%);
+  color: white;
+  padding: 4rem 0;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.hero-subtitle {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s;
+  display: inline-block;
+}
+
+.btn-primary {
+  background-color: white;
+  color: #1f4e79;
+  border: 2px solid white;
+}
+
+.btn-primary:hover {
+  background-color: transparent;
+  color: white;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btn-outline:hover {
+  background-color: white;
+  color: #1f4e79;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 2rem 0;
+  }
+  
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .hero-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+</style>

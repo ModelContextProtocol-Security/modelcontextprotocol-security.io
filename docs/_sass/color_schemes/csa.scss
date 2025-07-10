@@ -1,0 +1,52 @@
+//
+// CSA Color Scheme for Just the Docs
+// Based on Cloud Security Alliance branding
+//
+
+// Base colors
+$csa-blue: #1f4e79;
+$csa-light-blue: #0066cc;
+$csa-white: #ffffff;
+$csa-light-gray: #f8f9fa;
+$csa-dark-gray: #333333;
+$csa-medium-gray: #6c757d;
+$csa-border-gray: #e1e4e8;
+
+// Typography
+$body-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$mono-font-family: "SFMono-Regular", Menlo, Consolas, "Liberation Mono", "Courier New", monospace;
+
+// Color scheme mapping
+$link-color: $csa-light-blue;
+$btn-primary-color: $csa-blue;
+$base-button-color: $csa-light-gray;
+
+// Navigation colors
+$nav-child-link-color: $csa-medium-gray;
+$nav-child-link-hover-color: $csa-blue;
+
+// Search colors
+$search-background-color: $csa-white;
+$search-border-color: $csa-border-gray;
+
+// Code colors
+$code-background-color: $csa-light-gray;
+$code-border-color: $csa-border-gray;
+
+// Table colors
+$table-background-color: $csa-white;
+$table-header-background-color: $csa-blue;
+$table-header-text-color: $csa-white;
+$table-border-color: $csa-border-gray;
+
+// Feedback colors
+$feedback-color: $csa-light-blue;
+$feedback-hover-color: $csa-blue;
+
+// Border colors
+$border-color: $csa-border-gray;
+
+// Background colors
+$sidebar-color: $csa-white;
+$content-background-color: $csa-white;
+$main-background-color: $csa-light-gray;

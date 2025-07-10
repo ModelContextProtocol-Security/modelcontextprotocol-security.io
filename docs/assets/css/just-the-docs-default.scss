@@ -1,0 +1,239 @@
+---
+---
+@import "just-the-docs/default";
+
+// CSA Color Scheme Variables
+$csa-blue: #1f4e79;
+$csa-light-blue: #0066cc;
+$csa-white: #ffffff;
+$csa-light-gray: #f8f9fa;
+$csa-dark-gray: #333333;
+$csa-border-gray: #e1e4e8;
+
+// Override Just the Docs color scheme
+:root {
+  --csa-blue: #{$csa-blue};
+  --csa-light-blue: #{$csa-light-blue};
+  --csa-white: #{$csa-white};
+  --csa-light-gray: #{$csa-light-gray};
+  --csa-dark-gray: #{$csa-dark-gray};
+  --csa-border-gray: #{$csa-border-gray};
+}
+
+// Custom header styling
+.site-header {
+  background-color: var(--csa-blue);
+  border-bottom: 1px solid var(--csa-border-gray);
+  
+  .site-title {
+    color: var(--csa-white) !important;
+    font-weight: 600;
+    
+    &:hover {
+      color: var(--csa-white) !important;
+    }
+  }
+  
+  .site-nav .nav-list .nav-list-item .nav-list-link {
+    color: var(--csa-white) !important;
+    
+    &:hover {
+      color: var(--csa-light-gray) !important;
+    }
+  }
+}
+
+// Custom navigation styling
+.nav-list .nav-list-item {
+  .nav-list-link {
+    &:hover {
+      background-color: var(--csa-light-gray);
+    }
+    
+    &.active {
+      background-color: var(--csa-light-blue);
+      color: var(--csa-white) !important;
+    }
+  }
+}
+
+// Search styling
+.search-input {
+  border-color: var(--csa-border-gray);
+  
+  &:focus {
+    border-color: var(--csa-light-blue);
+    box-shadow: 0 0 0 3px rgba(31, 78, 121, 0.1);
+  }
+}
+
+// Button styling
+.btn {
+  &.btn-primary {
+    background-color: var(--csa-blue);
+    border-color: var(--csa-blue);
+    
+    &:hover {
+      background-color: var(--csa-light-blue);
+      border-color: var(--csa-light-blue);
+    }
+  }
+}
+
+// Link styling
+a {
+  color: var(--csa-light-blue);
+  
+  &:hover {
+    color: var(--csa-blue);
+  }
+}
+
+// Footer styling
+.site-footer {
+  background-color: var(--csa-light-gray);
+  border-top: 1px solid var(--csa-border-gray);
+  color: var(--csa-dark-gray);
+  
+  a {
+    color: var(--csa-blue);
+    
+    &:hover {
+      color: var(--csa-light-blue);
+    }
+  }
+}
+
+// Hero section styling
+.hero {
+  background: linear-gradient(135deg, var(--csa-blue) 0%, var(--csa-light-blue) 100%);
+  color: var(--csa-white);
+  padding: 3rem 0;
+  margin-bottom: 2rem;
+  
+  .hero-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+  }
+  
+  .hero-description {
+    font-size: 1.1rem;
+    opacity: 0.8;
+  }
+}
+
+// Card styling for sections
+.card {
+  background-color: var(--csa-white);
+  border: 1px solid var(--csa-border-gray);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
+  .card-title {
+    color: var(--csa-blue);
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  
+  .card-description {
+    color: var(--csa-dark-gray);
+    margin-bottom: 1rem;
+  }
+}
+
+// Quick start section
+.quick-start {
+  background-color: var(--csa-light-gray);
+  padding: 2rem;
+  border-radius: 8px;
+  margin: 2rem 0;
+  
+  .quick-start-title {
+    color: var(--csa-blue);
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+  
+  .quick-start-item {
+    margin-bottom: 0.5rem;
+    
+    strong {
+      color: var(--csa-blue);
+    }
+  }
+}
+
+// Responsive design
+@media (max-width: 768px) {
+  .hero {
+    padding: 2rem 0;
+    
+    .hero-title {
+      font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+      font-size: 1.1rem;
+    }
+  }
+  
+  .card {
+    padding: 1rem;
+  }
+}
+
+// Code block styling
+.highlight {
+  background-color: var(--csa-light-gray);
+  border: 1px solid var(--csa-border-gray);
+  border-radius: 4px;
+}
+
+// Table styling
+table {
+  border-collapse: collapse;
+  
+  th {
+    background-color: var(--csa-blue);
+    color: var(--csa-white);
+    border: 1px solid var(--csa-border-gray);
+  }
+  
+  td {
+    border: 1px solid var(--csa-border-gray);
+  }
+}
+
+// Callout boxes
+.callout {
+  padding: 1rem;
+  margin: 1rem 0;
+  border-left: 4px solid var(--csa-light-blue);
+  background-color: var(--csa-light-gray);
+  
+  &.callout-warning {
+    border-left-color: #ffc107;
+    background-color: #fff3cd;
+  }
+  
+  &.callout-danger {
+    border-left-color: #dc3545;
+    background-color: #f8d7da;
+  }
+  
+  &.callout-success {
+    border-left-color: #28a745;
+    background-color: #d4edda;
+  }
+}
