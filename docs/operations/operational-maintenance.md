@@ -1,3 +1,9 @@
+---
+title: "Operational Maintenance"
+parent: "Operations Guide"
+nav_order: 9
+---
+
 # Operational Maintenance
 
 This guide covers regular security maintenance tasks essential for maintaining the security posture of Model Context Protocol (MCP) servers in production environments. Consistent operational maintenance is critical for preventing security incidents and ensuring long-term security effectiveness.

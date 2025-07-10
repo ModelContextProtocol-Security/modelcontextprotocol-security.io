@@ -1,3 +1,9 @@
+---
+title: "Performance & Security"
+parent: "Operations Guide"
+nav_order: 11
+---
+
 # Performance & Security Optimization
 
 This guide addresses the critical balance between security controls and operational performance in Model Context Protocol (MCP) environments. Effective optimization ensures robust security without compromising the responsiveness and efficiency required for AI agent operations.

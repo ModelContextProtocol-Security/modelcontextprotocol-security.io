@@ -1,3 +1,9 @@
+---
+title: "API Gateway Operations"
+parent: "Operations Guide"
+nav_order: 6
+---
+
 # API Gateway Operations
 
 This guide provides comprehensive guidance for operating API gateways to secure Model Context Protocol (MCP) server traffic. Since most MCP traffic is TLS-encrypted and uninspectable at the network level, **API gateways are essential** for gaining visibility and control over MCP server communications.

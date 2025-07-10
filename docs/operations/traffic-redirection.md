@@ -1,3 +1,9 @@
+---
+title: "Traffic Redirection"
+parent: "Operations Guide"
+nav_order: 15
+---
+
 # Traffic Redirection
 
 This guide provides comprehensive guidance for implementing traffic redirection in Model Context Protocol (MCP) servers to route network traffic through security controls. Traffic redirection is often more effective than network-level controls for ensuring all MCP traffic flows through security inspection points.

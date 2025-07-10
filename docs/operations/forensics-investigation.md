@@ -1,3 +1,9 @@
+---
+title: "Forensics & Investigation"
+parent: "Operations Guide"
+nav_order: 8
+---
+
 # Forensics & Investigation
 
 This guide provides comprehensive procedures for collecting evidence and conducting forensic investigations in Model Context Protocol (MCP) environments. Proper forensic procedures are essential for understanding security incidents and supporting legal or compliance requirements.

@@ -1,3 +1,9 @@
+---
+title: "Security Workflows"
+parent: "Operations Guide"
+nav_order: 13
+---
+
 # Security Operations Workflows
 
 This guide provides standardized workflows and procedures for common security operations tasks in Model Context Protocol (MCP) environments. These workflows ensure consistent, repeatable security operations across teams and environments.

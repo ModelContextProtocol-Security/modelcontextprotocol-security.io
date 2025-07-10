@@ -1,3 +1,9 @@
+---
+title: "Change Management"
+parent: "Operations Guide"
+nav_order: 7
+---
+
 # Change Management
 
 This guide provides security-focused change management procedures for Model Context Protocol (MCP) environments. Proper change management is essential for maintaining security while enabling necessary updates and improvements to MCP servers and AI agents.

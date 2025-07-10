@@ -3,43 +3,43 @@
 
 /* Custom CSS overrides for CSA MCP Security site */
 
-/* Fix active page navigation styling - make it subtle and readable */
+/* Fix active page navigation styling - make it VERY subtle and barely visible */
 .navigation-list-link.active,
 .navigation-list-link[aria-current="page"] {
-  background-color: rgba(31, 78, 121, 0.08) !important;
+  background-color: rgba(31, 78, 121, 0.02) !important;
   color: #333333 !important;
   font-weight: 500 !important;
-  border-left: 3px solid #0066cc !important;
+  border-left: 2px solid rgba(0, 102, 204, 0.3) !important;
 }
 
 .navigation-list-link.active:hover,
 .navigation-list-link[aria-current="page"]:hover {
-  background-color: rgba(31, 78, 121, 0.12) !important;
+  background-color: rgba(31, 78, 121, 0.04) !important;
   color: #1f4e79 !important;
 }
 
 /* Alternative selectors for Just the Docs navigation */
 .nav-list .nav-list-item .nav-list-link.active,
 .nav-list .nav-list-item .nav-list-link[aria-current="page"] {
-  background-color: rgba(31, 78, 121, 0.08) !important;
+  background-color: rgba(31, 78, 121, 0.02) !important;
   color: #333333 !important;
   font-weight: 500 !important;
-  border-left: 3px solid #0066cc !important;
+  border-left: 2px solid rgba(0, 102, 204, 0.3) !important;
 }
 
 .nav-list .nav-list-item .nav-list-link.active:hover,
 .nav-list .nav-list-item .nav-list-link[aria-current="page"]:hover {
-  background-color: rgba(31, 78, 121, 0.12) !important;
+  background-color: rgba(31, 78, 121, 0.04) !important;
   color: #1f4e79 !important;
 }
 
-/* Child navigation active states */
+/* Child navigation active states - even more subtle */
 .nav-list .nav-list-item .nav-list .nav-list-item .nav-list-link.active,
 .nav-list .nav-list-item .nav-list .nav-list-item .nav-list-link[aria-current="page"] {
-  background-color: rgba(31, 78, 121, 0.06) !important;
+  background-color: rgba(31, 78, 121, 0.015) !important;
   color: #333333 !important;
   font-weight: 500 !important;
-  border-left: 2px solid #0066cc !important;
+  border-left: 1px solid rgba(0, 102, 204, 0.2) !important;
   padding-left: 12px !important;
 }
 
@@ -50,10 +50,22 @@
 
 .nav-list-link:hover {
   color: #1f4e79 !important;
-  background-color: #f8f9fa !important;
+  background-color: rgba(248, 249, 250, 0.8) !important;
 }
 
 /* Clean up any other aggressive blue backgrounds */
 .site-nav .nav-list .nav-list-item .nav-list-link {
   background-color: transparent !important;
+}
+
+/* Override any theme defaults that might be too bold */
+.nav-list .nav-list-item > .nav-list-link.active {
+  background-color: rgba(31, 78, 121, 0.02) !important;
+  color: #333333 !important;
+}
+
+/* Make sure nothing else gets a dark blue background */
+.nav-list .nav-list-item .nav-list-link[aria-current] {
+  background-color: rgba(31, 78, 121, 0.02) !important;
+  color: #333333 !important;
 }

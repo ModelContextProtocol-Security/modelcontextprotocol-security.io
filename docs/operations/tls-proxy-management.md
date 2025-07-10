@@ -1,3 +1,9 @@
+---
+title: "TLS & Proxy Management"
+parent: "Operations Guide"
+nav_order: 14
+---
+
 # TLS & Proxy Management
 
 This guide addresses the critical challenges of managing TLS traffic and API proxies in Model Context Protocol (MCP) environments. Since most MCP traffic is encrypted with TLS and uninspectable at the network level, **proper TLS and proxy management is essential** for maintaining security visibility and control.

@@ -1,3 +1,9 @@
+---
+title: "Security Troubleshooting"
+parent: "Operations Guide"
+nav_order: 12
+---
+
 # Security Troubleshooting
 
 This guide provides systematic approaches to diagnosing and resolving security-related issues in Model Context Protocol (MCP) environments. Effective troubleshooting minimizes downtime while maintaining security posture.

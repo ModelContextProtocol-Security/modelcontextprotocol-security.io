@@ -1,3 +1,9 @@
+---
+title: "Operational Runbooks"
+parent: "Operations Guide"
+nav_order: 10
+---
+
 # Operational Runbooks
 
 This section provides step-by-step operational runbooks for common security scenarios in Model Context Protocol (MCP) environments. These runbooks ensure consistent, effective responses to operational security challenges.
