@@ -1,91 +1,93 @@
-# Model Context Protocol Security
+---
+layout: home
+title: "Model Context Protocol Security"
+description: "A Cloud Security Alliance Community Project - Secure Autonomy: Hardening Model-Context-Protocol Servers & Agents"
+nav_order: 1
+---
 
-**A Cloud Security Alliance Community Project**
-
-Secure Autonomy: Hardening Model-Context-Protocol Servers & Agents
-
+{: .hero-description }
 This comprehensive resource provides security guidance, best practices, and tools for safely deploying Model Context Protocol (MCP) servers and AI agents. MCP has become the de-facto adapter layer that lets autonomous agents interact with APIs, services, and systems - but this power comes with significant security responsibilities.
 
-## Community Hub
-
-**[Join the Discussion](https://github.com/orgs/ModelContextProtocol-Security/discussions)** - Our primary community forum for MCP security discussions, questions, and collaboration
+---
 
 ## Quick Start
+{: .quick-start-title }
 
-**New to MCP Security?** Start with our [Why MCP Security?](why/) overview  
-**Ready to Secure?** Jump to the [Hardening Guide](hardening/)  
-**Operating MCP Servers?** Check our [Operations Guide](operations/)  
-**Need to Audit?** Use our [MCP Audit Tools](audit/)  
-**Want to Contribute?** Share your knowledge in our [Community](community/)
+<div class="quick-start">
+  <div class="quick-start-item">
+    <strong>New to MCP Security?</strong> Start with our <a href="/why/">Why MCP Security?</a> overview
+  </div>
+  <div class="quick-start-item">
+    <strong>Ready to Secure?</strong> Jump to the <a href="/hardening/">Hardening Guide</a>
+  </div>
+  <div class="quick-start-item">
+    <strong>Operating MCP Servers?</strong> Check our <a href="/operations/">Operations Guide</a>
+  </div>
+  <div class="quick-start-item">
+    <strong>Need to Audit?</strong> Use our <a href="/audit/">MCP Audit Tools</a>
+  </div>
+  <div class="quick-start-item">
+    <strong>Want to Contribute?</strong> Share your knowledge in our <a href="/community/">Community</a>
+  </div>
+</div>
 
-## Site Navigation
+---
 
-### [Why MCP Security?](why/)
-- [Overview](why/index.md) - Executive brief on MCP security risks and value proposition
-- [FAQ](why/faq.md) - Frequently asked questions about MCP security
+## Security Guides
 
-### [Hardening Guide](hardening/)
-- [Overview](hardening/index.md) - Introduction to our comprehensive security framework
-- [Provenance & Selection](hardening/provenance-selection.md) - Verifying and tracking MCP server origins
-- [Code Integrity & Auditing](hardening/code-integrity-auditing.md) - Auditing and validating MCP code
-- [Runtime Isolation](hardening/runtime-isolation.md) - Containerization and sandboxing
-- [Traffic Mediation](hardening/traffic-mediation.md) - API gateways and network controls
-- [Secrets & Credential Management](hardening/secrets-management.md) - Secure credential handling
-- [Observability & Logging](hardening/observability-logging.md) - Monitoring and incident response
-- [Backup & Versioning](hardening/backup-versioning.md) - Data protection and recovery
-- [Policy & Guardrails](hardening/policy-guardrails.md) - Automated policy enforcement
-- [Payments & Wallet Security](hardening/payments-wallets.md) - Financial security for AI agents
-- [Lifecycle Management](hardening/lifecycle-management.md) - Updates and retirement strategies
-- [Security Checklist](hardening/checklist.md) - Printable security assessment checklist
+<div class="cards-container">
+  <div class="card">
+    <div class="card-title">🔍 Why MCP Security?</div>
+    <div class="card-description">
+      Executive brief on MCP security risks and value proposition. Perfect for decision-makers and security teams.
+    </div>
+    <a href="/why/" class="card-link">Learn More →</a>
+  </div>
 
-### [Operations Guide](operations/)
-- [Overview](operations/index.md) - Securely operating MCP servers in production
-- [Container Operations](operations/container-operations.md) - Dockerizing and containerizing MCP servers
-- [Remote Deployment](operations/remote-deployment.md) - Secure remote infrastructure deployment
-- [Network Controls](operations/network-controls.md) - iptables, network redirection, and traffic control
-- [API Gateway Operations](operations/api-gateway-operations.md) - Operating API gateways for traffic mediation
-- [Traffic Redirection](operations/traffic-redirection.md) - Wrapping code to redirect network traffic
-- [TLS & Proxy Management](operations/tls-proxy-management.md) - Managing TLS traffic and API proxies
-- [Security Monitoring & Alerting](operations/monitoring-alerting.md) - Production monitoring and alerting
-- [Incident Response](operations/incident-response.md) - MCP-specific incident response procedures
-- [Operational Maintenance](operations/operational-maintenance.md) - Regular security maintenance tasks
-- [Security Operations Workflows](operations/security-workflows.md) - Standardized operational procedures
-- [Performance & Security Optimization](operations/performance-security.md) - Balancing security and performance
-- [Change Management](operations/change-management.md) - Security-focused change management
-- [Security Troubleshooting](operations/security-troubleshooting.md) - Diagnosing security issues
-- [Forensics & Investigation](operations/forensics-investigation.md) - Security incident investigation
-- [Operational Runbooks](operations/operational-runbooks.md) - Step-by-step operational procedures
+  <div class="card">
+    <div class="card-title">🛡️ Hardening Guide</div>
+    <div class="card-description">
+      Comprehensive security framework covering provenance, isolation, traffic mediation, and more.
+    </div>
+    <a href="/hardening/" class="card-link">Start Hardening →</a>
+  </div>
 
-### [Reference Patterns](patterns/)
-- [Overview](patterns/index.md) - Architecture patterns and deployment guides
-- [Local Dev Container](patterns/local-dev-container.md) - Secure development environment setup
-- [LLM Heaven VPS](patterns/llm-heaven-vps.md) - Isolated cloud deployment pattern
-- [Enterprise Gateway](patterns/enterprise-gateway.md) - Corporate-grade MCP security architecture
+  <div class="card">
+    <div class="card-title">⚙️ Operations Guide</div>
+    <div class="card-description">
+      Production-ready guidance for securely operating MCP servers with containers, network controls, and monitoring.
+    </div>
+    <a href="/operations/" class="card-link">View Operations →</a>
+  </div>
 
-### [Tools & Scripts](tools/)
-- [Overview](tools/index.md) - Security tools and automation scripts
+  <div class="card">
+    <div class="card-title">🏗️ Reference Patterns</div>
+    <div class="card-description">
+      Architecture patterns and deployment guides for common MCP security scenarios.
+    </div>
+    <a href="/patterns/" class="card-link">View Patterns →</a>
+  </div>
 
-### [Vulnerability Database](vulnerability-db/)
-- [Overview](vulnerability-db/index.md) - Security vulnerabilities and community-maintained advisory database
+  <div class="card">
+    <div class="card-title">🔎 Audit Tools</div>
+    <div class="card-description">
+      Security evaluation tools, scorecards, and step-by-step audit procedures for MCP deployments.
+    </div>
+    <a href="/audit/" class="card-link">Start Auditing →</a>
+  </div>
 
-### [Audit an MCP](audit/)
-- [Overview](audit/index.md) - How to audit MCP server security
-- [Selection Scorecard](audit/scorecard.md) - Interactive MCP evaluation criteria
-- [Step-by-Step Guide](audit/step-by-step-guide.md) - Manual security audit process
-- [MCP Inspector](audit/mcp-inspector.md) - Automated security scanning tool (Coming Soon)
+  <div class="card">
+    <div class="card-title">🛠️ Tools & Scripts</div>
+    <div class="card-description">
+      Security automation tools, utilities, and scripts for MCP security operations.
+    </div>
+    <a href="/tools/" class="card-link">View Tools →</a>
+  </div>
+</div>
 
-### [Blog](blog/)
-- [Latest Posts](blog/index.md) - Security insights and community updates
+---
 
-### [Events](events/)
-- [Upcoming Events](events/index.md) - Workshops, webinars, and working group meetings
-
-### [Community](community/)
-- [Getting Started](community/index.md) - How to contribute and get involved
-- [Code of Conduct](community/code-of-conduct.md) - Community behavior guidelines
-- [Project Charter](community/charter.md) - Governance and decision-making process
-
-## Community Resources & Contributing
+## Community Resources
 
 ### Discussion & Collaboration
 - **[GitHub Discussions](https://github.com/orgs/ModelContextProtocol-Security/discussions)** - Ask questions, share insights, propose improvements
@@ -94,31 +96,122 @@ This comprehensive resource provides security guidance, best practices, and tool
 
 ### Community Databases
 - **[Audit Database](https://github.com/ModelContextProtocol-Security/audit-db)** - Community-maintained MCP security audit results
-- **[Vulnerability Database](https://github.com/ModelContextProtocol-Security/vulnerability-db)** - Known security issues and CVEs
-
-### Development & Tools
-- **[Security Tools](https://github.com/ModelContextProtocol-Security/security-tools)** - Open-source security utilities and scripts
-- **[Documentation Site](https://github.com/ModelContextProtocol-Security/modelcontextprotocol-security.io)** - This website's source code
-
-### Knowledge Contributions
-We welcome and encourage contributions to our collective knowledge base:
-- **Document Security Patterns** - Share your deployment architectures and lessons learned
-- **Contribute Audit Findings** - Help build the community security database
-- **Improve Hardening Guides** - Add practical examples and real-world scenarios
-- **Share Operations Experience** - Document operational security procedures and technical setups
-- **Create Educational Content** - Write blog posts, tutorials, and case studies
-- **Develop Security Tools** - Build and share automation scripts and utilities
+- **[Vulnerability Database](/vulnerability-db/)** - Known security issues and CVEs
 
 ### How to Contribute
-1. **Start a Discussion** - Share your ideas and questions in our [GitHub Discussions](https://github.com/orgs/ModelContextProtocol-Security/discussions)
-2. **Join Working Group** - Participate in our bi-weekly meetings and planning sessions
-3. **Submit Documentation** - Improve guides, add examples, or create new content
-4. **Share Audit Results** - Contribute to our security databases and findings
-5. **Share Technical Operations** - Document your containerization, network controls, and proxy setups
-6. **Build Tools** - Develop utilities that help the community secure MCP deployments
 
-*Every contribution, whether large or small, helps strengthen the security of AI agent infrastructure for everyone.*
+We welcome contributions to strengthen AI agent infrastructure security:
+
+1. **Start a Discussion** - Share ideas in our [GitHub Discussions](https://github.com/orgs/ModelContextProtocol-Security/discussions)
+2. **Join Working Group** - Participate in bi-weekly meetings
+3. **Document Security Patterns** - Share deployment architectures and lessons learned
+4. **Contribute Audit Findings** - Help build the community security database
+5. **Improve Hardening Guides** - Add practical examples and real-world scenarios
+6. **Develop Security Tools** - Build automation scripts and utilities
+
+*Every contribution helps strengthen the security of AI agent infrastructure for everyone.*
 
 ---
 
-*This project is sponsored by the [Cloud Security Alliance](https://cloudsecurityalliance.org) and maintained by the Blockchain Working Group.*
+<div class="footer-csa">
+  <p><em>This project is sponsored by the <a href="https://cloudsecurityalliance.org">Cloud Security Alliance</a> and maintained by the Blockchain Working Group.</em></p>
+</div>
+
+<style>
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.card {
+  background-color: white;
+  border: 1px solid #e1e4e8;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.card-title {
+  color: #1f4e79;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.card-description {
+  color: #333333;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.card-link {
+  color: #0066cc;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.card-link:hover {
+  color: #1f4e79;
+  text-decoration: underline;
+}
+
+.quick-start {
+  background-color: #f8f9fa;
+  padding: 2rem;
+  border-radius: 8px;
+  margin: 2rem 0;
+}
+
+.quick-start-title {
+  color: #1f4e79;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.quick-start-item {
+  margin-bottom: 0.75rem;
+  padding: 0.5rem 0;
+}
+
+.quick-start-item strong {
+  color: #1f4e79;
+}
+
+.footer-csa {
+  text-align: center;
+  margin-top: 3rem;
+  padding: 2rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+.footer-csa a {
+  color: #1f4e79;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer-csa a:hover {
+  color: #0066cc;
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .cards-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .quick-start {
+    padding: 1.5rem;
+  }
+}
+</style>
