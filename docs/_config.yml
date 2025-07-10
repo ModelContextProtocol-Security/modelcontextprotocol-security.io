@@ -50,7 +50,7 @@ aux_links:
 aux_links_new_tab: true
 
 # Footer
-footer_content: "This project is sponsored by the <a href=\"https://cloudsecurityalliance.org\">Cloud Security Alliance</a> and maintained by the Blockchain Working Group."
+footer_content: "This project is sponsored by the <a href=\"https://cloudsecurityalliance.org\">Cloud Security Alliance</a> and maintained by the Model Context Protocol Security Working Group."
 
 # Google Analytics (optional)
 # ga_tracking: UA-XXXXXXXX-X

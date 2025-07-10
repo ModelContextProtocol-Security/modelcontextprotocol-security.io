@@ -114,7 +114,7 @@ We welcome contributions to strengthen AI agent infrastructure security:
 ---
 
 <div class="footer-csa">
-  <p><em>This project is sponsored by the <a href="https://cloudsecurityalliance.org">Cloud Security Alliance</a> and maintained by the Blockchain Working Group.</em></p>
+  <p><em>This project is sponsored by the <a href="https://cloudsecurityalliance.org">Cloud Security Alliance</a> and maintained by the Model Context Protocol Security Working Group.</em></p>
 </div>
 
 <style>

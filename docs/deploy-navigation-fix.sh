@@ -22,6 +22,7 @@ echo ""
 echo "📝 Changes made:"
 echo "=================="
 echo "✅ Updated home.html layout to use 'default' layout (preserves navigation)"
+echo "✅ Updated working group references to 'Model Context Protocol Security Working Group'"
 echo "✅ Added proper frontmatter to all major sections:"
 echo "   - Hardening Guide (nav_order: 2)"
 echo "   - Operations Guide (nav_order: 3)"
@@ -42,12 +43,13 @@ echo ""
 if [[ $REPLY =~ ^[Yy]$ ]]; then
     echo "📦 Committing changes..."
     git add .
-    git commit -m "Fix navigation: Add proper frontmatter to all sections
+    git commit -m "Fix navigation and update working group references
 
 - Updated home.html layout to inherit from default layout
 - Added navigation frontmatter to all major sections
 - Configured proper nav_order for hierarchical navigation
 - Added has_children property for parent sections
+- Updated references from 'Blockchain Working Group' to 'Model Context Protocol Security Working Group'
 - This should restore the Just the Docs navigation sidebar"
 
     echo "🚀 Pushing to GitHub..."

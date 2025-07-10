@@ -17,7 +17,7 @@ This project covers:
 
 - **Lead Maintainer**: Kurt Seifried
 - **Deputy Maintainer**: Hillary Baron
-- **Working Group**: CSA Blockchain Working Group
+- **Working Group**: Model Context Protocol Security Working Group
 
 ## Decision Making
 
