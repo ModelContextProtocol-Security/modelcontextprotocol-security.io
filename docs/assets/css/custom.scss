@@ -69,3 +69,33 @@
   background-color: rgba(31, 78, 121, 0.02) !important;
   color: #333333 !important;
 }
+
+/* FIX: Blue on blue unreadable text in main navigation */
+.site-nav .nav-list .nav-list-item .nav-list-link.active,
+.site-nav .nav-list .nav-list-item .nav-list-link[aria-current="page"] {
+  background-color: #1f4e79 !important;
+  color: #ffffff !important;
+  font-weight: 500 !important;
+}
+
+.site-nav .nav-list .nav-list-item .nav-list-link.active:hover,
+.site-nav .nav-list .nav-list-item .nav-list-link[aria-current="page"]:hover {
+  background-color: #0066cc !important;
+  color: #ffffff !important;
+}
+
+/* Fix main navigation active states */
+.site-nav .nav-list > .nav-list-item > .nav-list-link.active,
+.site-nav .nav-list > .nav-list-item > .nav-list-link[aria-current="page"] {
+  background-color: #1f4e79 !important;
+  color: #ffffff !important;
+  font-weight: 500 !important;
+}
+
+/* Fix top-level navigation items that are active */
+.nav-list > .nav-list-item > .nav-list-link.active,
+.nav-list > .nav-list-item > .nav-list-link[aria-current="page"] {
+  background-color: #1f4e79 !important;
+  color: #ffffff !important;
+  font-weight: 500 !important;
+}
