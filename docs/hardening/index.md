@@ -1,3 +1,9 @@
+---
+title: "Hardening Guide"
+nav_order: 2
+has_children: true
+---
+
 # Hardening Guide
 
 This comprehensive guide provides detailed security guidance for Model Context Protocol (MCP) servers and AI agent infrastructure. Our security framework covers all aspects of MCP security, from initial server selection through ongoing operational security, organized in a logical narrative that builds from foundational concepts to advanced implementations.

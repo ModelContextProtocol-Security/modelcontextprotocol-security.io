@@ -1,105 +1,129 @@
+---
+title: "Community"
+nav_order: 8
+has_children: true
+---
+
 # Community
 
-Welcome to the MCP Security community! This project is driven by security professionals, developers, and organizations working to secure AI agent infrastructure. We believe that collaborative development and knowledge sharing are essential for addressing the unique security challenges of autonomous AI systems.
+Welcome to the MCP Security community! This section provides information about how to get involved, contribute, and collaborate with other security professionals working on MCP infrastructure security.
 
-## Community Hub
+## Getting Started
 
-**[Join GitHub Discussions](https://github.com/orgs/ModelContextProtocol-Security/discussions)** - Our primary community forum where we discuss MCP security challenges, share solutions, and collaborate on improvements. This is the best place to:
+### New to MCP Security?
+- **[Getting Started Guide](getting-started.md)** - Introduction to MCP security concepts and community
+- **[Code of Conduct](code-of-conduct.md)** - Community behavior guidelines and expectations
+- **[Project Charter](charter.md)** - Governance and decision-making process
 
-- Ask questions about MCP security implementation
-- Share your security findings and lessons learned
-- Propose new features and improvements
-- Get help with security audits and deployments
-- Connect with other security professionals
+### How to Contribute
+- **Documentation** - Improve guides, add examples, create new content
+- **Tools** - Develop security automation tools and utilities
+- **Testing** - Validate security procedures and tools
+- **Research** - Contribute security research and analysis
+- **Support** - Help others in the community
 
-## How to Get Involved
+## Community Channels
 
-### Join the Conversation
-- **[GitHub Discussions](https://github.com/orgs/ModelContextProtocol-Security/discussions)** - Primary discussion forum
-- **Working Group Meetings** - Bi-weekly meetings every other Wednesday at 10:00 AM PDT
-- **Slack Channel** - Real-time chat and collaboration (#mcp-security)
+### Primary Communication
+- **[GitHub Discussions](https://github.com/orgs/ModelContextProtocol-Security/discussions)** - Main community forum
+- **[Working Group Meetings](../events/)** - Regular technical discussions
+- **[GitHub Issues](https://github.com/ModelContextProtocol-Security/)** - Bug reports and feature requests
 
-### Contribute Knowledge
-We actively encourage knowledge sharing and documentation contributions:
-
-#### Documentation & Guides
-- **Improve Hardening Guides** - Add practical examples, real-world scenarios, and lessons learned
-- **Create Reference Patterns** - Document secure deployment architectures you've developed
-- **Write Blog Posts** - Share security insights, case studies, and research findings
-- **Update FAQ** - Help answer common questions from the community
-
-#### Security Research & Data
-- **Audit Database** - Contribute security audit results to our [audit database](https://github.com/ModelContextProtocol-Security/audit-db)
-- **Vulnerability Research** - Report and document security findings in our [vulnerability database](https://github.com/ModelContextProtocol-Security/vulnerability-db)
-- **Tool Development** - Build and share security automation scripts and utilities
-- **Testing & Validation** - Help verify and improve our security recommendations
-
-### Technical Contributions
-- **Code Contributions** - Develop security tools and automation scripts
-- **Security Testing** - Help validate and improve our security guidance
-- **Infrastructure** - Contribute to our CI/CD, documentation, and community tools
-- **Reviews & Feedback** - Review pull requests and provide technical feedback
-
-### Community Support
-- **Mentorship** - Help new community members get started with MCP security
-- **Q&A Support** - Answer questions in discussions and community channels
-- **Event Organization** - Help organize workshops, webinars, and working group sessions
-- **Outreach** - Spread awareness about MCP security best practices
-
-## Getting Started with Contributions
-
-### 1. Start with Discussions
-Visit our [GitHub Discussions](https://github.com/orgs/ModelContextProtocol-Security/discussions) to introduce yourself and see what the community is working on.
-
-### 2. Identify Your Contribution Area
-- **New to MCP Security?** Start by improving documentation or asking questions
-- **Security Professional?** Share your expertise through guides, audits, or tool development
-- **Developer?** Contribute to our open-source tools and automation scripts
-- **Researcher?** Help us understand emerging threats and develop countermeasures
-
-### 3. Follow Our Contribution Guidelines
-- **Quality First** - All contributions should be technically accurate and well-documented
-- **Community Benefit** - Focus on contributions that help the broader MCP security community
-- **Collaborative Approach** - Work with maintainers and other contributors for the best results
-- **Respectful Engagement** - Follow our [Code of Conduct](code-of-conduct.md) in all interactions
+### Collaboration Platforms
+- **[Main Organization](https://github.com/ModelContextProtocol-Security)** - All project repositories
+- **[Documentation Site](https://github.com/ModelContextProtocol-Security/modelcontextprotocol-security.io)** - This website's source
+- **[Security Tools](https://github.com/ModelContextProtocol-Security/security-tools)** - Security automation tools
+- **[Audit Database](https://github.com/ModelContextProtocol-Security/audit-db)** - Community audit results
 
 ## Community Resources
 
-### Communication Channels
-- **GitHub Discussions** - [Primary discussion forum](https://github.com/orgs/ModelContextProtocol-Security/discussions)
-- **Email** - wg-mcp-security@cloudsecurityalliance.org
-- **Slack** - #mcp-security channel in CSA Slack workspace
+### Knowledge Sharing
+- **[Best Practices](best-practices.md)** - Community-validated security practices
+- **[Case Studies](case-studies.md)** - Real-world implementation examples
+- **[Lessons Learned](lessons-learned.md)** - What worked and what didn't
+- **[FAQ](faq.md)** - Frequently asked questions and answers
 
-### Project Repositories
-- **[Audit Database](https://github.com/ModelContextProtocol-Security/audit-db)** - Community security audit results
-- **[Vulnerability Database](https://github.com/ModelContextProtocol-Security/vulnerability-db)** - Known security issues and CVEs
-- **[Documentation Site](https://github.com/ModelContextProtocol-Security/modelcontextprotocol-security.io)** - This website's source code
+### Support Resources
+- **[Getting Help](getting-help.md)** - How to ask questions and get support
+- **[Contributing](contributing.md)** - Detailed contribution guidelines
+- **[Mentorship](mentorship.md)** - Mentorship program for new contributors
+- **[Recognition](recognition.md)** - How we recognize community contributions
 
-### Meeting Schedule
-- **Working Group Meetings** - Bi-weekly Wednesdays, 10:00 AM PDT
-- **Security Office Hours** - Monthly, first Friday of each month
-- **Special Workshops** - Quarterly deep-dive sessions on specific topics
+## Working Groups
 
-## Recognition & Acknowledgment
+### Security Framework
+- **Focus**: Core security methodology and framework development
+- **Meetings**: Bi-weekly technical sessions
+- **Deliverables**: Hardening guides, security patterns, best practices
 
-We believe in recognizing our contributors:
-- **Hall of Fame** - Top contributors featured on our website
-- **Speaking Opportunities** - Present your work at conferences and community events
-- **Advisory Roles** - Experienced contributors invited to help shape project direction
-- **Professional Development** - Networking opportunities with security professionals
+### Tools & Automation
+- **Focus**: Security tool development and automation
+- **Meetings**: Monthly development sessions
+- **Deliverables**: Security tools, automation scripts, monitoring solutions
+
+### Vulnerability Research
+- **Focus**: Vulnerability discovery and coordinated disclosure
+- **Meetings**: Quarterly research sessions
+- **Deliverables**: Vulnerability database, security advisories, research reports
+
+### Community & Education
+- **Focus**: Community building and educational content
+- **Meetings**: Monthly community sessions
+- **Deliverables**: Documentation, tutorials, training materials
+
+## Community Events
+
+### Regular Events
+- **Working Group Meetings** - Technical discussions and planning
+- **Community Calls** - General community updates and discussions
+- **Security Reviews** - Peer review of security implementations
+- **Tool Demonstrations** - Showcase of new security tools and techniques
+
+### Special Events
+- **Security Conferences** - Speaking opportunities and networking
+- **Workshops** - Hands-on security training and implementation
+- **Hackathons** - Collaborative security tool development
+- **Research Presentations** - Sharing of security research findings
+
+## Recognition Program
+
+### Contribution Types
+- **Documentation** - Significant improvements to guides and documentation
+- **Tools** - Development of useful security tools and automation
+- **Research** - Security research and vulnerability discovery
+- **Support** - Helping others and building community
+- **Leadership** - Leading working groups and initiatives
+
+### Recognition Levels
+- **Contributor** - Active participation in community activities
+- **Maintainer** - Ongoing responsibility for specific project areas
+- **Core Team** - Leadership role in project direction and governance
+- **Advisor** - Strategic guidance and oversight
 
 ## Code of Conduct
 
-All community members are expected to follow our [Code of Conduct](code-of-conduct.md) to ensure a welcoming and inclusive environment for everyone.
+Our community is committed to providing a welcoming and inclusive environment for all participants. We expect all community members to:
 
-## Project Charter
+- **Be Respectful** - Treat all community members with respect and professionalism
+- **Be Inclusive** - Welcome newcomers and diverse perspectives
+- **Be Collaborative** - Work together constructively and share knowledge
+- **Be Professional** - Maintain high standards of technical and ethical conduct
 
-Our [Project Charter](charter.md) outlines the project's goals, governance structure, and decision-making processes.
+## Getting Help
 
-## Ready to Get Started?
+### Technical Support
+- **[GitHub Discussions](https://github.com/orgs/ModelContextProtocol-Security/discussions)** - Ask technical questions
+- **[Working Group Meetings](../events/)** - Get real-time technical help
+- **[Community Mentorship](mentorship.md)** - Get paired with experienced contributors
 
-1. **[Join the Discussions](https://github.com/orgs/ModelContextProtocol-Security/discussions)** - Introduce yourself and see what's happening
-2. **Attend a Meeting** - Check our [events page](../events/) for upcoming sessions
-3. **Make Your First Contribution** - Start with documentation, questions, or sharing your experience
+### Project Support
+- **[Project Charter](charter.md)** - Understand project governance
+- **[Contributing Guidelines](contributing.md)** - Learn how to contribute effectively
+- **[Code of Conduct](code-of-conduct.md)** - Understand community expectations
 
-*This community is sponsored by the Cloud Security Alliance and operated under open-source principles. Every contribution helps make AI agent infrastructure more secure for everyone.*
+## Community Resources
+
+- **[GitHub Organization](https://github.com/ModelContextProtocol-Security)** - All project repositories
+- **[GitHub Discussions](https://github.com/orgs/ModelContextProtocol-Security/discussions)** - Community forum
+- **[Working Group Calendar](../events/)** - Upcoming meetings and events
+- **[Cloud Security Alliance](https://cloudsecurityalliance.org)** - Project sponsor

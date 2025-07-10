@@ -4,8 +4,8 @@ layout: default
 
 <div class="hero">
   <div class="hero-content">
-    <h1 class="hero-title">{{ page.title | default: site.title }}</h1>
-    <p class="hero-subtitle">{{ page.description | default: site.description }}</p>
+    <h1 class="hero-title">{{ site.title }}</h1>
+    <p class="hero-subtitle">{{ site.description }}</p>
     <div class="hero-actions">
       <a href="/why/" class="btn btn-primary">Get Started</a>
       <a href="https://github.com/orgs/ModelContextProtocol-Security/discussions" class="btn btn-outline">Join Discussion</a>
@@ -13,18 +13,14 @@ layout: default
   </div>
 </div>
 
-<div class="page-content">
-  <div class="wrapper">
-    {{ content }}
-  </div>
-</div>
+{{ content }}
 
 <style>
 .hero {
   background: linear-gradient(135deg, #1f4e79 0%, #0066cc 100%);
   color: white;
-  padding: 4rem 0;
-  margin-bottom: 3rem;
+  padding: 4rem 2rem;
+  margin: -1rem -1rem 3rem -1rem;
   text-align: center;
 }
 
@@ -84,7 +80,7 @@ layout: default
 
 @media (max-width: 768px) {
   .hero {
-    padding: 2rem 0;
+    padding: 2rem 1rem;
   }
   
   .hero-title {

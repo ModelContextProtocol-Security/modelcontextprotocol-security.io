@@ -1,132 +1,117 @@
-# Blog & Updates
+---
+title: "Blog"
+nav_order: 9
+has_children: true
+---
 
-Stay up to date with the latest developments in Model Context Protocol security, working group activities, and community contributions. This section features thought leadership posts, meeting recaps, security research, and practical insights from the MCP security community.
+# Blog
 
-## Community Discussion
-
-**[Share Your Insights](https://github.com/orgs/ModelContextProtocol-Security/discussions)** - Join ongoing discussions about MCP security trends, research findings, and implementation experiences. Your insights help shape the future of AI agent security.
+Security insights, community updates, and technical articles from the MCP Security project. Stay informed about the latest developments in MCP security.
 
 ## Latest Posts
 
-*Our blog features community-driven content covering the latest in MCP security research, implementation guidance, and industry developments. Check back regularly for new posts.*
+### Recent Articles
+- **Security Best Practices** - Latest security recommendations and guidelines
+- **Community Updates** - Project news and community highlights
+- **Technical Deep Dives** - In-depth analysis of security topics
+- **Tool Announcements** - New security tools and automation releases
 
-## Blog Categories
+### Featured Series
+- **MCP Security Fundamentals** - Educational series on core security concepts
+- **Implementation Guides** - Step-by-step implementation tutorials
+- **Case Studies** - Real-world security implementation examples
+- **Research Updates** - Latest security research and vulnerability findings
 
-### Security Research & Analysis
-- **Vulnerability Research** - Deep dives into newly discovered security issues
-- **Threat Intelligence** - Analysis of emerging attack patterns and trends
-- **Tool Development** - Introduction of new security utilities and methodologies
-- **Academic Research** - Summaries of formal security research and publications
+## Content Categories
 
-### Community Insights
-- **Working Group Updates** - Summaries of bi-weekly meetings and decisions
-- **Contributor Spotlights** - Recognition of outstanding community contributions
-- **Project Milestones** - Major announcements and development updates
-- **Event Recaps** - Summaries of workshops, conferences, and training sessions
+### Technical Articles
+- **Security Architecture** - Design patterns and architectural guidance
+- **Implementation Guides** - Practical how-to articles and tutorials
+- **Tool Reviews** - Analysis of security tools and utilities
+- **Performance Analysis** - Security and performance optimization
 
-### Practical Implementation
-- **Case Studies** - Real-world security implementation experiences
-- **Deployment Patterns** - Detailed analysis of successful security architectures
-- **Lessons Learned** - What worked, what didn't, and why
-- **Best Practices** - Practical guidance based on field experience
+### Community Content
+- **Project Updates** - News and announcements from the project
+- **Community Highlights** - Featuring community contributions and achievements
+- **Event Reports** - Summaries of conferences, workshops, and meetings
+- **Contributor Spotlights** - Interviews with community members
 
-### Industry & Standards
-- **Regulatory Updates** - Changes in compliance requirements affecting MCP deployments
-- **Industry Trends** - Analysis of MCP adoption and security implications
-- **Standards Development** - Updates on security standards and frameworks
-- **Vendor Analysis** - Security assessments of MCP server implementations
+### Research & Analysis
+- **Vulnerability Analysis** - Deep dives into security vulnerabilities
+- **Threat Intelligence** - Security threat analysis and trends
+- **Industry Trends** - Analysis of security trends in AI and infrastructure
+- **Compliance & Regulatory** - Updates on relevant regulations and standards
 
 ## Contributing to the Blog
 
-### We Welcome Guest Posts!
+### Article Types
+- **Technical Tutorials** - How-to guides and implementation instructions
+- **Case Studies** - Real-world implementation experiences
+- **Research Reports** - Security research findings and analysis
+- **Opinion Pieces** - Thoughtful commentary on security topics
+- **Community Stories** - Experiences and insights from community members
 
-The MCP security community thrives on shared knowledge and diverse perspectives. We encourage contributions from:
+### Submission Process
+1. **Propose Topic** - Submit article proposal in GitHub Discussions
+2. **Get Approval** - Receive feedback and approval from editorial team
+3. **Write Article** - Create article following style guidelines
+4. **Review Process** - Technical and editorial review
+5. **Publication** - Article published and promoted to community
 
-#### Security Professionals
-- **Research Findings** - Share your security research and analysis
-- **Implementation Guides** - Document your deployment and hardening experiences
-- **Tool Reviews** - Evaluate security tools and utilities for MCP deployments
-- **Methodology Improvements** - Suggest enhancements to our security frameworks
+### Editorial Guidelines
+- **Technical Accuracy** - Ensure all technical content is accurate and tested
+- **Clear Writing** - Use clear, accessible language for target audience
+- **Practical Value** - Provide actionable insights and practical guidance
+- **Community Focus** - Align with community interests and needs
+- **Professional Standards** - Maintain high standards of technical writing
 
-#### Developers
-- **Security Development** - Share how you build security into MCP servers
-- **Code Review Insights** - Lessons learned from auditing MCP implementations
-- **Testing Strategies** - Approaches to security testing and validation
-- **Open Source Contributions** - How you're helping secure the MCP ecosystem
+## Article Formats
 
-#### Organizations & Enterprises
-- **Deployment Experiences** - Large-scale MCP security implementation stories
-- **Policy Development** - How you've created governance around MCP security
-- **Training Programs** - Educational initiatives for MCP security awareness
-- **Vendor Management** - Approaches to evaluating and managing MCP server security
+### Technical Tutorials
+- **Introduction** - Problem statement and learning objectives
+- **Prerequisites** - Required knowledge and setup
+- **Step-by-Step** - Detailed implementation instructions
+- **Examples** - Working code samples and configurations
+- **Conclusion** - Summary and next steps
 
-### Contribution Process
+### Case Studies
+- **Background** - Organization and challenge description
+- **Solution** - Implemented security approach
+- **Results** - Outcomes and lessons learned
+- **Recommendations** - Guidance for similar situations
 
-1. **[Propose Your Topic](https://github.com/orgs/ModelContextProtocol-Security/discussions)** - Share your blog post idea in our community discussions
-2. **Get Community Input** - Receive feedback and suggestions from other contributors
-3. **Draft Your Post** - Write your content following our style guidelines
-4. **Submit for Review** - Email your draft to wg-mcp-security@cloudsecurityalliance.org
-5. **Collaborate on Editing** - Work with our editorial team to refine your post
-6. **Publication** - Your post goes live and gets shared with the community
+### Research Articles
+- **Abstract** - Brief summary of research findings
+- **Methodology** - Research approach and methods
+- **Findings** - Detailed results and analysis
+- **Implications** - Impact on MCP security practices
+- **Future Work** - Suggested areas for further research
 
-### Content Guidelines
+## Community Engagement
 
-#### Technical Accuracy
-- **Verify All Claims** - Ensure technical information is accurate and up-to-date
-- **Provide Evidence** - Include screenshots, code samples, or test results where appropriate
-- **Cite Sources** - Reference original research, tools, or methodologies
-- **Test Examples** - Validate that code examples and configurations work correctly
+### Reader Interaction
+- **Comments** - Engage with readers through GitHub Discussions
+- **Questions** - Answer reader questions and provide clarification
+- **Follow-up** - Create follow-up articles based on reader feedback
+- **Updates** - Keep articles current with latest developments
 
-#### Community Value
-- **Actionable Insights** - Focus on information that readers can apply immediately
-- **Practical Examples** - Include real-world scenarios and implementations
-- **Balanced Perspective** - Present both benefits and limitations of approaches
-- **Inclusive Language** - Make content accessible to diverse skill levels
+### Social Sharing
+- **Community Forums** - Share articles in relevant security communities
+- **Professional Networks** - Share on LinkedIn and professional platforms
+- **Technical Forums** - Post in relevant technical discussion groups
+- **Conferences** - Present article content at security conferences
 
-#### Original Content
-- **Unique Perspective** - Offer fresh insights or novel approaches
-- **Personal Experience** - Share your own journey and lessons learned
-- **Community Benefit** - Contribute to the collective knowledge base
-- **Proper Attribution** - Give credit to tools, techniques, and ideas from others
+## RSS Feed
 
-## Community Recognition
+Stay updated with the latest blog posts:
+- **RSS Feed** - Subscribe to automatic updates
+- **Email Notifications** - Get notified of new articles
+- **GitHub Notifications** - Watch the repository for updates
+- **Community Channels** - Follow announcements in GitHub Discussions
 
-### Featured Contributors
-We recognize valuable blog contributors through:
-- **Author Spotlights** - Featured profiles of regular contributors
-- **Speaking Opportunities** - Invitations to present at conferences and events
-- **Advisory Roles** - Opportunities to help shape our editorial direction
-- **Professional Development** - Networking with other security professionals
+## Community Resources
 
-### Content Promotion
-Quality blog posts receive:
-- **Social Media Promotion** - Shared across our community channels
-- **Newsletter Inclusion** - Featured in our community updates
-- **Discussion Facilitation** - Dedicated forum threads for community feedback
-- **Conference Presentations** - Opportunities to present your work at events
-
-## Subscribe to Updates
-
-### Stay Informed
-- **RSS Feed** - Subscribe to our blog feed for automatic updates
-- **Email Newsletter** - Join our mailing list for curated content summaries
-- **GitHub Discussions** - Follow our community discussions for real-time updates
-- **Social Media** - Follow us for announcements and featured content
-
-### Engagement Opportunities
-- **Comment on Posts** - Share your thoughts and experiences in our discussions
-- **Suggest Topics** - Propose blog post ideas the community would find valuable
-- **Share Your Story** - Tell us about your MCP security journey
-- **Amplify Content** - Help spread valuable insights to your networks
-
-## Topic Suggestions
-
-Looking for blog post inspiration? The community is interested in:
-- **Zero-Trust MCP Architecture** - Implementing zero-trust principles with MCP
-- **AI Agent Security Patterns** - Broader security considerations for autonomous agents
-- **Compliance Frameworks** - Mapping MCP security to regulatory requirements
-- **Incident Response** - Handling security incidents in MCP environments
-- **Supply Chain Security** - Securing the MCP server ecosystem
-- **Privacy Engineering** - Protecting sensitive data in MCP deployments
-
-*Ready to share your MCP security expertise? Start by joining our [community discussions](https://github.com/orgs/ModelContextProtocol-Security/discussions) and proposing your blog post idea!*
+- **[GitHub Discussions](https://github.com/orgs/ModelContextProtocol-Security/discussions)** - Discuss blog articles
+- **[Working Group Meetings](../events/)** - Present article ideas
+- **[Community Guidelines](../community/)** - How to contribute blog content
+- **[Editorial Team](mailto:blog@modelcontextprotocol-security.io)** - Contact for blog submissions

@@ -1,145 +1,98 @@
+---
+title: "Tools & Scripts"
+nav_order: 6
+has_children: true
+---
+
 # Tools & Scripts
 
-This section provides open-source security tools, utilities, and automation scripts developed by the MCP security community. These tools help implement the security framework, automate auditing processes, and streamline secure MCP deployments.
-
-## Community Discussion
-
-**[Tool Development Discussions](https://github.com/orgs/ModelContextProtocol-Security/discussions)** - Share your security tools, request new utilities, and collaborate on tool development with other community members.
+Security automation tools, utilities, and scripts for MCP security operations. These tools help implement and maintain security controls for MCP infrastructure.
 
 ## Available Tools
 
-*Our community is actively developing security tools and utilities. Check back regularly for new releases and updates.*
+### Security Automation
+- **Configuration Management** - Scripts for secure MCP server configuration
+- **Monitoring Tools** - Automated security monitoring and alerting
+- **Backup Scripts** - Automated backup and recovery procedures
+- **Update Automation** - Secure update and patch management
 
-### Tool Categories
+### Network Security
+- **Traffic Analysis** - Network traffic monitoring and analysis tools
+- **Firewall Management** - Automated firewall configuration and management
+- **SSL/TLS Tools** - Certificate management and validation utilities
+- **API Gateway Tools** - API security and traffic mediation scripts
 
-#### Security Auditing
-- **MCP Inspector** - Automated vulnerability scanning (Coming Soon)
-- **Configuration Validators** - Scripts to verify secure configurations
-- **Dependency Analyzers** - Tools to assess supply chain security
-- **Compliance Checkers** - Utilities to verify adherence to security best practices
+### Container Security
+- **Container Hardening** - Docker and container security automation
+- **Image Scanning** - Container image vulnerability scanning
+- **Runtime Security** - Container runtime security monitoring
+- **Orchestration Tools** - Kubernetes and container orchestration security
 
-#### Deployment Automation
-- **Secure Deployment Scripts** - Automated setup following security best practices
-- **Container Security Tools** - Docker security scanning and hardening utilities
-- **Infrastructure as Code** - Terraform and CloudFormation templates
-- **CI/CD Pipeline Integration** - Security checks for development workflows
+### Compliance & Auditing
+- **Compliance Checks** - Automated compliance validation scripts
+- **Security Scanning** - Vulnerability scanning and assessment tools
+- **Audit Automation** - Automated security audit procedures
+- **Reporting Tools** - Security reporting and dashboard automation
 
-#### Monitoring & Observability
-- **Security Dashboards** - Grafana dashboards for MCP security metrics
-- **Log Analysis Tools** - Scripts for analyzing MCP server logs
-- **Alert Configurations** - Monitoring rules for security events
-- **Incident Response Tools** - Utilities for security incident management
+## Tool Categories
 
-#### Policy & Governance
-- **Policy Templates** - OPA and Cedar policy examples
-- **Risk Assessment Tools** - Automated risk evaluation utilities
-- **Compliance Mapping** - Tools to map security controls to frameworks
-- **Documentation Generators** - Automated security documentation tools
+### By Purpose
+- **Hardening** - Security implementation and configuration
+- **Monitoring** - Ongoing security monitoring and alerting
+- **Testing** - Security testing and validation
+- **Incident Response** - Security incident response automation
+
+### By Environment
+- **Development** - Security tools for development environments
+- **Staging** - Pre-production security testing tools
+- **Production** - Production security operations tools
+- **Multi-Environment** - Tools that work across all environments
+
+### By Skill Level
+- **Beginner** - Simple tools for getting started
+- **Intermediate** - Tools for experienced practitioners
+- **Advanced** - Complex tools for security experts
+- **Expert** - Specialized tools for security researchers
+
+## Using These Tools
+
+### Getting Started
+1. **Assess Needs** - Determine which tools match your requirements
+2. **Test First** - Try tools in non-production environments
+3. **Customize** - Adapt tools to your specific environment
+4. **Document** - Record tool configurations and procedures
+5. **Monitor** - Track tool effectiveness and performance
+
+### Best Practices
+- **Version Control** - Keep tools in version control systems
+- **Documentation** - Maintain clear documentation for each tool
+- **Testing** - Regularly test tools to ensure they work correctly
+- **Security** - Secure the tools themselves against compromise
+- **Updates** - Keep tools updated with latest security patches
 
 ## Contributing Tools
 
-### Share Your Security Tools
-The community benefits from shared tooling that solves common security challenges:
+### Tool Development
+- **Create New Tools** - Develop security automation tools
+- **Improve Existing** - Enhance current tool capabilities
+- **Share Scripts** - Contribute useful automation scripts
+- **Document Usage** - Provide clear usage instructions
 
-#### Types of Contributions
-- **Security Scanners** - Tools to identify vulnerabilities in MCP deployments
-- **Hardening Scripts** - Automation for implementing security best practices
-- **Monitoring Solutions** - Tools for detecting and responding to security events
-- **Testing Utilities** - Tools for validating security configurations and controls
-
-#### Development Guidelines
-- **Open Source License** - All tools should use OSI-approved licenses
-- **Documentation** - Comprehensive README with usage examples
-- **Security Review** - Tools undergo community security review
-- **Maintenance Commitment** - Contributors should be prepared to maintain their tools
-
-### How to Contribute
-
-1. **[Propose Your Tool](https://github.com/orgs/ModelContextProtocol-Security/discussions)** - Share your tool idea with the community
-2. **Gather Requirements** - Understand community needs and use cases
-3. **Develop and Test** - Build your tool following our development guidelines
-4. **Security Review** - Submit for community security review
-5. **Documentation** - Create comprehensive usage documentation
-6. **Publish and Maintain** - Make your tool available and commit to ongoing maintenance
-
-### Tool Request Process
-Community members can request new tools:
-- **[Request New Tools](https://github.com/orgs/ModelContextProtocol-Security/discussions)** - Describe the security challenge you need solved
-- **Specify Requirements** - Detail the functionality and use cases
-- **Collaborate on Design** - Work with developers on tool architecture
-- **Test and Validate** - Help test developed tools in real environments
-
-## Development Resources
-
-### Tool Development Framework
-- **Common Libraries** - Shared code for common security operations
-- **Testing Standards** - Test frameworks and validation procedures
-- **Documentation Templates** - Standardized format for tool documentation
-- **Security Review Process** - Guidelines for security evaluation of tools
-
-### Integration Standards
-- **API Compatibility** - Tools should work with standard MCP implementations
-- **Configuration Formats** - Standardized configuration file formats
-- **Logging Standards** - Consistent logging and metrics formats
-- **Error Handling** - Standardized error reporting and handling
-
-## Community Tool Ecosystem
-
-### Tool Maintenance
-- **Community Maintenance** - Shared responsibility for tool updates
-- **Security Updates** - Rapid response to security vulnerabilities in tools
-- **Version Management** - Clear versioning and compatibility guidelines
-- **Deprecation Process** - Managed retirement of obsolete tools
-
-### Quality Assurance
-- **Automated Testing** - CI/CD pipelines for tool validation
-- **Security Scanning** - Regular vulnerability assessment of tools
-- **Performance Testing** - Validation of tool performance and resource usage
-- **Compatibility Testing** - Verification across different MCP implementations
-
-## Getting Started
-
-### For Tool Users
-1. **Review Available Tools** - Understand what's currently available
-2. **Check Documentation** - Review usage guides and examples
-3. **Test in Development** - Validate tools in non-production environments
-4. **Provide Feedback** - Share your experience and suggest improvements
-5. **Contribute Use Cases** - Help document additional use cases and scenarios
-
-### For Tool Developers
-1. **[Join the Discussion](https://github.com/orgs/ModelContextProtocol-Security/discussions)** - Connect with the developer community
-2. **Review Existing Tools** - Understand current capabilities and gaps
-3. **Follow Guidelines** - Use our development standards and security practices
-4. **Collaborate** - Work with other developers on shared challenges
-5. **Share Your Expertise** - Contribute to the collective knowledge base
-
-## Tool Support
+### Testing & Validation
+- **Test Tools** - Validate tools in different environments
+- **Report Issues** - Identify and report tool bugs
+- **Suggest Features** - Recommend new tool capabilities
+- **Share Results** - Document tool effectiveness
 
 ### Community Support
-- **[GitHub Discussions](https://github.com/orgs/ModelContextProtocol-Security/discussions)** - Get help with tool usage and development
-- **Working Group Meetings** - Discuss tools in our bi-weekly meetings
-- **Peer Support** - Connect with other tool users and developers
-- **Bug Reports** - Community-driven issue tracking and resolution
+- **Answer Questions** - Help others use tools effectively
+- **Provide Examples** - Share real-world tool implementations
+- **Mentor Users** - Guide newcomers through tool usage
+- **Review Contributions** - Help validate new tool submissions
 
-### Professional Services
-- **Custom Tool Development** - Professional development of specialized tools
-- **Tool Integration** - Help integrating tools into existing workflows
-- **Training** - Workshops on tool usage and development
-- **Support Contracts** - Commercial support for critical tool deployments
+## Community Resources
 
-## Recognition
-
-### Tool Contributor Recognition
-- **Developer Spotlights** - Featured recognition for valuable tool contributions
-- **Conference Presentations** - Opportunities to present tools at security conferences
-- **Advisory Board** - Invitation to help guide tool development strategy
-- **Professional Development** - Networking and career advancement opportunities
-
-### Community Impact
-We track and celebrate:
-- **Tool Adoption** - Most widely used community tools
-- **Security Impact** - Tools that have significantly improved MCP security
-- **Innovation** - Novel approaches to common security challenges
-- **Community Contribution** - Active participation in tool development and maintenance
-
-*Ready to contribute to our tool ecosystem? Start by joining our [community discussions](https://github.com/orgs/ModelContextProtocol-Security/discussions) and sharing your security tool ideas or development expertise.*
+- **[GitHub Repository](https://github.com/ModelContextProtocol-Security/security-tools)** - Main tools repository
+- **[GitHub Discussions](https://github.com/orgs/ModelContextProtocol-Security/discussions)** - Tool discussions and questions
+- **[Working Group Meetings](../events/)** - Tool development sessions
+- **[Community Guidelines](../community/)** - How to contribute tools and scripts

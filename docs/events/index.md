@@ -1,147 +1,137 @@
-# Events & Workshops
+---
+title: "Events"
+nav_order: 10
+has_children: true
+---
 
-Join our community events, workshops, and working group meetings focused on Model Context Protocol security. All events are open to the community and designed to share knowledge, collaborate on solutions, and advance the state of MCP security.
+# Events
 
-## Community Discussion
-
-**[Event Planning & Feedback](https://github.com/orgs/ModelContextProtocol-Security/discussions)** - Help us plan future events, suggest topics, and share feedback on past sessions. Your input shapes our community event strategy.
+Workshops, webinars, and working group meetings for the MCP Security community. Join us to learn, collaborate, and contribute to MCP security.
 
 ## Upcoming Events
 
-*No events are currently scheduled. Check back soon or join our [community discussions](https://github.com/orgs/ModelContextProtocol-Security/discussions) to suggest topics and help plan future events.*
+### Regular Meetings
+- **Working Group Meetings** - Bi-weekly technical discussions and planning sessions
+- **Community Calls** - Monthly general community updates and discussions
+- **Security Reviews** - Quarterly peer review of security implementations
+- **Tool Demonstrations** - Monthly showcase of new security tools and techniques
+
+### Special Events
+- **Security Workshops** - Hands-on training and implementation sessions
+- **Research Presentations** - Sharing of security research findings
+- **Conference Talks** - MCP security presentations at industry conferences
+- **Hackathons** - Collaborative security tool development events
 
 ## Event Types
 
 ### Working Group Meetings
-**Format:** Virtual (Zoom)  
-**Frequency:** Bi-weekly Wednesdays, 10:00 AM PDT  
-**Purpose:** Technical discussions, project planning, and community coordination
+- **Security Framework** - Core security methodology development
+- **Tools & Automation** - Security tool development and automation
+- **Vulnerability Research** - Vulnerability discovery and disclosure
+- **Community & Education** - Community building and educational content
 
-**What We Cover:**
-- Review of current security research and findings
-- Discussion of emerging threats and vulnerabilities
-- Planning for documentation and tool development
-- Community feedback and input on project direction
+### Educational Events
+- **Introduction to MCP Security** - Getting started with MCP security
+- **Advanced Security Techniques** - Deep dive into advanced security controls
+- **Implementation Workshops** - Hands-on implementation training
+- **Best Practices Sessions** - Sharing of community best practices
 
-### Security Workshops
-**Format:** Virtual hands-on sessions  
-**Duration:** 60-90 minutes  
-**Purpose:** Practical training on MCP security implementation
+### Community Events
+- **New Member Orientation** - Welcome sessions for new community members
+- **Contributor Recognition** - Celebrating community contributions
+- **Project Updates** - Major project announcements and updates
+- **Feedback Sessions** - Community input on project direction
 
-**Topics Include:**
-- Hardening Your First MCP Server
-- Security Audit Techniques and Tools
-- Container Security for MCP Deployments
-- API Gateway Configuration and Monitoring
-- Payment Security for AI Agents
+## Event Calendar
 
-### Community Webinars
-**Format:** Virtual presentations and Q&A  
-**Duration:** 45-60 minutes  
-**Purpose:** Educational content and thought leadership
+### Monthly Schedule
+- **1st Tuesday** - Security Framework Working Group
+- **2nd Wednesday** - Tools & Automation Working Group
+- **3rd Thursday** - Community Call
+- **4th Friday** - Security Review Session
 
-**Focus Areas:**
-- Emerging threat landscape analysis
-- Case studies from real deployments
-- Industry best practices and standards
-- Research findings and vulnerability disclosures
+### Quarterly Events
+- **Q1** - Vulnerability Research Working Group
+- **Q2** - Community Workshop
+- **Q3** - Research Presentation Session
+- **Q4** - Year-end Community Meeting
 
-### Hackathons & Build Events
-**Format:** Virtual collaborative sessions  
-**Duration:** 4-8 hours  
-**Purpose:** Building security tools and solutions
+## Participating in Events
 
-**Activities:**
-- Developing security scanning tools
-- Creating documentation and tutorials
-- Building proof-of-concept security solutions
-- Collaborative problem-solving sessions
+### Joining Meetings
+- **Registration** - Register for events through GitHub Discussions
+- **Calendar** - Add events to your calendar
+- **Preparation** - Review agenda and prepare questions
+- **Participation** - Actively participate in discussions
 
-## How to Participate
+### Presenting at Events
+- **Proposal Process** - Submit presentation proposals
+- **Review Process** - Proposals reviewed by working group leaders
+- **Preparation Support** - Assistance with presentation development
+- **Recording** - Sessions recorded for community access
 
-### Join Our Events
-1. **[Monitor Discussions](https://github.com/orgs/ModelContextProtocol-Security/discussions)** - Event announcements are posted here first
-2. **Check This Page** - Event details and registration links are posted here
-3. **Subscribe to Updates** - Join our mailing list for event notifications
-4. **Follow Community Channels** - Stay connected through Slack and other channels
-
-### Contribute to Events
-- **Suggest Topics** - Propose workshop topics and presentation ideas
-- **Volunteer to Speak** - Share your expertise with the community
-- **Help with Planning** - Assist with event organization and logistics
-- **Provide Feedback** - Help us improve future events
-
-### Event Participation Guidelines
-- **Be Respectful** - Follow our [Code of Conduct](../community/code-of-conduct.md)
-- **Stay Engaged** - Participate actively in discussions and Q&A
-- **Share Knowledge** - Contribute your experience and insights
-- **Be Collaborative** - Work together to solve security challenges
-
-## Past Events
-
-*Past events will be documented here with recordings, slides, and key takeaways for the community.*
+### Hosting Events
+- **Event Planning** - Work with community team to plan events
+- **Technical Setup** - Assistance with technical event requirements
+- **Promotion** - Help promote events to community
+- **Follow-up** - Support with post-event activities
 
 ## Event Resources
 
-### Recordings & Materials
-- **Video Recordings** - Available for most events (where permitted)
-- **Presentation Slides** - Shared on our GitHub repository
-- **Workshop Materials** - Hands-on exercises and code examples
-- **Discussion Summaries** - Key points and action items from meetings
+### Technical Requirements
+- **Video Conferencing** - Zoom or similar platform
+- **Screen Sharing** - Ability to share screen for presentations
+- **Recording** - Sessions recorded for later viewing
+- **Chat** - Text chat for questions and discussion
 
-### Tools & Setup
-- **Virtual Platform** - Zoom for most events (links provided upon registration)
-- **Prerequisites** - Technical requirements posted with each event
-- **Setup Guides** - Help documentation for workshop preparation
-- **Technical Support** - Assistance during live events
+### Materials
+- **Agendas** - Pre-event agendas and materials
+- **Presentations** - Slides and presentation materials
+- **Recordings** - Post-event recordings and transcripts
+- **Action Items** - Follow-up tasks and assignments
 
-## Community Event Ideas
+### Support
+- **Technical Support** - Help with technical issues during events
+- **Content Support** - Assistance with presentation content
+- **Accessibility** - Accommodations for accessibility needs
+- **Time Zones** - Multiple time zones for global participation
 
-### Suggested Workshop Topics
-*Help us prioritize by discussing these in our [community forum](https://github.com/orgs/ModelContextProtocol-Security/discussions):*
+## Event Archives
 
-- **MCP Security Fundamentals** - Introduction for newcomers
-- **Advanced Threat Modeling** - Deep dive into MCP attack scenarios
-- **Enterprise Deployment Security** - Large-scale implementation challenges
-- **Compliance and Governance** - Regulatory considerations for MCP deployments
-- **Incident Response Planning** - Preparing for security incidents
-- **Supply Chain Security** - Securing the MCP ecosystem
+### Past Events
+- **2024 Events** - Archive of 2024 community events
+- **2023 Events** - Archive of 2023 community events
+- **Launch Events** - Project launch and early community events
 
-### Community-Requested Topics
-- **Zero-Trust Architecture** - Implementing zero-trust principles with MCP
-- **Privacy Engineering** - Protecting sensitive data in MCP deployments
-- **Container Security Deep Dive** - Advanced containerization techniques
-- **AI Agent Financial Security** - Securing agents with payment capabilities
-- **Cross-Platform Security** - Securing MCP across different environments
+### Recordings
+- **Working Group Meetings** - Recordings of working group sessions
+- **Community Calls** - Recordings of community discussions
+- **Workshops** - Training and workshop recordings
+- **Presentations** - Research and technical presentations
 
-## Event Planning
+### Materials
+- **Presentation Slides** - Slides from community presentations
+- **Workshop Materials** - Training materials and exercises
+- **Discussion Notes** - Meeting notes and action items
+- **Resource Lists** - Links and resources shared during events
 
-### Propose an Event
-1. **[Start a Discussion](https://github.com/orgs/ModelContextProtocol-Security/discussions)** - Share your event idea
-2. **Gather Community Input** - Get feedback and gauge interest
-3. **Develop Content** - Create agenda and learning objectives
-4. **Coordinate Logistics** - Work with organizers on scheduling and setup
-5. **Promote Event** - Help spread the word to relevant communities
+## Event Feedback
 
-### Volunteer to Organize
-We're always looking for community members to help with:
-- **Event Planning** - Developing agendas and coordinating logistics
-- **Technical Setup** - Managing virtual platforms and recordings
-- **Content Creation** - Developing workshop materials and presentations
-- **Community Outreach** - Promoting events to relevant audiences
+### Post-Event Surveys
+- **Content Quality** - Feedback on presentation content
+- **Technical Quality** - Feedback on technical delivery
+- **Engagement** - Assessment of community engagement
+- **Suggestions** - Ideas for future events
 
-## Recognition
+### Continuous Improvement
+- **Regular Reviews** - Regular review of event effectiveness
+- **Community Input** - Ongoing feedback from community members
+- **Format Evolution** - Adapting event formats based on feedback
+- **New Event Types** - Developing new types of community events
 
-### Speaker Recognition
-- **Community Appreciation** - Featured recognition for valuable presentations
-- **Professional Development** - Opportunities for career advancement
-- **Networking** - Connections with other security professionals
-- **Speaking Portfolio** - Addition to your professional speaking experience
+## Community Resources
 
-### Active Participant Recognition
-- **Contributor Badges** - Recognition for consistent participation
-- **Advisory Opportunities** - Input on future event planning
-- **Early Access** - Priority access to new resources and tools
-- **Community Leadership** - Opportunities to help guide the community
-
-*Want to contribute to our event program? Join our [community discussions](https://github.com/orgs/ModelContextProtocol-Security/discussions) and help us plan events that serve our community's needs.*
+- **[GitHub Discussions](https://github.com/orgs/ModelContextProtocol-Security/discussions)** - Event discussions and registration
+- **[Community Calendar](https://calendar.google.com/calendar)** - All community events
+- **[Working Group Information](../community/)** - Details about working groups
+- **[Event Guidelines](event-guidelines.md)** - Guidelines for hosting and participating in events
