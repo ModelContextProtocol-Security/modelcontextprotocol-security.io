@@ -50,7 +50,7 @@ This comprehensive resource provides security guidance, best practices, and tool
   <div class="card">
     <div class="card-title">⚠️ MCP Top 10 Security Risks</div>
     <div class="card-description">
-      The most critical security risks in MCP-enabled systems, from prompt injection to credential exposure.
+      Comprehensive Top 10 lists covering the most critical security risks in both MCP server and client implementations.
     </div>
     <a href="/top10/" class="card-link">Review Risks →</a>
   </div>
