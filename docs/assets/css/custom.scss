@@ -3,11 +3,11 @@
 
 /* Custom CSS overrides for CSA MCP Security site */
 
-/* Clean navigation styling with good contrast */
+/* Clean navigation styling with all blue text and very light grey gradient for selected items */
 
-/* Default navigation link styles */
+/* Default navigation link styles - all blue text */
 .nav-list-link {
-  color: #586069 !important;
+  color: #0066cc !important;
   background-color: transparent !important;
 }
 
@@ -16,36 +16,36 @@
   background-color: rgba(248, 249, 250, 0.8) !important;
 }
 
-/* Active/current page navigation styling - light blue background with white text */
+/* Active/current page navigation styling - very light grey gradient over blue text */
 .nav-list .nav-list-item .nav-list-link.active,
 .nav-list .nav-list-item .nav-list-link[aria-current="page"],
 .site-nav .nav-list .nav-list-item .nav-list-link.active,
 .site-nav .nav-list .nav-list-item .nav-list-link[aria-current="page"],
 .nav-list > .nav-list-item > .nav-list-link.active,
 .nav-list > .nav-list-item > .nav-list-link[aria-current="page"] {
-  background-color: #0066cc !important;
-  color: #ffffff !important;
-  font-weight: 500 !important;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.02)) !important;
+  color: #0066cc !important;
+  font-weight: 600 !important;
   border-radius: 3px !important;
 }
 
-/* Hover state for active items - darker blue */
+/* Hover state for active items - slightly more visible grey gradient */
 .nav-list .nav-list-item .nav-list-link.active:hover,
 .nav-list .nav-list-item .nav-list-link[aria-current="page"]:hover,
 .site-nav .nav-list .nav-list-item .nav-list-link.active:hover,
 .site-nav .nav-list .nav-list-item .nav-list-link[aria-current="page"]:hover,
 .nav-list > .nav-list-item > .nav-list-link.active:hover,
 .nav-list > .nav-list-item > .nav-list-link[aria-current="page"]:hover {
-  background-color: #1f4e79 !important;
-  color: #ffffff !important;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.03)) !important;
+  color: #1f4e79 !important;
 }
 
-/* Child navigation active states - lighter style */
+/* Child navigation active states - even lighter grey gradient */
 .nav-list .nav-list-item .nav-list .nav-list-item .nav-list-link.active,
 .nav-list .nav-list-item .nav-list .nav-list-item .nav-list-link[aria-current="page"] {
-  background-color: rgba(0, 102, 204, 0.1) !important;
-  color: #1f4e79 !important;
-  font-weight: 500 !important;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.03), rgba(0, 0, 0, 0.01)) !important;
+  color: #0066cc !important;
+  font-weight: 600 !important;
   border-left: 3px solid #0066cc !important;
   padding-left: 12px !important;
   border-radius: 0 3px 3px 0 !important;
@@ -53,6 +53,6 @@
 
 .nav-list .nav-list-item .nav-list .nav-list-item .nav-list-link.active:hover,
 .nav-list .nav-list-item .nav-list .nav-list-item .nav-list-link[aria-current="page"]:hover {
-  background-color: rgba(0, 102, 204, 0.15) !important;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.02)) !important;
   color: #1f4e79 !important;
 }
