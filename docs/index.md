@@ -56,6 +56,14 @@ This comprehensive resource provides security guidance, best practices, and tool
   </div>
 
   <div class="card">
+    <div class="card-title">🎯 Security TTPs</div>
+    <div class="card-description">
+      Comprehensive database of MCP security tactics, techniques, and procedures for defenders and developers.
+    </div>
+    <a href="/ttps/" class="card-link">Explore TTPs →</a>
+  </div>
+
+  <div class="card">
     <div class="card-title">🛡️ Hardening Guide</div>
     <div class="card-description">
       Comprehensive security framework covering provenance, isolation, traffic mediation, and more.
