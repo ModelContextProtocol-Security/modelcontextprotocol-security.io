@@ -18,6 +18,9 @@ This comprehensive resource provides security guidance, best practices, and tool
     <strong>New to MCP Security?</strong> Start with our <a href="/why/">Why MCP Security?</a> overview
   </div>
   <div class="quick-start-item">
+    <strong>Critical Risks?</strong> Review the <a href="/top10/">MCP Top 10 Security Risks</a>
+  </div>
+  <div class="quick-start-item">
     <strong>Ready to Secure?</strong> Jump to the <a href="/hardening/">Hardening Guide</a>
   </div>
   <div class="quick-start-item">
@@ -42,6 +45,14 @@ This comprehensive resource provides security guidance, best practices, and tool
       Executive brief on MCP security risks and value proposition. Perfect for decision-makers and security teams.
     </div>
     <a href="/why/" class="card-link">Learn More →</a>
+  </div>
+
+  <div class="card">
+    <div class="card-title">⚠️ MCP Top 10 Security Risks</div>
+    <div class="card-description">
+      The most critical security risks in MCP-enabled systems, from prompt injection to credential exposure.
+    </div>
+    <a href="/top10/" class="card-link">Review Risks →</a>
   </div>
 
   <div class="card">
