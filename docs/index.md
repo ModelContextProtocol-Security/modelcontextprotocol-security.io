@@ -64,6 +64,14 @@ This comprehensive resource provides security guidance, best practices, and tool
   </div>
 
   <div class="card">
+    <div class="card-title">🚨 Known Vulnerabilities</div>
+    <div class="card-description">
+      Documented security vulnerabilities in MCP implementations, including CVEs, security advisories, and incident reports.
+    </div>
+    <a href="/known-vulnerabilities/" class="card-link">View Vulnerabilities →</a>
+  </div>
+
+  <div class="card">
     <div class="card-title">🛡️ Hardening Guide</div>
     <div class="card-description">
       Comprehensive security framework covering provenance, isolation, traffic mediation, and more.

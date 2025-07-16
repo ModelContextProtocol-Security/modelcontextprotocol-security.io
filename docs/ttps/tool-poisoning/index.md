@@ -41,6 +41,12 @@ Attackers alter tool metadata to deceive both users and AI systems about tool ca
 ### [Tool Impersonation](tool-impersonation.md)
 Malicious tools that mimic legitimate services to steal data or credentials.
 
+### [Metadata Manipulation Attacks](metadata-manipulation-attacks.md)
+Manipulating tool metadata, descriptions, rankings, or other properties to bias agent selection toward malicious servers.
+
+### [Tool Squatting](tool-squatting.md)
+Registering tool names that closely resemble legitimate, popular tools to deceive users and agents through typosquatting.
+
 ## Impact Assessment
 
 - **Severity**: High to Critical
@@ -78,4 +84,4 @@ Malicious tools that mimic legitimate services to steal data or credentials.
 
 ---
 
-*This category contains 8 distinct attack techniques targeting the trust and integrity of MCP tools and their metadata.*
+*This category contains 10 distinct attack techniques targeting the trust and integrity of MCP tools and their metadata.*
