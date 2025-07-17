@@ -24,10 +24,16 @@ This comprehensive resource provides security guidance, best practices, and tool
     <strong>Ready to Secure?</strong> Jump to the <a href="/hardening/">Hardening Guide</a>
   </div>
   <div class="quick-start-item">
-    <strong>Operating MCP Servers?</strong> Check our <a href="/operations/">Operations Guide</a>
+    <strong>Building Secure MCP?</strong> Check our <a href="/build/">Build Security</a> guide
   </div>
   <div class="quick-start-item">
-    <strong>Need to Audit?</strong> Use our <a href="/audit/">MCP Audit Tools</a>
+    <strong>Operating MCP Servers?</strong> Check our <a href="/operational/">Operational Security</a>
+  </div>
+  <div class="quick-start-item">
+    <strong>Need to Audit?</strong> Use our <a href="/audit/">Audit & Compliance</a> tools
+  </div>
+  <div class="quick-start-item">
+    <strong>Security Updates?</strong> Check the latest <a href="/news/">Security News</a>
   </div>
   <div class="quick-start-item">
     <strong>Want to Contribute?</strong> Share your knowledge in our <a href="/community/">Community</a>
@@ -80,11 +86,19 @@ This comprehensive resource provides security guidance, best practices, and tool
   </div>
 
   <div class="card">
-    <div class="card-title">⚙️ Operations Guide</div>
+    <div class="card-title">🏗️ Build Security</div>
     <div class="card-description">
-      Production-ready guidance for securely operating MCP servers with containers, network controls, and monitoring.
+      Security guidance for developing secure MCP implementations, including authentication, isolation, and architecture patterns.
     </div>
-    <a href="/operations/" class="card-link">View Operations →</a>
+    <a href="/build/" class="card-link">View Build Security →</a>
+  </div>
+
+  <div class="card">
+    <div class="card-title">⚙️ Operational Security</div>
+    <div class="card-description">
+      Production-ready guidance for securely operating MCP systems with monitoring, registry security, and version management.
+    </div>
+    <a href="/operational/" class="card-link">View Operations →</a>
   </div>
 
   <div class="card">
@@ -96,9 +110,9 @@ This comprehensive resource provides security guidance, best practices, and tool
   </div>
 
   <div class="card">
-    <div class="card-title">🔎 Audit Tools</div>
+    <div class="card-title">🔎 Audit & Compliance</div>
     <div class="card-description">
-      Security evaluation tools, scorecards, and step-by-step audit procedures for MCP deployments.
+      Security auditing, compliance monitoring, and vulnerability tracking for comprehensive MCP security assessment.
     </div>
     <a href="/audit/" class="card-link">Start Auditing →</a>
   </div>
@@ -109,6 +123,14 @@ This comprehensive resource provides security guidance, best practices, and tool
       Security automation tools, utilities, and scripts for MCP security operations.
     </div>
     <a href="/tools/" class="card-link">View Tools →</a>
+  </div>
+
+  <div class="card">
+    <div class="card-title">📰 Security News</div>
+    <div class="card-description">
+      Latest security research, protocol updates, and threat intelligence affecting MCP deployments.
+    </div>
+    <a href="/news/" class="card-link">View News →</a>
   </div>
 </div>
 
