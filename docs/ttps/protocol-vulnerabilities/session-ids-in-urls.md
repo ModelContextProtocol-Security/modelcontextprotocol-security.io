@@ -11,7 +11,6 @@ grand_parent: "MCP Security TTPs"
 
 **Category**: Protocol Vulnerabilities  
 **Severity**: Medium  
-**MITRE ATT&CK Mapping**: T1539 (Steal Web Session Cookie)
 
 ## Description
 

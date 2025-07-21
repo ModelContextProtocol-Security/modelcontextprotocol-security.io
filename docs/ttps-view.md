@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "MCP Security TTPs Matrix"
+title: "TTP Matrix View"
 permalink: /ttps-view/
 nav_order: 4
 ---
@@ -9,6 +9,11 @@ nav_order: 4
 
 # MCP Security TTPs Matrix
 
+<div class="matrix-navigation">
+  <a href="/ttps/" class="nav-link">← Back to Category View</a>
+  <span class="matrix-description">Interactive matrix showing all MCP security techniques</span>
+</div>
+
 <div class="matrix-container">
   <div class="techniques-grid">
     <!-- Prompt Injection Techniques -->
@@ -16,7 +21,7 @@ nav_order: 4
       <!-- Category Header Card -->
       <div class="category-header-card">
         <a href="/ttps/prompt-injection/" class="category-link">
-          <h3>🎯 Prompt Injection</h3>
+          <h3>Prompt Injection</h3>
           <span class="technique-count">7 techniques</span>
         </a>
       </div>
@@ -69,7 +74,7 @@ nav_order: 4
       <!-- Category Header Card -->
       <div class="category-header-card">
         <a href="/ttps/tool-poisoning/" class="category-link">
-          <h3>🛠️ Tool Poisoning</h3>
+          <h3>Tool Poisoning</h3>
           <span class="technique-count">8 techniques</span>
         </a>
       </div>
@@ -128,7 +133,7 @@ nav_order: 4
       <!-- Category Header Card -->
       <div class="category-header-card">
         <a href="/ttps/data-exfiltration/" class="category-link">
-          <h3>📊 Data Exfiltration</h3>
+          <h3>Data Exfiltration</h3>
           <span class="technique-count">6 techniques</span>
         </a>
       </div>
@@ -175,7 +180,7 @@ nav_order: 4
       <!-- Category Header Card -->
       <div class="category-header-card">
         <a href="/ttps/command-injection/" class="category-link">
-          <h3>💻 Command Injection</h3>
+          <h3>Command Injection</h3>
           <span class="technique-count">7 techniques</span>
         </a>
       </div>
@@ -228,7 +233,7 @@ nav_order: 4
       <!-- Category Header Card -->
       <div class="category-header-card">
         <a href="/ttps/authentication/" class="category-link">
-          <h3>🔐 Authentication</h3>
+          <h3>Authentication</h3>
           <span class="technique-count">8 techniques</span>
         </a>
       </div>
@@ -287,7 +292,7 @@ nav_order: 4
       <!-- Category Header Card -->
       <div class="category-header-card">
         <a href="/ttps/supply-chain/" class="category-link">
-          <h3>🔗 Supply Chain</h3>
+          <h3>Supply Chain</h3>
           <span class="technique-count">7 techniques</span>
         </a>
       </div>

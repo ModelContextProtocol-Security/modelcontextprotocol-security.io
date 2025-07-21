@@ -13,16 +13,32 @@ custom_css: /assets/css/ttp-cards.css
 
 A comprehensive database of security tactics, techniques, and procedures specific to Model Context Protocol (MCP) implementations. This resource provides detailed technical information about attack vectors, detection methods, and mitigation strategies for MCP security threats.
 
+## Viewing Options
+
+<div class="view-options">
+  <div class="view-option-card">
+    <h3>Category View</h3>
+    <p>Browse TTPs organized by security categories with detailed descriptions and guidance.</p>
+    <span class="current-view">You are here</span>
+  </div>
+  
+  <div class="view-option-card">
+    <h3>Matrix View</h3>
+    <p>Interactive matrix showing all techniques in a unified scrollable interface.</p>
+    <a href="/ttps-view/" class="view-link">Open Matrix View →</a>
+  </div>
+</div>
+
 ## About This Framework
 
-This TTP framework is designed to evolve into a MITRE ATT&CK-style resource specifically for MCP security. It organizes security threats by category and provides actionable intelligence for defenders, developers, and security professionals.
+This TTP framework is designed to evolve into a comprehensive resource specifically for MCP security. It organizes security threats by category and provides actionable intelligence for defenders, developers, and security professionals.
 
 ## TTP Categories
 
 <div class="ttp-categories">
   <div class="ttp-category">
     <div class="ttp-category-header">
-      <h3>🎯 Prompt Injection & Manipulation</h3>
+      <h3>Prompt Injection & Manipulation</h3>
       <span class="ttp-count">7 techniques</span>
     </div>
     <p class="ttp-description">
@@ -33,7 +49,7 @@ This TTP framework is designed to evolve into a MITRE ATT&CK-style resource spec
 
   <div class="ttp-category">
     <div class="ttp-category-header">
-      <h3>🛠️ Tool Poisoning & Metadata Attacks</h3>
+      <h3>Tool Poisoning & Metadata Attacks</h3>
       <span class="ttp-count">8 techniques</span>
     </div>
     <p class="ttp-description">
@@ -44,7 +60,7 @@ This TTP framework is designed to evolve into a MITRE ATT&CK-style resource spec
 
   <div class="ttp-category">
     <div class="ttp-category-header">
-      <h3>📊 Data Exfiltration & Credential Theft</h3>
+      <h3>Data Exfiltration & Credential Theft</h3>
       <span class="ttp-count">6 techniques</span>
     </div>
     <p class="ttp-description">
@@ -55,7 +71,7 @@ This TTP framework is designed to evolve into a MITRE ATT&CK-style resource spec
 
   <div class="ttp-category">
     <div class="ttp-category-header">
-      <h3>💻 Command & Code Injection</h3>
+      <h3>Command & Code Injection</h3>
       <span class="ttp-count">7 techniques</span>
     </div>
     <p class="ttp-description">
@@ -66,7 +82,7 @@ This TTP framework is designed to evolve into a MITRE ATT&CK-style resource spec
 
   <div class="ttp-category">
     <div class="ttp-category-header">
-      <h3>🔐 Authentication & Authorization</h3>
+      <h3>Authentication & Authorization</h3>
       <span class="ttp-count">8 techniques</span>
     </div>
     <p class="ttp-description">
@@ -77,7 +93,7 @@ This TTP framework is designed to evolve into a MITRE ATT&CK-style resource spec
 
   <div class="ttp-category">
     <div class="ttp-category-header">
-      <h3>🔗 Supply Chain & Dependencies</h3>
+      <h3>Supply Chain & Dependencies</h3>
       <span class="ttp-count">7 techniques</span>
     </div>
     <p class="ttp-description">
@@ -88,7 +104,7 @@ This TTP framework is designed to evolve into a MITRE ATT&CK-style resource spec
 
   <div class="ttp-category">
     <div class="ttp-category-header">
-      <h3>🎭 Context Manipulation</h3>
+      <h3>Context Manipulation</h3>
       <span class="ttp-count">5 techniques</span>
     </div>
     <p class="ttp-description">
@@ -99,7 +115,7 @@ This TTP framework is designed to evolve into a MITRE ATT&CK-style resource spec
 
   <div class="ttp-category">
     <div class="ttp-category-header">
-      <h3>🔌 Protocol Vulnerabilities</h3>
+      <h3>Protocol Vulnerabilities</h3>
       <span class="ttp-count">5 techniques</span>
     </div>
     <p class="ttp-description">
@@ -110,7 +126,7 @@ This TTP framework is designed to evolve into a MITRE ATT&CK-style resource spec
 
   <div class="ttp-category">
     <div class="ttp-category-header">
-      <h3>🛡️ Privilege & Access Control</h3>
+      <h3>Privilege & Access Control</h3>
       <span class="ttp-count">6 techniques</span>
     </div>
     <p class="ttp-description">
@@ -121,7 +137,7 @@ This TTP framework is designed to evolve into a MITRE ATT&CK-style resource spec
 
   <div class="ttp-category">
     <div class="ttp-category-header">
-      <h3>💰 Economic & Infrastructure Abuse</h3>
+      <h3>Economic & Infrastructure Abuse</h3>
       <span class="ttp-count">3 techniques</span>
     </div>
     <p class="ttp-description">
@@ -132,7 +148,7 @@ This TTP framework is designed to evolve into a MITRE ATT&CK-style resource spec
 
   <div class="ttp-category">
     <div class="ttp-category-header">
-      <h3>📊 Monitoring & Operational Security</h3>
+      <h3>Monitoring & Operational Security</h3>
       <span class="ttp-count">5 techniques</span>
     </div>
     <p class="ttp-description">
@@ -143,7 +159,7 @@ This TTP framework is designed to evolve into a MITRE ATT&CK-style resource spec
 
   <div class="ttp-category">
     <div class="ttp-category-header">
-      <h3>🤖 AI-Specific Vulnerabilities</h3>
+      <h3>AI-Specific Vulnerabilities</h3>
       <span class="ttp-count">4 techniques</span>
     </div>
     <p class="ttp-description">

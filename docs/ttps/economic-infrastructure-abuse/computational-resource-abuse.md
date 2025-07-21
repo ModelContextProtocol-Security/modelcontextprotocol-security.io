@@ -11,7 +11,6 @@ grand_parent: "MCP Security TTPs"
 
 **Category**: Economic & Infrastructure Abuse  
 **Severity**: High  
-**MITRE ATT&CK Mapping**: T1496 (Resource Hijacking)
 
 ## Description
 

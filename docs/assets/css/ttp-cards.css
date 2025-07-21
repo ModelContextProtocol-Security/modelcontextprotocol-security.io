@@ -1,4 +1,4 @@
-/* MCP Security TTP Cards - MITRE ATT&CK Style */
+/* MCP Security TTP Cards */
 .ttp-categories {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -62,8 +62,68 @@
   text-decoration: underline;
 }
 
+/* View Options */
+.view-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.view-option-card {
+  background: white;
+  border: 2px solid #e1e4e8;
+  border-radius: 8px;
+  padding: 1.5rem;
+  text-align: center;
+  position: relative;
+}
+
+.view-option-card h3 {
+  color: #1f4e79;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 0.75rem 0;
+}
+
+.view-option-card p {
+  color: #333333;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.current-view {
+  background: #e8f5e8;
+  color: #28a745;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.view-link {
+  background: #1f4e79;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-block;
+  transition: background-color 0.2s;
+}
+
+.view-link:hover {
+  background: #0066cc;
+  text-decoration: none;
+  color: white;
+}
+
 @media (max-width: 768px) {
   .ttp-categories {
+    grid-template-columns: 1fr;
+  }
+  
+  .view-options {
     grid-template-columns: 1fr;
   }
 }

@@ -1,4 +1,45 @@
-/* MCP Security TTPs Matrix View - MITRE ATT&CK Style */
+/* MCP Security TTPs Matrix View */
+
+/* Matrix Navigation */
+.matrix-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f8f9fa;
+  padding: 1rem;
+  border-radius: 6px;
+  margin: 1rem 0 2rem 0;
+  border: 1px solid #e1e4e8;
+}
+
+.nav-link {
+  color: #1f4e79;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.nav-link:hover {
+  background: white;
+  text-decoration: none;
+  color: #1f4e79;
+}
+
+.matrix-description {
+  color: #6c757d;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .matrix-navigation {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.5rem;
+  }
+}
 
 .matrix-container {
   width: 100%;

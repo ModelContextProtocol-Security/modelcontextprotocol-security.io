@@ -11,7 +11,6 @@ grand_parent: "MCP Security TTPs"
 
 **Category**: Monitoring & Operational Security  
 **Severity**: High  
-**MITRE ATT&CK Mapping**: T1070.002 (Indicator Removal on Host: Clear Linux or Mac System Logs)
 
 ## Description
 

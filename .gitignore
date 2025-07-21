@@ -1,0 +1,58 @@
+# Jekyll build artifacts
+docs/_site/
+docs/.jekyll-cache/
+docs/.jekyll-metadata
+docs/.sass-cache/
+
+# Dependency directories
+docs/node_modules/
+docs/vendor/
+docs/bundle/
+
+# Gemfile.lock (uncomment if not needed in production)
+# docs/Gemfile.lock
+
+# Local environment files
+docs/.env
+docs/.env.local
+docs/.env.*.local
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Ruby
+docs/.bundle/
+docs/vendor/bundle/
+docs/vendor/cache/
+docs/.ruby-version
+
+# Backup files
+*.bak
+*.backup
+*~

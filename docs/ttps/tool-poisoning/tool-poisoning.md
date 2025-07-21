@@ -11,7 +11,6 @@ grand_parent: "MCP Security TTPs"
 
 **Category**: Tool Poisoning & Metadata Attacks  
 **Severity**: High  
-**MITRE ATT&CK Mapping**: T1195 (Supply Chain Compromise)  
 
 ## Description
 

@@ -11,7 +11,6 @@ grand_parent: "MCP Security TTPs"
 
 **Category**: Prompt Injection & Manipulation  
 **Severity**: High  
-**MITRE ATT&CK Mapping**: T1204 (User Execution)
 
 ## Description
 

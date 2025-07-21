@@ -11,7 +11,6 @@ grand_parent: "MCP Security TTPs"
 
 **Category**: Authentication & Authorization  
 **Severity**: Medium  
-**MITRE ATT&CK Mapping**: T1562.006 (Impair Defenses: Indicator Blocking)
 
 ## Description
 

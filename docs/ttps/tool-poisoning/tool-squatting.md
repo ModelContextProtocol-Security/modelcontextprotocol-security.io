@@ -11,7 +11,6 @@ grand_parent: "MCP Security TTPs"
 
 **Category**: Tool Poisoning  
 **Severity**: High  
-**MITRE ATT&CK Mapping**: T1036.005 (Masquerading: Match Legitimate Name or Location)
 
 ## Description
 

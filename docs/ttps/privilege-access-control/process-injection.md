@@ -11,7 +11,6 @@ grand_parent: "MCP Security TTPs"
 
 **Category**: Privilege & Access Control  
 **Severity**: Critical  
-**MITRE ATT&CK Mapping**: T1055 (Process Injection)
 
 ## Description
 

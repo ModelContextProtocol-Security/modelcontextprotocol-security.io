@@ -11,7 +11,6 @@ grand_parent: "MCP Security TTPs"
 
 **Category**: Authentication & Authorization  
 **Severity**: High  
-**MITRE ATT&CK Mapping**: T1134 (Access Token Manipulation)
 
 ## Description
 

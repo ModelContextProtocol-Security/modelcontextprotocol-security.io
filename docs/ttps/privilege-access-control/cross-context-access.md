@@ -11,7 +11,6 @@ grand_parent: "MCP Security TTPs"
 
 **Category**: Privilege & Access Control  
 **Severity**: High  
-**MITRE ATT&CK Mapping**: T1021 (Remote Services)
 
 ## Description
 

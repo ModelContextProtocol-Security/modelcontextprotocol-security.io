@@ -11,7 +11,6 @@ grand_parent: "MCP Security TTPs"
 
 **Category**: Protocol Vulnerabilities  
 **Severity**: High  
-**MITRE ATT&CK Mapping**: T1040 (Network Sniffing)
 
 ## Description
 

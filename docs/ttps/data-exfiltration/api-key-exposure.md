@@ -11,7 +11,6 @@ grand_parent: "MCP Security TTPs"
 
 **Category**: Data Exfiltration & Credential Theft  
 **Severity**: High  
-**MITRE ATT&CK Mapping**: T1552 (Unsecured Credentials)
 
 ## Description
 

@@ -11,7 +11,6 @@ grand_parent: "MCP Security TTPs"
 
 **Category**: AI-Specific Vulnerabilities  
 **Severity**: High  
-**MITRE ATT&CK Mapping**: T1005 (Data from Local System)
 
 ## Description
 

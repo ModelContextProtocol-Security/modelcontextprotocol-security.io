@@ -11,7 +11,6 @@ grand_parent: "MCP Security TTPs"
 
 **Category**: Context Manipulation  
 **Severity**: High  
-**MITRE ATT&CK Mapping**: T1036 (Masquerading)
 
 ## Description
 

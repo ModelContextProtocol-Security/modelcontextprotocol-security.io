@@ -11,7 +11,6 @@ grand_parent: "MCP Security TTPs"
 
 **Category**: Context Manipulation  
 **Severity**: Medium  
-**MITRE ATT&CK Mapping**: T1041 (Exfiltration Over C2 Channel)
 
 ## Description
 

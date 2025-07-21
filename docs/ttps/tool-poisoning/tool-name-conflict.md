@@ -11,7 +11,6 @@ grand_parent: "MCP Security TTPs"
 
 **Category**: Tool Poisoning & Metadata Attacks  
 **Severity**: Medium  
-**MITRE ATT&CK Mapping**: T1036 (Masquerading)
 
 ## Description
 

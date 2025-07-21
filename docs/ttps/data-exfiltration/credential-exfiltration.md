@@ -11,7 +11,6 @@ grand_parent: "MCP Security TTPs"
 
 **Category**: Data Exfiltration & Credential Theft  
 **Severity**: Critical  
-**MITRE ATT&CK Mapping**: T1555 (Credentials from Password Stores)
 
 ## Description
 

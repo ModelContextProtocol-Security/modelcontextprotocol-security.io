@@ -11,7 +11,6 @@ grand_parent: "MCP Security TTPs"
 
 **Category**: Context Manipulation  
 **Severity**: Medium  
-**MITRE ATT&CK Mapping**: T1565 (Data Manipulation)
 
 ## Description
 

@@ -62,11 +62,14 @@ This comprehensive resource provides security guidance, best practices, and tool
   </div>
 
   <div class="card">
-    <div class="card-title">🎯 Security TTPs</div>
+    <div class="card-title">Security TTPs</div>
     <div class="card-description">
-      Comprehensive database of MCP security tactics, techniques, and procedures for defenders and developers.
+      Comprehensive database of MCP security tactics, techniques, and procedures with interactive matrix view.
     </div>
-    <a href="/ttps/" class="card-link">Explore TTPs →</a>
+    <div class="card-links">
+      <a href="/ttps/" class="card-link">Browse Categories →</a>
+      <a href="/ttps-view/" class="card-link-secondary">Matrix View →</a>
+    </div>
   </div>
 
   <div class="card">
@@ -254,6 +257,30 @@ We welcome contributions to strengthen AI agent infrastructure security:
   text-decoration: underline;
 }
 
+.card-links {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.card-link-secondary {
+  color: #6c757d;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid #d1d5da;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.card-link-secondary:hover {
+  color: #1f4e79;
+  background: #f8f9fa;
+  text-decoration: none;
+  border-color: #1f4e79;
+}
+
 @media (max-width: 768px) {
   .cards-container {
     grid-template-columns: 1fr;
@@ -261,6 +288,10 @@ We welcome contributions to strengthen AI agent infrastructure security:
   
   .quick-start {
     padding: 1.5rem;
+  }
+  
+  .card-links {
+    flex-direction: column;
   }
 }
 </style>

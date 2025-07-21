@@ -11,7 +11,6 @@ grand_parent: "MCP Security TTPs"
 
 **Category**: Prompt Injection & Manipulation  
 **Severity**: Medium  
-**MITRE ATT&CK Mapping**: T1055 (Process Injection)
 
 ## Description
 

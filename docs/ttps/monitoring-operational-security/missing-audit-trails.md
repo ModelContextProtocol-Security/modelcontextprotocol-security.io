@@ -11,7 +11,6 @@ grand_parent: "MCP Security TTPs"
 
 **Category**: Monitoring & Operational Security  
 **Severity**: Medium  
-**MITRE ATT&CK Mapping**: T1070 (Indicator Removal on Host)
 
 ## Description
 

@@ -11,7 +11,6 @@ grand_parent: "MCP Security TTPs"
 
 **Category**: Tool Poisoning  
 **Severity**: High  
-**MITRE ATT&CK Mapping**: T1565.001 (Data Manipulation: Stored Data Manipulation)
 
 ## Description
 

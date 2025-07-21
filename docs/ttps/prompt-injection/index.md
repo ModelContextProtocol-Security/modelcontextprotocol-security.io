@@ -21,7 +21,6 @@ Prompt injection attacks represent one of the most critical security threats to 
   <div class="technique-card">
     <div class="technique-header">
       <h3 class="technique-title">Direct Prompt Injection</h3>
-      <span class="technique-id">T1001</span>
     </div>
     <p class="technique-description">
       Malicious instructions embedded directly in user input to manipulate AI behavior and bypass security filters.
@@ -36,7 +35,6 @@ Prompt injection attacks represent one of the most critical security threats to 
   <div class="technique-card">
     <div class="technique-header">
       <h3 class="technique-title">Indirect Prompt Injection</h3>
-      <span class="technique-id">T1002</span>
     </div>
     <p class="technique-description">
       Malicious instructions embedded in external data sources that the AI processes, causing unintended actions.
@@ -51,7 +49,6 @@ Prompt injection attacks represent one of the most critical security threats to 
   <div class="technique-card">
     <div class="technique-header">
       <h3 class="technique-title">Tool Description Poisoning</h3>
-      <span class="technique-id">T1003</span>
     </div>
     <p class="technique-description">
       Attackers embed malicious instructions in MCP tool descriptions that are visible to the LLM but hidden from users.
@@ -66,7 +63,6 @@ Prompt injection attacks represent one of the most critical security threats to 
   <div class="technique-card">
     <div class="technique-header">
       <h3 class="technique-title">Context Shadowing</h3>
-      <span class="technique-id">T1004</span>
     </div>
     <p class="technique-description">
       Attackers manipulate context data to influence AI reasoning without direct prompt injection.
@@ -81,7 +77,6 @@ Prompt injection attacks represent one of the most critical security threats to 
   <div class="technique-card">
     <div class="technique-header">
       <h3 class="technique-title">Prompt-State Manipulation</h3>
-      <span class="technique-id">T1005</span>
     </div>
     <p class="technique-description">
       Manipulation of the AI's internal state through crafted prompts to alter behavior persistently.
@@ -96,7 +91,6 @@ Prompt injection attacks represent one of the most critical security threats to 
   <div class="technique-card">
     <div class="technique-header">
       <h3 class="technique-title">ANSI Escape Code Injection</h3>
-      <span class="technique-id">T1006</span>
     </div>
     <p class="technique-description">
       Using terminal escape codes to hide malicious instructions in tool descriptions.
@@ -111,7 +105,6 @@ Prompt injection attacks represent one of the most critical security threats to 
   <div class="technique-card">
     <div class="technique-header">
       <h3 class="technique-title">Hidden Instructions</h3>
-      <span class="technique-id">T1007</span>
     </div>
     <p class="technique-description">
       Embedding covert commands in seemingly innocent content that trigger unauthorized actions.

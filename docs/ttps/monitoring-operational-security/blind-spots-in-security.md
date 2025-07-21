@@ -11,7 +11,6 @@ grand_parent: "MCP Security TTPs"
 
 **Category**: Monitoring & Operational Security  
 **Severity**: High  
-**MITRE ATT&CK Mapping**: T1562.008 (Impair Defenses: Disable Cloud Logs)
 
 ## Description
 

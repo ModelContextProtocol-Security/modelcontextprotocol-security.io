@@ -11,7 +11,6 @@ grand_parent: "MCP Security TTPs"
 
 **Category**: Command & Code Injection  
 **Severity**: Critical  
-**MITRE ATT&CK Mapping**: T1059 (Command and Scripting Interpreter)
 
 ## Description
 
