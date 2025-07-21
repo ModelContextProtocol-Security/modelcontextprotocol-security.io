@@ -2,7 +2,7 @@
 layout: default
 title: "TTP Matrix View"
 permalink: /ttps-view/
-nav_order: 4
+nav_order: 3
 ---
 
 <link rel="stylesheet" href="{{ '/assets/css/matrix-view.css' | relative_url }}">

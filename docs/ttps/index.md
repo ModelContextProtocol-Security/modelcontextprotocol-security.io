@@ -2,7 +2,7 @@
 layout: default
 title: "MCP Security TTPs"
 permalink: /ttps/
-nav_order: 3
+nav_order: 4
 has_children: true
 custom_css: /assets/css/ttp-cards.css
 ---
