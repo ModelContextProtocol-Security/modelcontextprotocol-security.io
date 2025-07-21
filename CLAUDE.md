@@ -4,24 +4,32 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is the **Model Context Protocol Security** documentation site - a Cloud Security Alliance community project focused on security guidance for MCP deployments. The site provides comprehensive security hardening guides, operational best practices, and security tools for organizations using MCP servers and AI agents.
+This is the **Model Context Protocol Security** documentation site - a Cloud Security Alliance community project focused on security guidance for MCP deployments. The site provides comprehensive security hardening guides, operational best practices, security tools, threat intelligence, and vulnerability assessments for organizations using MCP servers and AI agents.
 
 ## Development Environment
 
-This is a Jekyll-based static site using the "Just the Docs" theme, hosted on GitHub Pages.
+This is a Jekyll-based static site using the "Just the Docs" theme, hosted on GitHub Pages at `https://modelcontextprotocol-security.github.io/modelcontextprotocol-security.io/`.
 
 ### Common Commands
 
 **Setup and Dependencies:**
 ```bash
 cd docs/
-./setup.sh          # Install Ruby gems and set up Jekyll
+./setup.sh          # Install Ruby gems and set up Jekyll environment
+./make-scripts-executable.sh  # Ensure all scripts are executable
 ```
 
 **Development Server:**
 ```bash
 cd docs/
 ./serve.sh          # Start development server at http://localhost:4000
+```
+
+**Maintenance and Cleanup:**
+```bash
+cd docs/
+./setup-cleanup.sh  # Clean up temporary files and reset environment
+./deploy-navigation-fix.sh  # Deploy navigation fixes for GitHub Pages
 ```
 
 **Manual Jekyll Commands:**
@@ -36,58 +44,172 @@ bundle exec jekyll build --verbose   # Build static site
 
 ### Repository Organization
 - `docs/` - Main Jekyll site directory (all content and configuration)
-- `docs/index.md` - Homepage with cards and quick start guide
-- `docs/_config.yml` - Jekyll configuration with CSA theme settings
-- `docs/Gemfile` - Ruby dependencies
-- `docs/setup.sh` - Automated setup script
-- `docs/serve.sh` - Development server script
+- `docs/index.md` - Homepage with feature cards and quick start guide
+- `docs/_config.yml` - Jekyll configuration with CSA theme settings and collections
+- `docs/Gemfile` - Ruby dependencies for Jekyll and plugins
+- `docs/_layouts/` - Custom Jekyll layouts
+- `docs/_includes/` - Reusable Jekyll components
+- `docs/_sass/` - Custom SCSS styling
+- `docs/assets/` - Static assets (images, CSS, JavaScript)
+
+### Scripts and Automation
+- `docs/setup.sh` - Automated environment setup and dependency installation
+- `docs/serve.sh` - Development server with live reload
+- `docs/make-scripts-executable.sh` - Script permission management
+- `docs/setup-cleanup.sh` - Environment cleanup and reset
+- `docs/deploy-navigation-fix.sh` - Navigation deployment fixes
 
 ### Content Organization
-The site is organized around security guidance for MCP deployments:
 
+The site is organized around comprehensive security guidance for MCP deployments:
+
+#### Core Security Sections
 - **Hardening Guide** (`docs/hardening/`) - 10-part comprehensive security framework
 - **Operations Guide** (`docs/operations/`) - Production deployment and operational security
-- **Reference Patterns** (`docs/patterns/`) - Architecture patterns and deployment templates
+- **Build Security** (`docs/build-security/`) - CI/CD pipeline security
+- **Configuration Management** (`docs/configuration/`) - Secure configuration practices
+- **Monitoring & Logging** (`docs/monitoring/`) - Security monitoring and incident response
+
+#### Threat Intelligence & Vulnerability Management
+- **TTPs (Tactics, Techniques, Procedures)** (`docs/ttps/`) - Comprehensive threat framework with categories:
+  - Initial Access (T1001-T1008)
+  - Execution (T2001-T2007) 
+  - Persistence (T3001-T3006)
+  - Privilege Escalation (T4001-T4005)
+  - Defense Evasion (T5001-T5008)
+  - Credential Access (T6001-T6006)
+  - Discovery (T7001-T7007)
+  - Lateral Movement (T8001-T8005)
+  - Collection (T9001-T9006)
+  - Command & Control (T10001-T10007)
+  - Exfiltration (T11001-T11005)
+  - Impact (T12001-T12006)
+- **Known Vulnerabilities** (`docs/vulnerabilities/`) - CVE database and vulnerability assessments
+- **Incident Response** (`docs/incident-response/`) - Security incident handling procedures
+
+#### Tools & Automation
 - **Audit Tools** (`docs/audit/`) - Security assessment tools and procedures
+- **Reference Patterns** (`docs/patterns/`) - Architecture patterns and deployment templates
+- **Automation** (`docs/automation/`) - Security automation and orchestration
+
+#### Support Sections
 - **Community Resources** (`docs/community/`) - Contribution guidelines and working group info
+- **Training** (`docs/training/`) - Security training materials and resources
+- **Compliance** (`docs/compliance/`) - Regulatory compliance guidance
+- **Best Practices** (`docs/best-practices/`) - General security best practices
+- **News** (`docs/news/`) - Security updates and announcements
 
 ### Navigation Structure
 - Each major section has an `index.md` file with `has_children: true`
-- Individual pages use `nav_order` for positioning
-- External links configured in `_config.yml` for GitHub and CSA
+- Individual pages use `nav_order` for positioning within sections
+- TTP entries use standardized naming: `T[category][number]-[technique-name].md`
+- External links configured in `_config.yml` for GitHub and CSA resources
 
 ## Theme and Styling
 
-- **Theme**: Just the Docs with custom CSA color scheme
-- **Custom CSS**: Inline styles in `docs/index.md` for homepage cards
-- **Color Scheme**: CSA-inspired (defined in `docs/_sass/color_schemes/csa.scss`)
-- **Logo**: Placeholder SVG created by setup script
+- **Theme**: Just the Docs with extensive customizations
+- **Custom Layouts**: Specialized layouts in `docs/_layouts/` for different content types
+- **Color Scheme**: CSA-inspired theme (defined in `docs/_sass/color_schemes/csa.scss`)
+- **Custom Components**: Reusable includes in `docs/_includes/` for consistent formatting
+- **Homepage Styling**: Custom CSS for feature cards and navigation elements
+- **Logo**: CSA and MCP Security branding elements
 
 ## Content Management
 
 ### Markdown Files
-- All content uses Jekyll front matter with `title`, `nav_order`, and `has_children` properties
-- Content is written in GitHub-flavored Markdown
+- All content uses Jekyll front matter with required properties:
+  - `title`: Page title
+  - `nav_order`: Position in navigation
+  - `has_children`: For parent pages with sub-sections
+  - `parent`: For child pages (references parent page title)
+- Content written in GitHub-flavored Markdown with Jekyll extensions
 - Cross-references use relative links (e.g., `[link](../operations/)`)
+- TTP entries follow standardized format with threat modeling details
 
 ### Site Configuration
-- Site metadata in `docs/_config.yml`
-- Navigation configured through Jekyll front matter
-- External links defined in `aux_links` section
+- Site metadata and navigation in `docs/_config.yml`
+- Jekyll collections configured for specialized content types
+- Plugin configuration for enhanced functionality
+- External resource links in `aux_links` section
+
+### Jekyll Collections
+The site uses Jekyll collections for specialized content organization:
+- Custom collections may be configured for TTPs, vulnerabilities, or other structured content
+- Collection configuration in `_config.yml` with output and permalink settings
 
 ## Development Workflow
 
-1. **Local Development**: Use `./serve.sh` for live reload during editing
-2. **Content Updates**: Edit Markdown files in respective directories
-3. **Testing**: Jekyll serves at `http://localhost:4000` with live reload
-4. **Deployment**: GitHub Pages automatically builds and deploys from `docs/` directory
+### Standard Development Process
+1. **Environment Setup**: Run `./setup.sh` to install dependencies and configure environment
+2. **Script Permissions**: Use `./make-scripts-executable.sh` to ensure proper script permissions
+3. **Local Development**: Start development server with `./serve.sh` for live reload
+4. **Content Creation**: Add or edit Markdown files in appropriate directories
+5. **Navigation Testing**: Verify navigation structure and cross-links work correctly
+6. **Build Testing**: Test site building with `bundle exec jekyll build --verbose`
+7. **Cleanup**: Use `./setup-cleanup.sh` to clean temporary files before commits
+8. **Deployment**: GitHub Pages automatically builds from `docs/` directory
+
+### Navigation Management
+- Navigation is automatically generated from Jekyll front matter
+- Use `deploy-navigation-fix.sh` if navigation issues occur on GitHub Pages
+- Ensure consistent `nav_order` values within each section
+
+### Content Guidelines
+- Follow established naming conventions for consistency
+- Use appropriate front matter for proper navigation
+- Include cross-references to related content
+- Maintain security-focused perspective in all content
+- Test all internal and external links before publishing
+
+## Key Files for Understanding the Codebase
+
+### Configuration Files
+- `docs/_config.yml` - Main Jekyll configuration, theme settings, navigation
+- `docs/Gemfile` - Ruby dependencies and Jekyll plugins
+- `docs/_sass/color_schemes/csa.scss` - Custom color scheme definition
+
+### Content Structure Files  
+- `docs/index.md` - Homepage with feature overview and navigation
+- `docs/*/index.md` - Section landing pages with child page listings
+- Major section indexes provide navigation to sub-content
+
+### Development Files
+- `docs/setup.sh` - Primary environment setup and dependency management
+- `docs/serve.sh` - Development server with optimal settings for content editing
+- `docs/make-scripts-executable.sh` - Script permission management
+- `docs/setup-cleanup.sh` - Environment cleanup and maintenance
+
+## AI Assistant Guidance
+
+### Working with This Codebase
+- **Always run scripts from the `docs/` directory**
+- **Use `./serve.sh` for local development** - includes live reload and optimal settings
+- **Follow Jekyll front matter requirements** - pages without proper front matter won't navigate correctly
+- **Maintain security focus** - all content should align with defensive security objectives
+- **Test navigation changes** - verify section organization and cross-links work properly
+
+### Content Creation Best Practices
+- Use existing content as templates for formatting and structure
+- Follow established naming conventions (especially for TTPs and vulnerabilities)
+- Include appropriate cross-references to related content
+- Ensure all external links are current and accessible
+- Test content locally before suggesting publication
+
+### Navigation and Structure
+- Each major section needs an `index.md` with `has_children: true`
+- Child pages must reference their parent with `parent: "Parent Page Title"`
+- Use sequential `nav_order` values within each section
+- External navigation links go in `_config.yml` under `aux_links`
 
 ## Security Context
 
-This is a defensive security project focused on:
-- Hardening MCP server deployments
-- Operational security best practices
-- Security audit tools and procedures
-- Community-driven security guidance
+This is a defensive security project exclusively focused on:
+- Hardening MCP server deployments against known threats
+- Operational security best practices for production environments  
+- Security audit tools and vulnerability assessment procedures
+- Threat intelligence and TTP analysis for defensive purposes
+- Community-driven security guidance and best practices
+- Compliance and regulatory security requirements
+- Incident response and security monitoring procedures
 
-The content focuses exclusively on defensive security measures and does not include offensive security tools or techniques.
+**Important**: The content focuses exclusively on defensive security measures and does not include offensive security tools, techniques, or procedures. All guidance is oriented toward protecting MCP deployments and improving security posture.

@@ -4,7 +4,10 @@ title: "MCP Security TTPs"
 permalink: /ttps/
 nav_order: 3
 has_children: true
+custom_css: /assets/css/ttp-cards.css
 ---
+
+<link rel="stylesheet" href="{{ '/assets/css/ttp-cards.css' | relative_url }}".
 
 # MCP Security Tactics, Techniques, and Procedures (TTPs)
 
@@ -113,7 +116,7 @@ This TTP framework is designed to evolve into a MITRE ATT&CK-style resource spec
     <p class="ttp-description">
       Escalating privileges and bypassing access controls in MCP deployments
     </p>
-    <a href="/ttps/privilege-access/" class="ttp-link">Explore Techniques →</a>
+    <a href="/ttps/privilege-access-control/" class="ttp-link">Explore Techniques →</a>
   </div>
 
   <div class="ttp-category">
@@ -124,7 +127,7 @@ This TTP framework is designed to evolve into a MITRE ATT&CK-style resource spec
     <p class="ttp-description">
       Abusing MCP systems for economic damage and infrastructure disruption
     </p>
-    <a href="/ttps/economic-abuse/" class="ttp-link">Explore Techniques →</a>
+    <a href="/ttps/economic-infrastructure-abuse/" class="ttp-link">Explore Techniques →</a>
   </div>
 
   <div class="ttp-category">
@@ -135,7 +138,7 @@ This TTP framework is designed to evolve into a MITRE ATT&CK-style resource spec
     <p class="ttp-description">
       Exploiting gaps in monitoring and operational security practices
     </p>
-    <a href="/ttps/monitoring-failures/" class="ttp-link">Explore Techniques →</a>
+    <a href="/ttps/monitoring-operational-security/" class="ttp-link">Explore Techniques →</a>
   </div>
 
   <div class="ttp-category">
@@ -146,7 +149,7 @@ This TTP framework is designed to evolve into a MITRE ATT&CK-style resource spec
     <p class="ttp-description">
       Vulnerabilities specific to AI reasoning and model behavior
     </p>
-    <a href="/ttps/ai-specific/" class="ttp-link">Explore Techniques →</a>
+    <a href="/ttps/ai-specific-vulnerabilities/" class="ttp-link">Explore Techniques →</a>
   </div>
 </div>
 

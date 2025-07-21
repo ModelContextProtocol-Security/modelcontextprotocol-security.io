@@ -1,0 +1,543 @@
+<!DOCTYPE html><html lang="en-US"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=Edge"><link rel="stylesheet" href="/assets/css/just-the-docs-default.css"><link rel="stylesheet" href="/assets/css/just-the-docs-head-nav.css" id="jtd-head-nav-stylesheet"><style id="jtd-nav-activation"> .site-nav > ul.nav-list:first-child > li > a, .site-nav > ul.nav-list:first-child > li > ul > li:not(:nth-child(14)) > a, .site-nav > ul.nav-list:first-child > li > ul > li > ul > li a { background-image: none; } .site-nav > ul.nav-list:not(:first-child) a, .site-nav li.external a { background-image: none; } .site-nav > ul.nav-list:first-child > li:nth-child(8) > ul > li:nth-child(14) > a { font-weight: 600; text-decoration: none; }.site-nav > ul.nav-list:first-child > li:nth-child(8) > button svg, .site-nav > ul.nav-list:first-child > li:nth-child(8) > ul > li:nth-child(14) > button svg { transform: rotate(-90deg); }.site-nav > ul.nav-list:first-child > li.nav-list-item:nth-child(8) > ul.nav-list, .site-nav > ul.nav-list:first-child > li.nav-list-item:nth-child(8) > ul.nav-list > li.nav-list-item:nth-child(14) > ul.nav-list { display: block; }</style><script src="/assets/js/vendor/lunr.min.js"></script> <script src="/assets/js/just-the-docs.js"></script><meta name="viewport" content="width=device-width, initial-scale=1"><title>TLS &amp; Proxy Management | Model Context Protocol Security</title><meta name="generator" content="Jekyll v3.9.5" /><meta property="og:title" content="TLS &amp; Proxy Management" /><meta property="og:locale" content="en_US" /><meta name="description" content="A Cloud Security Alliance Community Project - Secure Autonomy: Hardening Model-Context-Protocol Servers &amp; Agents" /><meta property="og:description" content="A Cloud Security Alliance Community Project - Secure Autonomy: Hardening Model-Context-Protocol Servers &amp; Agents" /><link rel="canonical" href="http://0.0.0.0:4000/operations/tls-proxy-management.html" /><meta property="og:url" content="http://0.0.0.0:4000/operations/tls-proxy-management.html" /><meta property="og:site_name" content="Model Context Protocol Security" /><meta property="og:type" content="website" /><meta name="twitter:card" content="summary" /><meta property="twitter:title" content="TLS &amp; Proxy Management" /> <script type="application/ld+json"> {"@context":"https://schema.org","@type":"WebPage","description":"A Cloud Security Alliance Community Project - Secure Autonomy: Hardening Model-Context-Protocol Servers &amp; Agents","headline":"TLS &amp; Proxy Management","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://0.0.0.0:4000/assets/images/mcp-security-logo.svg"}},"url":"http://0.0.0.0:4000/operations/tls-proxy-management.html"}</script><body> <a class="skip-to-main" href="#main-content">Skip to main content</a> <svg xmlns="http://www.w3.org/2000/svg" class="d-none"> <symbol id="svg-link" viewBox="0 0 24 24"><title>Link</title><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path> </svg> </symbol> <symbol id="svg-menu" viewBox="0 0 24 24"><title>Menu</title><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line> </svg> </symbol> <symbol id="svg-arrow-right" viewBox="0 0 24 24"><title>Expand</title><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline> </svg> </symbol> <symbol id="svg-external-link" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link"><title id="svg-external-link-title">(external link)</title><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line> </symbol> <symbol id="svg-doc" viewBox="0 0 24 24"><title>Document</title><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline> </svg> </symbol> <symbol id="svg-search" viewBox="0 0 24 24"><title>Search</title><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"> <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line> </svg> </symbol> <symbol id="svg-copy" viewBox="0 0 16 16"><title>Copy</title><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16"><path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/><path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/> </svg> </symbol> <symbol id="svg-copied" viewBox="0 0 16 16"><title>Copied</title><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check-fill" viewBox="0 0 16 16"><path d="M6.5 0A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3Zm3 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3Z"/><path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1A2.5 2.5 0 0 1 9.5 5h-3A2.5 2.5 0 0 1 4 2.5v-1Zm6.854 7.354-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708Z"/> </svg> </symbol> </svg><div class="side-bar"><div class="site-header" role="banner"> <a href="/" class="site-title lh-tight"><div class="site-logo" role="img" aria-label="Model Context Protocol Security"></div></a> <button id="menu-button" class="site-button btn-reset" aria-label="Toggle menu" aria-pressed="false"> <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><use xlink:href="#svg-menu"></use></svg> </button></div><nav aria-label="Main" id="site-nav" class="site-nav"><ul class="nav-list"><li class="nav-list-item"><a href="/" class="nav-list-link">Model Context Protocol Security</a><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Why MCP Security? category" aria-pressed="false"> <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/why/" class="nav-list-link">Why MCP Security?</a><ul class="nav-list"><li class="nav-list-item"><a href="/why/faq.html" class="nav-list-link">FAQ</a></ul><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in MCP Top 10 Security Risks category" aria-pressed="false"> <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/top10/" class="nav-list-link">MCP Top 10 Security Risks</a><ul class="nav-list"><li class="nav-list-item"><a href="/top10/server/" class="nav-list-link">MCP Server Top 10 Security Risks</a><li class="nav-list-item"><a href="/top10/client/" class="nav-list-link">MCP Client Top 10 Security Risks</a></ul><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in MCP Security TTPs category" aria-pressed="false"> <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/ttps/" class="nav-list-link">MCP Security TTPs</a><ul class="nav-list"><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Prompt Injection & Manipulation category" aria-pressed="false"> <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/ttps/prompt-injection/" class="nav-list-link">Prompt Injection & Manipulation</a><ul class="nav-list"><li class="nav-list-item"><a href="/ttps/prompt-injection/direct-prompt-injection/" class="nav-list-link">Direct Prompt Injection</a><li class="nav-list-item"><a href="/ttps/prompt-injection/indirect-prompt-injection/" class="nav-list-link">Indirect Prompt Injection</a><li class="nav-list-item"><a href="/ttps/prompt-injection/tool-description-poisoning/" class="nav-list-link">Tool Description Poisoning</a><li class="nav-list-item"><a href="/ttps/prompt-injection/context-shadowing/" class="nav-list-link">Context Shadowing</a><li class="nav-list-item"><a href="/ttps/prompt-injection/prompt-state-manipulation/" class="nav-list-link">Prompt-State Manipulation</a><li class="nav-list-item"><a href="/ttps/prompt-injection/ansi-escape-injection/" class="nav-list-link">ANSI Escape Code Injection</a><li class="nav-list-item"><a href="/ttps/prompt-injection/hidden-instructions/" class="nav-list-link">Hidden Instructions</a></ul><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Tool Poisoning & Metadata Attacks category" aria-pressed="false"> <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/ttps/tool-poisoning/" class="nav-list-link">Tool Poisoning & Metadata Attacks</a><ul class="nav-list"><li class="nav-list-item"><a href="/ttps/tool-poisoning/tool-poisoning/" class="nav-list-link">Tool Poisoning</a><li class="nav-list-item"><a href="/ttps/tool-poisoning/tool-mutation/" class="nav-list-link">Tool Mutation/Rug Pull Attacks</a><li class="nav-list-item"><a href="/ttps/tool-poisoning/tool-name-conflict/" class="nav-list-link">Tool Name Conflict</a><li class="nav-list-item"><a href="/ttps/tool-poisoning/tool-shadowing/" class="nav-list-link">Tool Shadowing/Name Collisions</a><li class="nav-list-item"><a href="/ttps/tool-poisoning/preference-manipulation/" class="nav-list-link">Preference Manipulation</a><li class="nav-list-item"><a href="/ttps/tool-poisoning/metadata-prompt-injection/" class="nav-list-link">Prompt Injection in Metadata</a><li class="nav-list-item"><a href="/ttps/tool-poisoning/metadata-manipulation/" class="nav-list-link">Metadata Manipulation</a><li class="nav-list-item"><a href="/ttps/tool-poisoning/tool-impersonation/" class="nav-list-link">Tool Impersonation</a></ul><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Data Exfiltration & Credential Theft category" aria-pressed="false"> <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/ttps/data-exfiltration/" class="nav-list-link">Data Exfiltration & Credential Theft</a><ul class="nav-list"><li class="nav-list-item"><a href="/ttps/data-exfiltration/data-exfiltration/" class="nav-list-link">Data Exfiltration</a><li class="nav-list-item"><a href="/ttps/data-exfiltration/credential-exfiltration/" class="nav-list-link">Credential Exfiltration</a><li class="nav-list-item"><a href="/ttps/data-exfiltration/token-theft/" class="nav-list-link">Token Theft/Overreach</a><li class="nav-list-item"><a href="/ttps/data-exfiltration/api-key-exposure/" class="nav-list-link">API Key Exposure</a><li class="nav-list-item"><a href="/ttps/data-exfiltration/conversation-history-exfiltration/" class="nav-list-link">Conversation History Exfiltration</a><li class="nav-list-item"><a href="/ttps/data-exfiltration/sensitive-information-disclosure/" class="nav-list-link">Sensitive Information Disclosure</a></ul><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Command & Code Injection category" aria-pressed="false"> <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/ttps/command-injection/" class="nav-list-link">Command & Code Injection</a><ul class="nav-list"><li class="nav-list-item"><a href="/ttps/command-injection/command-injection/" class="nav-list-link">Command Injection</a><li class="nav-list-item"><a href="/ttps/command-injection/sql-injection/" class="nav-list-link">SQL Injection</a><li class="nav-list-item"><a href="/ttps/command-injection/os-command-injection/" class="nav-list-link">OS Command Injection</a><li class="nav-list-item"><a href="/ttps/command-injection/code-injection/" class="nav-list-link">Code Injection</a><li class="nav-list-item"><a href="/ttps/command-injection/shell-command-execution/" class="nav-list-link">Shell Command Execution</a><li class="nav-list-item"><a href="/ttps/command-injection/output-prompt-injection/" class="nav-list-link">Output Prompt Injection</a><li class="nav-list-item"><a href="/ttps/command-injection/malicious-output-composition/" class="nav-list-link">Malicious Output Composition</a></ul><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Authentication & Authorization category" aria-pressed="false"> <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/ttps/authentication/" class="nav-list-link">Authentication & Authorization</a><ul class="nav-list"><li class="nav-list-item"><a href="/ttps/authentication/unauthenticated-access/" class="nav-list-link">Unauthenticated Access</a><li class="nav-list-item"><a href="/ttps/authentication/broken-authentication/" class="nav-list-link">Broken Authentication</a><li class="nav-list-item"><a href="/ttps/authentication/authorization-bypass/" class="nav-list-link">Authorization Bypass</a><li class="nav-list-item"><a href="/ttps/authentication/auth-bypass-rogue-server/" class="nav-list-link">Auth Bypass & Rogue Server Registration</a><li class="nav-list-item"><a href="/ttps/authentication/identity-subversion/" class="nav-list-link">Identity Subversion</a><li class="nav-list-item"><a href="/ttps/authentication/session-management-issues/" class="nav-list-link">Session Management Issues</a><li class="nav-list-item"><a href="/ttps/authentication/privilege-escalation/" class="nav-list-link">Privilege Escalation</a><li class="nav-list-item"><a href="/ttps/authentication/audit-bypass/" class="nav-list-link">Audit Bypass</a></ul><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Supply Chain & Dependencies category" aria-pressed="false"> <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/ttps/supply-chain/" class="nav-list-link">Supply Chain & Dependencies</a><ul class="nav-list"><li class="nav-list-item"><a href="/ttps/supply-chain/malicious-mcp-packages/" class="nav-list-link">Malicious MCP Packages</a><li class="nav-list-item"><a href="/ttps/supply-chain/supply-chain-attacks/" class="nav-list-link">Supply Chain Attacks</a><li class="nav-list-item"><a href="/ttps/supply-chain/dependency-vulnerabilities/" class="nav-list-link">Dependency Vulnerabilities</a><li class="nav-list-item"><a href="/ttps/supply-chain/installer-spoofing/" class="nav-list-link">Installer Spoofing</a><li class="nav-list-item"><a href="/ttps/supply-chain/typosquatting/" class="nav-list-link">Typosquatting</a><li class="nav-list-item"><a href="/ttps/supply-chain/drift-from-upstream/" class="nav-list-link">Drift from Upstream</a><li class="nav-list-item"><a href="/ttps/supply-chain/malicious-dependency-inclusion/" class="nav-list-link">Malicious Dependency Inclusion</a></ul><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Context Manipulation category" aria-pressed="false"> <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/ttps/context-manipulation/" class="nav-list-link">Context Manipulation</a><ul class="nav-list"><li class="nav-list-item"><a href="/ttps/context-manipulation/context-poisoning/" class="nav-list-link">Context Poisoning</a><li class="nav-list-item"><a href="/ttps/context-manipulation/context-spoofing/" class="nav-list-link">Context Spoofing</a><li class="nav-list-item"> <a href="/ttps/context-manipulation/context-manipulation/" class="nav-list-link"> ∞ </a><li class="nav-list-item"><a href="/ttps/context-manipulation/memory-references-issues/" class="nav-list-link">Memory References Issues</a><li class="nav-list-item"><a href="/ttps/context-manipulation/covert-channel-abuse/" class="nav-list-link">Covert Channel Abuse</a></ul><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Protocol Vulnerabilities category" aria-pressed="false"> <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/ttps/protocol-vulnerabilities/" class="nav-list-link">Protocol Vulnerabilities</a><ul class="nav-list"><li class="nav-list-item"><a href="/ttps/protocol-vulnerabilities/session-ids-in-urls/" class="nav-list-link">Session IDs in URLs</a><li class="nav-list-item"><a href="/ttps/protocol-vulnerabilities/lack-of-authentication-standards/" class="nav-list-link">Lack of Authentication Standards</a><li class="nav-list-item"><a href="/ttps/protocol-vulnerabilities/missing-integrity-controls/" class="nav-list-link">Missing Integrity Controls</a><li class="nav-list-item"><a href="/ttps/protocol-vulnerabilities/protocol-implementation-flaws/" class="nav-list-link">Protocol Implementation Flaws</a><li class="nav-list-item"><a href="/ttps/protocol-vulnerabilities/insecure-communication/" class="nav-list-link">Insecure Communication</a></ul><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Privilege & Access Control category" aria-pressed="false"> <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/ttps/privilege-access-control/" class="nav-list-link">Privilege & Access Control</a><ul class="nav-list"><li class="nav-list-item"><a href="/ttps/privilege-access-control/unauthorized-privilege-escalation/" class="nav-list-link">Unauthorized Privilege Escalation</a><li class="nav-list-item"><a href="/ttps/privilege-access-control/excessive-tool-permissions/" class="nav-list-link">Excessive Tool Permissions</a><li class="nav-list-item"><a href="/ttps/privilege-access-control/sandbox-escape/" class="nav-list-link">Sandbox Escape</a><li class="nav-list-item"><a href="/ttps/privilege-access-control/resource-access-control-bypass/" class="nav-list-link">Resource Access Control Bypass</a><li class="nav-list-item"><a href="/ttps/privilege-access-control/cross-context-access/" class="nav-list-link">Cross-Context Access</a><li class="nav-list-item"><a href="/ttps/privilege-access-control/process-injection/" class="nav-list-link">Process Injection</a></ul><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Economic & Infrastructure Abuse category" aria-pressed="false"> <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/ttps/economic-infrastructure-abuse/" class="nav-list-link">Economic & Infrastructure Abuse</a><ul class="nav-list"><li class="nav-list-item"><a href="/ttps/economic-infrastructure-abuse/resource-exhaustion/" class="nav-list-link">Resource Exhaustion</a><li class="nav-list-item"><a href="/ttps/economic-infrastructure-abuse/api-rate-limit-bypass/" class="nav-list-link">API Rate Limit Bypass</a><li class="nav-list-item"><a href="/ttps/economic-infrastructure-abuse/computational-resource-abuse/" class="nav-list-link">Computational Resource Abuse</a></ul><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Monitoring & Operational Security category" aria-pressed="false"> <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/ttps/monitoring-operational-security/" class="nav-list-link">Monitoring & Operational Security</a><ul class="nav-list"><li class="nav-list-item"><a href="/ttps/monitoring-operational-security/insufficient-logging/" class="nav-list-link">Insufficient Logging</a><li class="nav-list-item"><a href="/ttps/monitoring-operational-security/missing-audit-trails/" class="nav-list-link">Missing Audit Trails</a><li class="nav-list-item"><a href="/ttps/monitoring-operational-security/inadequate-monitoring/" class="nav-list-link">Inadequate Monitoring</a><li class="nav-list-item"><a href="/ttps/monitoring-operational-security/log-tampering/" class="nav-list-link">Log Tampering</a><li class="nav-list-item"><a href="/ttps/monitoring-operational-security/blind-spots-in-security/" class="nav-list-link">Blind Spots in Security</a></ul><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in AI-Specific Vulnerabilities category" aria-pressed="false"> <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/ttps/ai-specific-vulnerabilities/" class="nav-list-link">AI-Specific Vulnerabilities</a><ul class="nav-list"><li class="nav-list-item"><a href="/ttps/ai-specific-vulnerabilities/model-poisoning/" class="nav-list-link">Model Poisoning</a><li class="nav-list-item"><a href="/ttps/ai-specific-vulnerabilities/inference-attacks/" class="nav-list-link">Inference Attacks</a><li class="nav-list-item"><a href="/ttps/ai-specific-vulnerabilities/model-theft/" class="nav-list-link">Model Theft</a><li class="nav-list-item"><a href="/ttps/ai-specific-vulnerabilities/adversarial-attacks/" class="nav-list-link">Adversarial Attacks</a></ul></ul><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Hardening Guide category" aria-pressed="false"> <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/hardening/" class="nav-list-link">Hardening Guide</a><ul class="nav-list"><li class="nav-list-item"><a href="/hardening/provenance-selection.html" class="nav-list-link">Provenance & Selection</a><li class="nav-list-item"><a href="/hardening/code-integrity-auditing.html" class="nav-list-link">Code Integrity & Auditing</a><li class="nav-list-item"><a href="/hardening/runtime-isolation.html" class="nav-list-link">Runtime Isolation</a><li class="nav-list-item"><a href="/hardening/traffic-mediation.html" class="nav-list-link">Traffic Mediation</a><li class="nav-list-item"><a href="/hardening/secrets-management.html" class="nav-list-link">Secrets Management</a><li class="nav-list-item"><a href="/hardening/observability-logging.html" class="nav-list-link">Observability & Logging</a><li class="nav-list-item"><a href="/hardening/backup-versioning.html" class="nav-list-link">Backup & Versioning</a><li class="nav-list-item"><a href="/hardening/policy-guardrails.html" class="nav-list-link">Policy & Guardrails</a><li class="nav-list-item"><a href="/hardening/payments-wallets.html" class="nav-list-link">Payments & Wallets</a><li class="nav-list-item"><a href="/hardening/lifecycle-management.html" class="nav-list-link">Lifecycle Management</a><li class="nav-list-item"><a href="/hardening/checklist.html" class="nav-list-link">Security Checklist</a></ul><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Known Vulnerabilities category" aria-pressed="false"> <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/known-vulnerabilities/" class="nav-list-link">Known Vulnerabilities</a><ul class="nav-list"><li class="nav-list-item"><a href="/known-vulnerabilities/cve-2025-49596/" class="nav-list-link">CVE-2025-49596: RCE in MCP Inspector</a><li class="nav-list-item"><a href="/known-vulnerabilities/cve-2025-6514/" class="nav-list-link">CVE-2025-6514: Authentication Bypass and Session Hijacking</a></ul><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Build Security category" aria-pressed="false"> <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/build/" class="nav-list-link">Build Security</a><ul class="nav-list"><li class="nav-list-item"><a href="/build/oauth-security/" class="nav-list-link">OAuth Security Patterns</a><li class="nav-list-item"><a href="/build/authentication-strategies/" class="nav-list-link">Authentication Strategies</a><li class="nav-list-item"><a href="/build/runtime-isolation/" class="nav-list-link">Runtime Isolation</a><li class="nav-list-item"><a href="/build/architecture-patterns/" class="nav-list-link">Architecture Patterns</a><li class="nav-list-item"><a href="/build/tool-metadata-spec/" class="nav-list-link">Tool Metadata Specification</a></ul><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Operations Guide category" aria-pressed="false"> <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/operations/" class="nav-list-link">Operations Guide</a><ul class="nav-list"><li class="nav-list-item"><a href="/operations/container-operations.html" class="nav-list-link">Container Operations</a><li class="nav-list-item"><a href="/operations/network-controls.html" class="nav-list-link">Network Controls</a><li class="nav-list-item"><a href="/operations/remote-deployment.html" class="nav-list-link">Remote Deployment</a><li class="nav-list-item"><a href="/operations/monitoring-alerting.html" class="nav-list-link">Monitoring & Alerting</a><li class="nav-list-item"><a href="/operations/incident-response.html" class="nav-list-link">Incident Response</a><li class="nav-list-item"><a href="/operations/api-gateway-operations.html" class="nav-list-link">API Gateway Operations</a><li class="nav-list-item"><a href="/operations/change-management.html" class="nav-list-link">Change Management</a><li class="nav-list-item"><a href="/operations/forensics-investigation.html" class="nav-list-link">Forensics & Investigation</a><li class="nav-list-item"><a href="/operations/operational-maintenance.html" class="nav-list-link">Operational Maintenance</a><li class="nav-list-item"><a href="/operations/operational-runbooks.html" class="nav-list-link">Operational Runbooks</a><li class="nav-list-item"><a href="/operations/performance-security.html" class="nav-list-link">Performance & Security</a><li class="nav-list-item"><a href="/operations/security-troubleshooting.html" class="nav-list-link">Security Troubleshooting</a><li class="nav-list-item"><a href="/operations/security-workflows.html" class="nav-list-link">Security Workflows</a><li class="nav-list-item"><a href="/operations/tls-proxy-management.html" class="nav-list-link">TLS & Proxy Management</a><li class="nav-list-item"><a href="/operations/traffic-redirection.html" class="nav-list-link">Traffic Redirection</a></ul><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Operational Security category" aria-pressed="false"> <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/operational/" class="nav-list-link">Operational Security</a><ul class="nav-list"><li class="nav-list-item"><a href="/operational/runtime-monitoring/" class="nav-list-link">Runtime Monitoring</a><li class="nav-list-item"><a href="/operational/registry-security/" class="nav-list-link">Registry Security</a><li class="nav-list-item"><a href="/operational/version-management/" class="nav-list-link">Version Management</a></ul><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Reference Patterns category" aria-pressed="false"> <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/patterns/" class="nav-list-link">Reference Patterns</a><ul class="nav-list"><li class="nav-list-item"><a href="/patterns/enterprise-gateway.html" class="nav-list-link">Enterprise Gateway</a><li class="nav-list-item"><a href="/patterns/local-dev-container.html" class="nav-list-link">Local Dev Container</a><li class="nav-list-item"><a href="/patterns/llm-heaven-vps.html" class="nav-list-link">LLM Heaven VPS</a></ul><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Audit Tools category" aria-pressed="false"> <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/audit/" class="nav-list-link">Audit Tools</a><ul class="nav-list"><li class="nav-list-item"><a href="/audit/mcp-inspector.html" class="nav-list-link">MCP Inspector</a><li class="nav-list-item"><a href="/audit/tool-usage-auditing/" class="nav-list-link">Tool Usage Auditing</a><li class="nav-list-item"><a href="/audit/scorecard.html" class="nav-list-link">Selection Scorecard</a><li class="nav-list-item"><a href="/audit/vulnerability-tracking/" class="nav-list-link">Vulnerability Tracking</a><li class="nav-list-item"><a href="/audit/step-by-step-guide.html" class="nav-list-link">Step-by-Step Guide</a></ul><li class="nav-list-item"><a href="/tools/" class="nav-list-link">Tools & Scripts</a><li class="nav-list-item"><a href="/vulnerability-db/" class="nav-list-link">Vulnerability Database</a><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Community category" aria-pressed="false"> <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/community/" class="nav-list-link">Community</a><ul class="nav-list"><li class="nav-list-item"><a href="/community/charter.html" class="nav-list-link">Charter</a><li class="nav-list-item"><a href="/community/code-of-conduct.html" class="nav-list-link">Code of Conduct</a></ul><li class="nav-list-item"><a href="/blog/" class="nav-list-link">Blog</a><li class="nav-list-item"><a href="/news/" class="nav-list-link">Security News</a><li class="nav-list-item"><a href="/events/" class="nav-list-link">Events</a></ul><ul class="nav-list"><li class="nav-list-item external"> <a href="https://github.com/orgs/ModelContextProtocol-Security/discussions" class="nav-list-link external" > GitHub Discussions <svg viewBox="0 0 24 24" aria-labelledby="svg-external-link-title"><use xlink:href="#svg-external-link"></use></svg> </a><li class="nav-list-item external"> <a href="https://cloudsecurityalliance.org" class="nav-list-link external" > Cloud Security Alliance <svg viewBox="0 0 24 24" aria-labelledby="svg-external-link-title"><use xlink:href="#svg-external-link"></use></svg> </a></ul></nav><footer class="site-footer"> This site uses <a href="https://github.com/just-the-docs/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.</footer></div><div class="main" id="top"><div id="main-header" class="main-header"><div class="search" role="search"><div class="search-input-wrap"> <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search Model Context Protocol Security" aria-label="Search Model Context Protocol Security" autocomplete="off"> <label for="search-input" class="search-label"><svg viewBox="0 0 24 24" class="search-icon"><use xlink:href="#svg-search"></use></svg></label></div><div id="search-results" class="search-results"></div></div><nav aria-label="Auxiliary" class="aux-nav"><ul class="aux-nav-list"><li class="aux-nav-list-item"> <a href="https://github.com/ModelContextProtocol-Security/modelcontextprotocol-security.io" class="site-button" target="_blank" rel="noopener noreferrer" > GitHub Repository </a><li class="aux-nav-list-item"> <a href="https://github.com/orgs/ModelContextProtocol-Security/discussions" class="site-button" target="_blank" rel="noopener noreferrer" > Join Discussion </a></ul></nav></div><div class="main-content-wrap"><nav aria-label="Breadcrumb" class="breadcrumb-nav"><ol class="breadcrumb-nav-list"><li class="breadcrumb-nav-list-item"><a href="/operations/">Operations Guide</a><li class="breadcrumb-nav-list-item"><span>TLS & Proxy Management</span></ol></nav><div id="main-content" class="main-content"><main><h1 id="tls--proxy-management"> <a href="#tls--proxy-management" class="anchor-heading" aria-labelledby="tls--proxy-management"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> TLS &amp; Proxy Management</h1><p>This guide addresses the critical challenges of managing TLS traffic and API proxies in Model Context Protocol (MCP) environments. Since most MCP traffic is encrypted with TLS and uninspectable at the network level, <strong>proper TLS and proxy management is essential</strong> for maintaining security visibility and control.</p><h2 id="community-discussion"> <a href="#community-discussion" class="anchor-heading" aria-labelledby="community-discussion"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Community Discussion</h2><p>💬 <strong><a href="https://github.com/orgs/ModelContextProtocol-Security/discussions">TLS &amp; Proxy Management Discussions</a></strong> - Share your TLS management strategies, proxy configurations, and solutions to encrypted traffic challenges.</p><h2 id="the-tls-inspection-challenge"> <a href="#the-tls-inspection-challenge" class="anchor-heading" aria-labelledby="the-tls-inspection-challenge"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> The TLS Inspection Challenge</h2><h3 id="why-tls-makes-mcp-security-difficult"> <a href="#why-tls-makes-mcp-security-difficult" class="anchor-heading" aria-labelledby="why-tls-makes-mcp-security-difficult"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Why TLS Makes MCP Security Difficult</h3><p><strong>Most MCP traffic is encrypted and uninspectable:</strong></p><ul><li><strong>HTTPS Everywhere</strong> - All modern APIs use HTTPS, making content inspection impossible<li><strong>End-to-End Encryption</strong> - TLS encrypts the entire HTTP payload, including headers and body<li><strong>Network Security Blindness</strong> - Traditional firewalls and IDS/IPS cannot see encrypted content<li><strong>Compliance Gaps</strong> - Regulatory requirements for data inspection cannot be met at network level</ul><h3 id="the-api-proxy-solution"> <a href="#the-api-proxy-solution" class="anchor-heading" aria-labelledby="the-api-proxy-solution"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> The API Proxy Solution</h3><p><strong>API proxies provide the only practical solution for TLS traffic inspection:</strong></p><ul><li><strong>TLS Termination</strong> - Proxy terminates TLS connection and inspects plaintext content<li><strong>Policy Enforcement</strong> - Apply security policies to decrypted traffic<li><strong>Content Filtering</strong> - Block malicious content before it reaches external services<li><strong>Audit Logging</strong> - Log all API interactions for compliance and security monitoring</ul><h2 id="tls-termination-strategies"> <a href="#tls-termination-strategies" class="anchor-heading" aria-labelledby="tls-termination-strategies"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> TLS Termination Strategies</h2><h3 id="forward-proxy-with-tls-termination"> <a href="#forward-proxy-with-tls-termination" class="anchor-heading" aria-labelledby="forward-proxy-with-tls-termination"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Forward Proxy with TLS Termination</h3><div class="language-nginx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># nginx.conf - Forward proxy with TLS termination</span>
+<span class="k">events</span> <span class="p">{</span>
+    <span class="kn">worker_connections</span> <span class="mi">1024</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">http</span> <span class="p">{</span>
+    <span class="c1"># Define upstream for external services</span>
+    <span class="kn">upstream</span> <span class="s">external_api</span> <span class="p">{</span>
+        <span class="kn">server</span> <span class="nf">api.external-service.com</span><span class="p">:</span><span class="mi">443</span><span class="p">;</span>
+        <span class="kn">keepalive</span> <span class="mi">32</span><span class="p">;</span>
+    <span class="p">}</span>
+    
+    <span class="c1"># Forward proxy server</span>
+    <span class="kn">server</span> <span class="p">{</span>
+        <span class="kn">listen</span> <span class="mi">8080</span><span class="p">;</span>
+        
+        <span class="c1"># TLS termination and re-encryption</span>
+        <span class="kn">location</span> <span class="n">/</span> <span class="p">{</span>
+            <span class="c1"># Extract target host from request</span>
+            <span class="kn">set</span> <span class="nv">$target_host</span> <span class="nv">$http_host</span><span class="p">;</span>
+            
+            <span class="c1"># Proxy to external service with TLS re-encryption</span>
+            <span class="kn">proxy_pass</span> <span class="s">https://external_api</span><span class="p">;</span>
+            <span class="kn">proxy_ssl_verify</span> <span class="no">on</span><span class="p">;</span>
+            <span class="kn">proxy_ssl_trusted_certificate</span> <span class="n">/etc/ssl/certs/ca-certificates.crt</span><span class="p">;</span>
+            <span class="kn">proxy_ssl_protocols</span> <span class="s">TLSv1.2</span> <span class="s">TLSv1.3</span><span class="p">;</span>
+            
+            <span class="c1"># Preserve original host header</span>
+            <span class="kn">proxy_set_header</span> <span class="s">Host</span> <span class="nv">$target_host</span><span class="p">;</span>
+            <span class="kn">proxy_set_header</span> <span class="s">X-Real-IP</span> <span class="nv">$remote_addr</span><span class="p">;</span>
+            <span class="kn">proxy_set_header</span> <span class="s">X-Forwarded-For</span> <span class="nv">$proxy_add_x_forwarded_for</span><span class="p">;</span>
+            <span class="kn">proxy_set_header</span> <span class="s">X-Forwarded-Proto</span> <span class="s">https</span><span class="p">;</span>
+            
+            <span class="c1"># Security headers</span>
+            <span class="kn">add_header</span> <span class="s">X-Content-Type-Options</span> <span class="s">nosniff</span><span class="p">;</span>
+            <span class="kn">add_header</span> <span class="s">X-Frame-Options</span> <span class="s">DENY</span><span class="p">;</span>
+            <span class="kn">add_header</span> <span class="s">X-XSS-Protection</span> <span class="s">"1</span><span class="p">;</span> <span class="kn">mode=block"</span><span class="p">;</span>
+            
+            <span class="c1"># Content inspection and logging</span>
+            <span class="kn">access_log</span> <span class="n">/var/log/nginx/proxy_access.log</span><span class="p">;</span>
+            <span class="kn">error_log</span> <span class="n">/var/log/nginx/proxy_error.log</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div><h3 id="squid-proxy-with-ssl-bump"> <a href="#squid-proxy-with-ssl-bump" class="anchor-heading" aria-labelledby="squid-proxy-with-ssl-bump"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Squid Proxy with SSL Bump</h3><div class="language-conf highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># squid.conf - SSL bump configuration for TLS inspection
+</span><span class="n">http_port</span> <span class="m">3128</span> <span class="n">ssl</span>-<span class="n">bump</span> <span class="n">generate</span>-<span class="n">host</span>-<span class="n">certificates</span>=<span class="n">on</span> <span class="n">dynamic_cert_mem_cache_size</span>=<span class="m">4</span><span class="n">MB</span> <span class="n">cert</span>=/<span class="n">etc</span>/<span class="n">squid</span>/<span class="n">ssl</span>/<span class="n">squid</span>.<span class="n">pem</span> <span class="n">key</span>=/<span class="n">etc</span>/<span class="n">squid</span>/<span class="n">ssl</span>/<span class="n">squid</span>.<span class="n">key</span>
+
+<span class="c"># SSL bump configuration
+</span><span class="n">ssl_bump</span> <span class="n">bump</span> <span class="n">all</span>
+<span class="n">sslcrtd_program</span> /<span class="n">usr</span>/<span class="n">lib</span>/<span class="n">squid</span>/<span class="n">security_file_certgen</span> -<span class="n">s</span> /<span class="n">var</span>/<span class="n">spool</span>/<span class="n">squid</span>/<span class="n">ssl_db</span> -<span class="n">M</span> <span class="m">4</span><span class="n">MB</span>
+
+<span class="c"># Access control
+</span><span class="n">acl</span> <span class="n">localnet</span> <span class="n">src</span> <span class="m">10</span>.<span class="m">0</span>.<span class="m">0</span>.<span class="m">0</span>/<span class="m">8</span>
+<span class="n">acl</span> <span class="n">localnet</span> <span class="n">src</span> <span class="m">172</span>.<span class="m">16</span>.<span class="m">0</span>.<span class="m">0</span>/<span class="m">12</span>
+<span class="n">acl</span> <span class="n">localnet</span> <span class="n">src</span> <span class="m">192</span>.<span class="m">168</span>.<span class="m">0</span>.<span class="m">0</span>/<span class="m">16</span>
+
+<span class="c"># Allow local network
+</span><span class="n">http_access</span> <span class="n">allow</span> <span class="n">localnet</span>
+<span class="n">http_access</span> <span class="n">deny</span> <span class="n">all</span>
+
+<span class="c"># Content filtering
+</span><span class="n">acl</span> <span class="n">malicious_content</span> <span class="n">rep_header</span> <span class="n">Content</span>-<span class="n">Type</span> -<span class="n">i</span> <span class="s2">"application/malware"</span>
+<span class="n">http_reply_access</span> <span class="n">deny</span> <span class="n">malicious_content</span>
+
+<span class="c"># Logging
+</span><span class="n">access_log</span> /<span class="n">var</span>/<span class="n">log</span>/<span class="n">squid</span>/<span class="n">access</span>.<span class="n">log</span> <span class="n">squid</span>
+<span class="n">cache_log</span> /<span class="n">var</span>/<span class="n">log</span>/<span class="n">squid</span>/<span class="n">cache</span>.<span class="n">log</span>
+</code></pre></div></div><h2 id="certificate-management"> <a href="#certificate-management" class="anchor-heading" aria-labelledby="certificate-management"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Certificate Management</h2><h3 id="self-signed-certificate-authority"> <a href="#self-signed-certificate-authority" class="anchor-heading" aria-labelledby="self-signed-certificate-authority"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Self-Signed Certificate Authority</h3><div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
+<span class="c"># Create self-signed CA for TLS termination</span>
+
+<span class="c"># Generate CA private key</span>
+openssl genrsa <span class="nt">-out</span> ca-key.pem 4096
+
+<span class="c"># Generate CA certificate</span>
+openssl req <span class="nt">-new</span> <span class="nt">-x509</span> <span class="nt">-days</span> 365 <span class="nt">-key</span> ca-key.pem <span class="nt">-out</span> ca-cert.pem <span class="se">\</span>
+  <span class="nt">-subj</span> <span class="s2">"/C=US/ST=State/L=City/O=Organization/CN=MCP-Proxy-CA"</span>
+
+<span class="c"># Generate server private key</span>
+openssl genrsa <span class="nt">-out</span> server-key.pem 4096
+
+<span class="c"># Generate server certificate signing request</span>
+openssl req <span class="nt">-new</span> <span class="nt">-key</span> server-key.pem <span class="nt">-out</span> server-csr.pem <span class="se">\</span>
+  <span class="nt">-subj</span> <span class="s2">"/C=US/ST=State/L=City/O=Organization/CN=api-gateway"</span>
+
+<span class="c"># Generate server certificate</span>
+openssl x509 <span class="nt">-req</span> <span class="nt">-days</span> 365 <span class="nt">-in</span> server-csr.pem <span class="nt">-CA</span> ca-cert.pem <span class="nt">-CAkey</span> ca-key.pem <span class="se">\</span>
+  <span class="nt">-CAcreateserial</span> <span class="nt">-out</span> server-cert.pem
+
+<span class="c"># Set proper permissions</span>
+<span class="nb">chmod </span>600 <span class="k">*</span><span class="nt">-key</span>.pem
+<span class="nb">chmod </span>644 <span class="k">*</span><span class="nt">-cert</span>.pem
+</code></pre></div></div><h3 id="certificate-distribution"> <a href="#certificate-distribution" class="anchor-heading" aria-labelledby="certificate-distribution"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Certificate Distribution</h3><div class="language-dockerfile highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># Dockerfile - Include custom CA certificate</span>
+<span class="k">FROM</span><span class="s"> python:3.11-slim</span>
+
+<span class="c"># Copy custom CA certificate</span>
+<span class="k">COPY</span><span class="s"> ca-cert.pem /usr/local/share/ca-certificates/mcp-proxy-ca.crt</span>
+
+<span class="c"># Update CA certificates</span>
+<span class="k">RUN </span>update-ca-certificates
+
+<span class="c"># Set environment variable for requests library</span>
+<span class="k">ENV</span><span class="s"> REQUESTS_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt</span>
+
+<span class="c"># Install MCP server</span>
+<span class="k">COPY</span><span class="s"> . /app</span>
+<span class="k">WORKDIR</span><span class="s"> /app</span>
+<span class="k">RUN </span>pip <span class="nb">install</span> <span class="nt">-r</span> requirements.txt
+
+<span class="k">CMD</span><span class="s"> ["python", "mcp_server.py"]</span>
+</code></pre></div></div><h2 id="proxy-configuration-for-mcp-servers"> <a href="#proxy-configuration-for-mcp-servers" class="anchor-heading" aria-labelledby="proxy-configuration-for-mcp-servers"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Proxy Configuration for MCP Servers</h2><h3 id="python-proxy-configuration"> <a href="#python-proxy-configuration" class="anchor-heading" aria-labelledby="python-proxy-configuration"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Python Proxy Configuration</h3><div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">from</span> <span class="nn">requests.adapters</span> <span class="kn">import</span> <span class="n">HTTPAdapter</span>
+<span class="kn">import</span> <span class="nn">urllib3</span>
+
+<span class="k">class</span> <span class="nc">TLSProxyClient</span><span class="p">:</span>
+    <span class="s">"""HTTP client configured for TLS proxy"""</span>
+    
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">proxy_url</span><span class="o">=</span><span class="bp">None</span><span class="p">,</span> <span class="n">ca_cert_path</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">session</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="n">Session</span><span class="p">()</span>
+        
+        <span class="c1"># Configure proxy
+</span>        <span class="bp">self</span><span class="p">.</span><span class="n">proxy_url</span> <span class="o">=</span> <span class="n">proxy_url</span> <span class="ow">or</span> <span class="n">os</span><span class="p">.</span><span class="n">environ</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">'HTTPS_PROXY'</span><span class="p">)</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="p">.</span><span class="n">proxy_url</span><span class="p">:</span>
+            <span class="bp">self</span><span class="p">.</span><span class="n">session</span><span class="p">.</span><span class="n">proxies</span><span class="p">.</span><span class="n">update</span><span class="p">({</span>
+                <span class="s">'http'</span><span class="p">:</span> <span class="bp">self</span><span class="p">.</span><span class="n">proxy_url</span><span class="p">,</span>
+                <span class="s">'https'</span><span class="p">:</span> <span class="bp">self</span><span class="p">.</span><span class="n">proxy_url</span>
+            <span class="p">})</span>
+        
+        <span class="c1"># Configure custom CA certificate
+</span>        <span class="k">if</span> <span class="n">ca_cert_path</span><span class="p">:</span>
+            <span class="bp">self</span><span class="p">.</span><span class="n">session</span><span class="p">.</span><span class="n">verify</span> <span class="o">=</span> <span class="n">ca_cert_path</span>
+        <span class="k">elif</span> <span class="n">os</span><span class="p">.</span><span class="n">environ</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">'REQUESTS_CA_BUNDLE'</span><span class="p">):</span>
+            <span class="bp">self</span><span class="p">.</span><span class="n">session</span><span class="p">.</span><span class="n">verify</span> <span class="o">=</span> <span class="n">os</span><span class="p">.</span><span class="n">environ</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">'REQUESTS_CA_BUNDLE'</span><span class="p">)</span>
+        
+        <span class="c1"># Configure SSL/TLS settings
+</span>        <span class="n">adapter</span> <span class="o">=</span> <span class="n">HTTPAdapter</span><span class="p">()</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">session</span><span class="p">.</span><span class="n">mount</span><span class="p">(</span><span class="s">'https://'</span><span class="p">,</span> <span class="n">adapter</span><span class="p">)</span>
+        
+        <span class="c1"># Disable SSL warnings if using self-signed certificates
+</span>        <span class="k">if</span> <span class="n">ca_cert_path</span><span class="p">:</span>
+            <span class="n">urllib3</span><span class="p">.</span><span class="n">disable_warnings</span><span class="p">(</span><span class="n">urllib3</span><span class="p">.</span><span class="n">exceptions</span><span class="p">.</span><span class="n">InsecureRequestWarning</span><span class="p">)</span>
+    
+    <span class="k">def</span> <span class="nf">request</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">method</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="s">"""Make request through TLS proxy"""</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">session</span><span class="p">.</span><span class="n">request</span><span class="p">(</span><span class="n">method</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">response</span>
+        <span class="k">except</span> <span class="n">requests</span><span class="p">.</span><span class="n">exceptions</span><span class="p">.</span><span class="n">SSLError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"SSL Error: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+            <span class="k">print</span><span class="p">(</span><span class="s">"Check proxy certificate configuration"</span><span class="p">)</span>
+            <span class="k">raise</span>
+        <span class="k">except</span> <span class="n">requests</span><span class="p">.</span><span class="n">exceptions</span><span class="p">.</span><span class="n">ProxyError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"Proxy Error: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+            <span class="k">print</span><span class="p">(</span><span class="s">"Check proxy connectivity and authentication"</span><span class="p">)</span>
+            <span class="k">raise</span>
+</code></pre></div></div><h3 id="nodejs-proxy-configuration"> <a href="#nodejs-proxy-configuration" class="anchor-heading" aria-labelledby="nodejs-proxy-configuration"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Node.js Proxy Configuration</h3><div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">https</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">https</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">HttpsProxyAgent</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">https-proxy-agent</span><span class="dl">'</span><span class="p">);</span>
+<span class="kd">const</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">fs</span><span class="dl">'</span><span class="p">);</span>
+
+<span class="kd">class</span> <span class="nx">TLSProxyClient</span> <span class="p">{</span>
+    <span class="kd">constructor</span><span class="p">(</span><span class="nx">options</span> <span class="o">=</span> <span class="p">{})</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">proxyUrl</span> <span class="o">=</span> <span class="nx">options</span><span class="p">.</span><span class="nx">proxyUrl</span> <span class="o">||</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">HTTPS_PROXY</span><span class="p">;</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">caCertPath</span> <span class="o">=</span> <span class="nx">options</span><span class="p">.</span><span class="nx">caCertPath</span> <span class="o">||</span> <span class="nx">process</span><span class="p">.</span><span class="nx">env</span><span class="p">.</span><span class="nx">REQUESTS_CA_BUNDLE</span><span class="p">;</span>
+        
+        <span class="c1">// Configure HTTPS agent</span>
+        <span class="kd">const</span> <span class="nx">agentOptions</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="na">keepAlive</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+            <span class="na">rejectUnauthorized</span><span class="p">:</span> <span class="kc">true</span>
+        <span class="p">};</span>
+        
+        <span class="c1">// Add custom CA certificate if specified</span>
+        <span class="k">if</span> <span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">caCertPath</span> <span class="o">&amp;&amp;</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">existsSync</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">caCertPath</span><span class="p">))</span> <span class="p">{</span>
+            <span class="nx">agentOptions</span><span class="p">.</span><span class="nx">ca</span> <span class="o">=</span> <span class="nx">fs</span><span class="p">.</span><span class="nx">readFileSync</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">caCertPath</span><span class="p">);</span>
+        <span class="p">}</span>
+        
+        <span class="c1">// Create proxy agent</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">agent</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">proxyUrl</span> <span class="p">?</span> 
+            <span class="k">new</span> <span class="nx">HttpsProxyAgent</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">proxyUrl</span><span class="p">,</span> <span class="nx">agentOptions</span><span class="p">)</span> <span class="p">:</span> 
+            <span class="k">new</span> <span class="nx">https</span><span class="p">.</span><span class="nx">Agent</span><span class="p">(</span><span class="nx">agentOptions</span><span class="p">);</span>
+    <span class="p">}</span>
+    
+    <span class="k">async</span> <span class="nx">request</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{})</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="k">new</span> <span class="nb">Promise</span><span class="p">((</span><span class="nx">resolve</span><span class="p">,</span> <span class="nx">reject</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+            <span class="kd">const</span> <span class="nx">req</span> <span class="o">=</span> <span class="nx">https</span><span class="p">.</span><span class="nx">request</span><span class="p">(</span><span class="nx">url</span><span class="p">,</span> <span class="p">{</span>
+                <span class="p">...</span><span class="nx">options</span><span class="p">,</span>
+                <span class="na">agent</span><span class="p">:</span> <span class="k">this</span><span class="p">.</span><span class="nx">agent</span>
+            <span class="p">},</span> <span class="p">(</span><span class="nx">res</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+                <span class="kd">let</span> <span class="nx">data</span> <span class="o">=</span> <span class="dl">''</span><span class="p">;</span>
+                <span class="nx">res</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">data</span><span class="dl">'</span><span class="p">,</span> <span class="p">(</span><span class="nx">chunk</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">data</span> <span class="o">+=</span> <span class="nx">chunk</span><span class="p">);</span>
+                <span class="nx">res</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">end</span><span class="dl">'</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="nx">resolve</span><span class="p">({</span>
+                    <span class="na">status</span><span class="p">:</span> <span class="nx">res</span><span class="p">.</span><span class="nx">statusCode</span><span class="p">,</span>
+                    <span class="na">headers</span><span class="p">:</span> <span class="nx">res</span><span class="p">.</span><span class="nx">headers</span><span class="p">,</span>
+                    <span class="na">data</span><span class="p">:</span> <span class="nx">data</span>
+                <span class="p">}));</span>
+            <span class="p">});</span>
+            
+            <span class="nx">req</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="dl">'</span><span class="s1">error</span><span class="dl">'</span><span class="p">,</span> <span class="p">(</span><span class="nx">err</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="p">{</span>
+                <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="dl">'</span><span class="s1">Request error:</span><span class="dl">'</span><span class="p">,</span> <span class="nx">err</span><span class="p">);</span>
+                <span class="nx">reject</span><span class="p">(</span><span class="nx">err</span><span class="p">);</span>
+            <span class="p">});</span>
+            
+            <span class="k">if</span> <span class="p">(</span><span class="nx">options</span><span class="p">.</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+                <span class="nx">req</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">options</span><span class="p">.</span><span class="nx">data</span><span class="p">);</span>
+            <span class="p">}</span>
+            
+            <span class="nx">req</span><span class="p">.</span><span class="nx">end</span><span class="p">();</span>
+        <span class="p">});</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div><h2 id="content-inspection-and-filtering"> <a href="#content-inspection-and-filtering" class="anchor-heading" aria-labelledby="content-inspection-and-filtering"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Content Inspection and Filtering</h2><h3 id="request-content-inspection"> <a href="#request-content-inspection" class="anchor-heading" aria-labelledby="request-content-inspection"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Request Content Inspection</h3><div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Any</span>
+
+<span class="k">class</span> <span class="nc">ContentInspector</span><span class="p">:</span>
+    <span class="s">"""Inspect and filter HTTP content"""</span>
+    
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">blocked_patterns</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="sa">r</span><span class="s">'&lt;script[^&gt;]*&gt;.*?&lt;/script&gt;'</span><span class="p">,</span>  <span class="c1"># Block JavaScript
+</span>            <span class="sa">r</span><span class="s">'(password|token|key)\s*[:=]\s*["\']([^"\']+)["\']'</span><span class="p">,</span>  <span class="c1"># Block credentials
+</span>            <span class="sa">r</span><span class="s">'(eval|exec|system|shell_exec)\s*\('</span><span class="p">,</span>  <span class="c1"># Block dangerous functions
+</span>        <span class="p">]</span>
+        
+        <span class="bp">self</span><span class="p">.</span><span class="n">suspicious_headers</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="s">'X-Forwarded-For'</span><span class="p">,</span>
+            <span class="s">'X-Real-IP'</span><span class="p">,</span>
+            <span class="s">'X-Originating-IP'</span>
+        <span class="p">]</span>
+    
+    <span class="k">def</span> <span class="nf">inspect_request</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">method</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">url</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">headers</span><span class="p">:</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">body</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
+        <span class="s">"""Inspect HTTP request for security issues"""</span>
+        <span class="n">issues</span> <span class="o">=</span> <span class="p">[]</span>
+        
+        <span class="c1"># Check for suspicious headers
+</span>        <span class="k">for</span> <span class="n">header</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">.</span><span class="n">suspicious_headers</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">header</span> <span class="ow">in</span> <span class="n">headers</span><span class="p">:</span>
+                <span class="n">issues</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s">"Suspicious header: </span><span class="si">{</span><span class="n">header</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+        
+        <span class="c1"># Check request body for blocked patterns
+</span>        <span class="k">if</span> <span class="n">body</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">pattern</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">.</span><span class="n">blocked_patterns</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">re</span><span class="p">.</span><span class="n">search</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">body</span><span class="p">,</span> <span class="n">re</span><span class="p">.</span><span class="n">IGNORECASE</span><span class="p">):</span>
+                    <span class="n">issues</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s">"Blocked content pattern found: </span><span class="si">{</span><span class="n">pattern</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+        
+        <span class="c1"># Check for SQL injection patterns
+</span>        <span class="k">if</span> <span class="bp">self</span><span class="p">.</span><span class="n">_check_sql_injection</span><span class="p">(</span><span class="n">body</span><span class="p">):</span>
+            <span class="n">issues</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="s">"Potential SQL injection detected"</span><span class="p">)</span>
+        
+        <span class="c1"># Check for XXE attacks
+</span>        <span class="k">if</span> <span class="bp">self</span><span class="p">.</span><span class="n">_check_xxe_attack</span><span class="p">(</span><span class="n">body</span><span class="p">):</span>
+            <span class="n">issues</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="s">"Potential XXE attack detected"</span><span class="p">)</span>
+        
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="s">'allowed'</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">issues</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="s">'issues'</span><span class="p">:</span> <span class="n">issues</span><span class="p">,</span>
+            <span class="s">'risk_score'</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">issues</span><span class="p">)</span> <span class="o">*</span> <span class="mi">10</span>
+        <span class="p">}</span>
+    
+    <span class="k">def</span> <span class="nf">_check_sql_injection</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">content</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="s">"""Check for SQL injection patterns"""</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">content</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">False</span>
+        
+        <span class="n">sql_patterns</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="sa">r</span><span class="s">"('|(\\'))|(--|#|\\/\\*)"</span><span class="p">,</span>
+            <span class="sa">r</span><span class="s">"(union|select|insert|update|delete|drop|create|alter|exec|execute)"</span>
+        <span class="p">]</span>
+        
+        <span class="k">for</span> <span class="n">pattern</span> <span class="ow">in</span> <span class="n">sql_patterns</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">re</span><span class="p">.</span><span class="n">search</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">content</span><span class="p">,</span> <span class="n">re</span><span class="p">.</span><span class="n">IGNORECASE</span><span class="p">):</span>
+                <span class="k">return</span> <span class="bp">True</span>
+        
+        <span class="k">return</span> <span class="bp">False</span>
+    
+    <span class="k">def</span> <span class="nf">_check_xxe_attack</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">content</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+        <span class="s">"""Check for XXE attack patterns"""</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">content</span><span class="p">:</span>
+            <span class="k">return</span> <span class="bp">False</span>
+        
+        <span class="n">xxe_patterns</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="sa">r</span><span class="s">"&lt;!DOCTYPE.*?ENTITY"</span><span class="p">,</span>
+            <span class="sa">r</span><span class="s">"SYSTEM\s+[\"'][^\"']+[\"']"</span><span class="p">,</span>
+            <span class="sa">r</span><span class="s">"PUBLIC\s+[\"'][^\"']+[\"']"</span>
+        <span class="p">]</span>
+        
+        <span class="k">for</span> <span class="n">pattern</span> <span class="ow">in</span> <span class="n">xxe_patterns</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">re</span><span class="p">.</span><span class="n">search</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">content</span><span class="p">,</span> <span class="n">re</span><span class="p">.</span><span class="n">IGNORECASE</span><span class="p">):</span>
+                <span class="k">return</span> <span class="bp">True</span>
+        
+        <span class="k">return</span> <span class="bp">False</span>
+</code></pre></div></div><h3 id="response-content-filtering"> <a href="#response-content-filtering" class="anchor-heading" aria-labelledby="response-content-filtering"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Response Content Filtering</h3><div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">ResponseFilter</span><span class="p">:</span>
+    <span class="s">"""Filter HTTP responses for security"""</span>
+    
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">sensitive_patterns</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="sa">r</span><span class="s">'(api[_-]?key|token|password|secret)\s*[:=]\s*["\']([^"\']+)["\']'</span><span class="p">,</span>
+            <span class="sa">r</span><span class="s">'-----BEGIN\s+(RSA\s+)?PRIVATE\s+KEY-----'</span><span class="p">,</span>
+            <span class="sa">r</span><span class="s">'[A-Za-z0-9+/]{40,}={0,2}'</span><span class="p">,</span>  <span class="c1"># Base64 encoded data
+</span>        <span class="p">]</span>
+        
+        <span class="bp">self</span><span class="p">.</span><span class="n">blocked_content_types</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="s">'application/x-executable'</span><span class="p">,</span>
+            <span class="s">'application/x-msdownload'</span><span class="p">,</span>
+            <span class="s">'application/octet-stream'</span>
+        <span class="p">]</span>
+    
+    <span class="k">def</span> <span class="nf">filter_response</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">headers</span><span class="p">:</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">body</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
+        <span class="s">"""Filter HTTP response for security"""</span>
+        <span class="n">issues</span> <span class="o">=</span> <span class="p">[]</span>
+        
+        <span class="c1"># Check content type
+</span>        <span class="n">content_type</span> <span class="o">=</span> <span class="n">headers</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">'Content-Type'</span><span class="p">,</span> <span class="s">''</span><span class="p">).</span><span class="n">lower</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">blocked_type</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">.</span><span class="n">blocked_content_types</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">blocked_type</span> <span class="ow">in</span> <span class="n">content_type</span><span class="p">:</span>
+                <span class="n">issues</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="sa">f</span><span class="s">"Blocked content type: </span><span class="si">{</span><span class="n">blocked_type</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+        
+        <span class="c1"># Check for sensitive information in response
+</span>        <span class="k">if</span> <span class="n">body</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">pattern</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">.</span><span class="n">sensitive_patterns</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">re</span><span class="p">.</span><span class="n">search</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="n">body</span><span class="p">,</span> <span class="n">re</span><span class="p">.</span><span class="n">IGNORECASE</span><span class="p">):</span>
+                    <span class="n">issues</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="s">"Sensitive information detected in response"</span><span class="p">)</span>
+        
+        <span class="c1"># Check response size
+</span>        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">body</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">10</span> <span class="o">*</span> <span class="mi">1024</span> <span class="o">*</span> <span class="mi">1024</span><span class="p">:</span>  <span class="c1"># 10MB limit
+</span>            <span class="n">issues</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="s">"Response size exceeds limit"</span><span class="p">)</span>
+        
+        <span class="k">return</span> <span class="p">{</span>
+            <span class="s">'allowed'</span><span class="p">:</span> <span class="nb">len</span><span class="p">(</span><span class="n">issues</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="s">'issues'</span><span class="p">:</span> <span class="n">issues</span><span class="p">,</span>
+            <span class="s">'filtered_body'</span><span class="p">:</span> <span class="bp">self</span><span class="p">.</span><span class="n">_sanitize_response</span><span class="p">(</span><span class="n">body</span><span class="p">)</span> <span class="k">if</span> <span class="n">issues</span> <span class="k">else</span> <span class="n">body</span>
+        <span class="p">}</span>
+    
+    <span class="k">def</span> <span class="nf">_sanitize_response</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">body</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
+        <span class="s">"""Sanitize response body"""</span>
+        <span class="n">sanitized</span> <span class="o">=</span> <span class="n">body</span>
+        
+        <span class="c1"># Remove sensitive patterns
+</span>        <span class="k">for</span> <span class="n">pattern</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">.</span><span class="n">sensitive_patterns</span><span class="p">:</span>
+            <span class="n">sanitized</span> <span class="o">=</span> <span class="n">re</span><span class="p">.</span><span class="n">sub</span><span class="p">(</span><span class="n">pattern</span><span class="p">,</span> <span class="s">'[REDACTED]'</span><span class="p">,</span> <span class="n">sanitized</span><span class="p">,</span> <span class="n">flags</span><span class="o">=</span><span class="n">re</span><span class="p">.</span><span class="n">IGNORECASE</span><span class="p">)</span>
+        
+        <span class="k">return</span> <span class="n">sanitized</span>
+</code></pre></div></div><h2 id="proxy-high-availability"> <a href="#proxy-high-availability" class="anchor-heading" aria-labelledby="proxy-high-availability"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Proxy High Availability</h2><h3 id="multiple-proxy-setup"> <a href="#multiple-proxy-setup" class="anchor-heading" aria-labelledby="multiple-proxy-setup"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Multiple Proxy Setup</h3><div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># docker-compose.yml - Multiple proxy setup</span>
+<span class="na">version</span><span class="pi">:</span> <span class="s1">'</span><span class="s">3.8'</span>
+<span class="na">services</span><span class="pi">:</span>
+  <span class="na">mcp-server</span><span class="pi">:</span>
+    <span class="na">image</span><span class="pi">:</span> <span class="s">mcp-server:latest</span>
+    <span class="na">environment</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">HTTPS_PROXY=http://proxy-lb:8080</span>
+    <span class="na">depends_on</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">proxy-lb</span>
+    <span class="na">networks</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">mcp-network</span>
+
+  <span class="na">proxy-lb</span><span class="pi">:</span>
+    <span class="na">image</span><span class="pi">:</span> <span class="s">nginx:alpine</span>
+    <span class="na">ports</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s2">"</span><span class="s">8080:8080"</span>
+    <span class="na">volumes</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">./nginx-lb.conf:/etc/nginx/nginx.conf</span>
+    <span class="na">depends_on</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">proxy-1</span>
+      <span class="pi">-</span> <span class="s">proxy-2</span>
+    <span class="na">networks</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">mcp-network</span>
+
+  <span class="na">proxy-1</span><span class="pi">:</span>
+    <span class="na">image</span><span class="pi">:</span> <span class="s">squid:latest</span>
+    <span class="na">volumes</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">./squid.conf:/etc/squid/squid.conf</span>
+    <span class="na">networks</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">mcp-network</span>
+
+  <span class="na">proxy-2</span><span class="pi">:</span>
+    <span class="na">image</span><span class="pi">:</span> <span class="s">squid:latest</span>
+    <span class="na">volumes</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">./squid.conf:/etc/squid/squid.conf</span>
+    <span class="na">networks</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="s">mcp-network</span>
+
+<span class="na">networks</span><span class="pi">:</span>
+  <span class="na">mcp-network</span><span class="pi">:</span>
+    <span class="na">driver</span><span class="pi">:</span> <span class="s">bridge</span>
+</code></pre></div></div><h3 id="load-balancer-configuration"> <a href="#load-balancer-configuration" class="anchor-heading" aria-labelledby="load-balancer-configuration"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Load Balancer Configuration</h3><div class="language-nginx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># nginx-lb.conf - Load balancer for proxies</span>
+<span class="k">events</span> <span class="p">{</span>
+    <span class="kn">worker_connections</span> <span class="mi">1024</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">http</span> <span class="p">{</span>
+    <span class="kn">upstream</span> <span class="s">proxy_backend</span> <span class="p">{</span>
+        <span class="kn">server</span> <span class="nf">proxy-1</span><span class="p">:</span><span class="mi">3128</span> <span class="s">max_fails=2</span> <span class="s">fail_timeout=30s</span><span class="p">;</span>
+        <span class="kn">server</span> <span class="nf">proxy-2</span><span class="p">:</span><span class="mi">3128</span> <span class="s">max_fails=2</span> <span class="s">fail_timeout=30s</span><span class="p">;</span>
+    <span class="p">}</span>
+    
+    <span class="kn">server</span> <span class="p">{</span>
+        <span class="kn">listen</span> <span class="mi">8080</span><span class="p">;</span>
+        
+        <span class="kn">location</span> <span class="n">/</span> <span class="p">{</span>
+            <span class="kn">proxy_pass</span> <span class="s">http://proxy_backend</span><span class="p">;</span>
+            <span class="kn">proxy_set_header</span> <span class="s">Host</span> <span class="nv">$host</span><span class="p">;</span>
+            <span class="kn">proxy_set_header</span> <span class="s">X-Real-IP</span> <span class="nv">$remote_addr</span><span class="p">;</span>
+            <span class="kn">proxy_connect_timeout</span> <span class="s">30s</span><span class="p">;</span>
+            <span class="kn">proxy_send_timeout</span> <span class="s">30s</span><span class="p">;</span>
+            <span class="kn">proxy_read_timeout</span> <span class="s">30s</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div><h2 id="monitoring-and-alerting"> <a href="#monitoring-and-alerting" class="anchor-heading" aria-labelledby="monitoring-and-alerting"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Monitoring and Alerting</h2><h3 id="proxy-health-monitoring"> <a href="#proxy-health-monitoring" class="anchor-heading" aria-labelledby="proxy-health-monitoring"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Proxy Health Monitoring</h3><div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">requests</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+
+<span class="k">class</span> <span class="nc">ProxyHealthMonitor</span><span class="p">:</span>
+    <span class="s">"""Monitor proxy health and performance"""</span>
+    
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">proxy_url</span><span class="p">,</span> <span class="n">test_url</span><span class="o">=</span><span class="s">'https://httpbin.org/ip'</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">proxy_url</span> <span class="o">=</span> <span class="n">proxy_url</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">test_url</span> <span class="o">=</span> <span class="n">test_url</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">session</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="n">Session</span><span class="p">()</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">session</span><span class="p">.</span><span class="n">proxies</span><span class="p">.</span><span class="n">update</span><span class="p">({</span>
+            <span class="s">'http'</span><span class="p">:</span> <span class="n">proxy_url</span><span class="p">,</span>
+            <span class="s">'https'</span><span class="p">:</span> <span class="n">proxy_url</span>
+        <span class="p">})</span>
+    
+    <span class="k">def</span> <span class="nf">check_proxy_health</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
+        <span class="s">"""Check proxy health"""</span>
+        <span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="p">.</span><span class="n">time</span><span class="p">()</span>
+        
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">session</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="bp">self</span><span class="p">.</span><span class="n">test_url</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+            <span class="n">response_time</span> <span class="o">=</span> <span class="n">time</span><span class="p">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">start_time</span>
+            
+            <span class="k">return</span> <span class="p">{</span>
+                <span class="s">'healthy'</span><span class="p">:</span> <span class="bp">True</span><span class="p">,</span>
+                <span class="s">'response_time'</span><span class="p">:</span> <span class="n">response_time</span><span class="p">,</span>
+                <span class="s">'status_code'</span><span class="p">:</span> <span class="n">response</span><span class="p">.</span><span class="n">status_code</span><span class="p">,</span>
+                <span class="s">'timestamp'</span><span class="p">:</span> <span class="n">datetime</span><span class="p">.</span><span class="n">utcnow</span><span class="p">().</span><span class="n">isoformat</span><span class="p">()</span>
+            <span class="p">}</span>
+        <span class="k">except</span> <span class="nb">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">{</span>
+                <span class="s">'healthy'</span><span class="p">:</span> <span class="bp">False</span><span class="p">,</span>
+                <span class="s">'error'</span><span class="p">:</span> <span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">),</span>
+                <span class="s">'response_time'</span><span class="p">:</span> <span class="n">time</span><span class="p">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">start_time</span><span class="p">,</span>
+                <span class="s">'timestamp'</span><span class="p">:</span> <span class="n">datetime</span><span class="p">.</span><span class="n">utcnow</span><span class="p">().</span><span class="n">isoformat</span><span class="p">()</span>
+            <span class="p">}</span>
+    
+    <span class="k">def</span> <span class="nf">monitor_continuously</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">interval</span><span class="o">=</span><span class="mi">60</span><span class="p">):</span>
+        <span class="s">"""Monitor proxy continuously"""</span>
+        <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+            <span class="n">health_status</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">check_proxy_health</span><span class="p">()</span>
+            
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">health_status</span><span class="p">[</span><span class="s">'healthy'</span><span class="p">]:</span>
+                <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"ALERT: Proxy unhealthy - </span><span class="si">{</span><span class="n">health_status</span><span class="p">[</span><span class="s">'error'</span><span class="p">]</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+                <span class="c1"># Send alert to monitoring system
+</span>            
+            <span class="k">if</span> <span class="n">health_status</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">'response_time'</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">:</span>
+                <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"WARNING: High response time - </span><span class="si">{</span><span class="n">health_status</span><span class="p">[</span><span class="s">'response_time'</span><span class="p">]</span><span class="si">:</span><span class="p">.</span><span class="mi">2</span><span class="n">f</span><span class="si">}</span><span class="s">s"</span><span class="p">)</span>
+            
+            <span class="n">time</span><span class="p">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">interval</span><span class="p">)</span>
+</code></pre></div></div><h3 id="tls-certificate-monitoring"> <a href="#tls-certificate-monitoring" class="anchor-heading" aria-labelledby="tls-certificate-monitoring"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> TLS Certificate Monitoring</h3><div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
+<span class="c"># Monitor TLS certificate expiration</span>
+
+<span class="nv">PROXY_HOST</span><span class="o">=</span><span class="s2">"api-gateway"</span>
+<span class="nv">PROXY_PORT</span><span class="o">=</span><span class="s2">"8080"</span>
+<span class="nv">CERT_WARNING_DAYS</span><span class="o">=</span>30
+
+<span class="c"># Check certificate expiration</span>
+check_cert_expiry<span class="o">()</span> <span class="o">{</span>
+    <span class="nb">local </span><span class="nv">host</span><span class="o">=</span><span class="nv">$1</span>
+    <span class="nb">local </span><span class="nv">port</span><span class="o">=</span><span class="nv">$2</span>
+    
+    <span class="c"># Get certificate expiration date</span>
+    <span class="nv">expiry_date</span><span class="o">=</span><span class="si">$(</span><span class="nb">echo</span> | openssl s_client <span class="nt">-connect</span> <span class="nv">$host</span>:<span class="nv">$port</span> 2&gt;/dev/null | <span class="se">\</span>
+                  openssl x509 <span class="nt">-noout</span> <span class="nt">-enddate</span> | <span class="nb">cut</span> <span class="nt">-d</span><span class="o">=</span> <span class="nt">-f2</span><span class="si">)</span>
+    
+    <span class="c"># Convert to epoch time</span>
+    <span class="nv">expiry_epoch</span><span class="o">=</span><span class="si">$(</span><span class="nb">date</span> <span class="nt">-d</span> <span class="s2">"</span><span class="nv">$expiry_date</span><span class="s2">"</span> +%s<span class="si">)</span>
+    <span class="nv">current_epoch</span><span class="o">=</span><span class="si">$(</span><span class="nb">date</span> +%s<span class="si">)</span>
+    
+    <span class="c"># Calculate days until expiry</span>
+    <span class="nv">days_until_expiry</span><span class="o">=</span><span class="k">$((</span> <span class="o">(</span>expiry_epoch <span class="o">-</span> current_epoch<span class="o">)</span> <span class="o">/</span> <span class="m">86400</span> <span class="k">))</span>
+    
+    <span class="k">if</span> <span class="o">[</span> <span class="nv">$days_until_expiry</span> <span class="nt">-lt</span> <span class="nv">$CERT_WARNING_DAYS</span> <span class="o">]</span><span class="p">;</span> <span class="k">then
+        </span><span class="nb">echo</span> <span class="s2">"WARNING: Certificate for </span><span class="nv">$host</span><span class="s2">:</span><span class="nv">$port</span><span class="s2"> expires in </span><span class="nv">$days_until_expiry</span><span class="s2"> days"</span>
+        <span class="k">return </span>1
+    <span class="k">else
+        </span><span class="nb">echo</span> <span class="s2">"OK: Certificate for </span><span class="nv">$host</span><span class="s2">:</span><span class="nv">$port</span><span class="s2"> expires in </span><span class="nv">$days_until_expiry</span><span class="s2"> days"</span>
+        <span class="k">return </span>0
+    <span class="k">fi</span>
+<span class="o">}</span>
+
+<span class="c"># Monitor certificate</span>
+check_cert_expiry <span class="nv">$PROXY_HOST</span> <span class="nv">$PROXY_PORT</span>
+</code></pre></div></div><h2 id="troubleshooting-tls-issues"> <a href="#troubleshooting-tls-issues" class="anchor-heading" aria-labelledby="troubleshooting-tls-issues"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Troubleshooting TLS Issues</h2><h3 id="common-tls-problems"> <a href="#common-tls-problems" class="anchor-heading" aria-labelledby="common-tls-problems"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Common TLS Problems</h3><div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">ssl</span>
+<span class="kn">import</span> <span class="nn">socket</span>
+
+<span class="k">class</span> <span class="nc">TLSTroubleshooter</span><span class="p">:</span>
+    <span class="s">"""Troubleshoot TLS connection issues"""</span>
+    
+    <span class="k">def</span> <span class="nf">diagnose_tls_connection</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hostname</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">443</span><span class="p">):</span>
+        <span class="s">"""Diagnose TLS connection issues"""</span>
+        <span class="n">results</span> <span class="o">=</span> <span class="p">{}</span>
+        
+        <span class="k">try</span><span class="p">:</span>
+            <span class="c1"># Test basic TCP connection
+</span>            <span class="n">sock</span> <span class="o">=</span> <span class="n">socket</span><span class="p">.</span><span class="n">create_connection</span><span class="p">((</span><span class="n">hostname</span><span class="p">,</span> <span class="n">port</span><span class="p">),</span> <span class="n">timeout</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+            <span class="n">results</span><span class="p">[</span><span class="s">'tcp_connection'</span><span class="p">]</span> <span class="o">=</span> <span class="s">'OK'</span>
+            
+            <span class="c1"># Test TLS handshake
+</span>            <span class="n">context</span> <span class="o">=</span> <span class="n">ssl</span><span class="p">.</span><span class="n">create_default_context</span><span class="p">()</span>
+            <span class="k">with</span> <span class="n">context</span><span class="p">.</span><span class="n">wrap_socket</span><span class="p">(</span><span class="n">sock</span><span class="p">,</span> <span class="n">server_hostname</span><span class="o">=</span><span class="n">hostname</span><span class="p">)</span> <span class="k">as</span> <span class="n">ssock</span><span class="p">:</span>
+                <span class="n">results</span><span class="p">[</span><span class="s">'tls_handshake'</span><span class="p">]</span> <span class="o">=</span> <span class="s">'OK'</span>
+                <span class="n">results</span><span class="p">[</span><span class="s">'tls_version'</span><span class="p">]</span> <span class="o">=</span> <span class="n">ssock</span><span class="p">.</span><span class="n">version</span><span class="p">()</span>
+                <span class="n">results</span><span class="p">[</span><span class="s">'cipher'</span><span class="p">]</span> <span class="o">=</span> <span class="n">ssock</span><span class="p">.</span><span class="n">cipher</span><span class="p">()</span>
+                <span class="n">results</span><span class="p">[</span><span class="s">'certificate'</span><span class="p">]</span> <span class="o">=</span> <span class="n">ssock</span><span class="p">.</span><span class="n">getpeercert</span><span class="p">()</span>
+                
+        <span class="k">except</span> <span class="n">socket</span><span class="p">.</span><span class="n">timeout</span><span class="p">:</span>
+            <span class="n">results</span><span class="p">[</span><span class="s">'tcp_connection'</span><span class="p">]</span> <span class="o">=</span> <span class="s">'TIMEOUT'</span>
+        <span class="k">except</span> <span class="n">socket</span><span class="p">.</span><span class="n">gaierror</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="n">results</span><span class="p">[</span><span class="s">'tcp_connection'</span><span class="p">]</span> <span class="o">=</span> <span class="sa">f</span><span class="s">'DNS_ERROR: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s">'</span>
+        <span class="k">except</span> <span class="n">ssl</span><span class="p">.</span><span class="n">SSLError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="n">results</span><span class="p">[</span><span class="s">'tls_handshake'</span><span class="p">]</span> <span class="o">=</span> <span class="sa">f</span><span class="s">'SSL_ERROR: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s">'</span>
+        <span class="k">except</span> <span class="nb">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="n">results</span><span class="p">[</span><span class="s">'error'</span><span class="p">]</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+        
+        <span class="k">return</span> <span class="n">results</span>
+</code></pre></div></div><h3 id="debug-commands"> <a href="#debug-commands" class="anchor-heading" aria-labelledby="debug-commands"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Debug Commands</h3><div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
+<span class="c"># Debug TLS proxy issues</span>
+
+<span class="c"># Test proxy connectivity</span>
+<span class="nb">echo</span> <span class="s2">"Testing proxy connectivity..."</span>
+curl <span class="nt">-x</span> http://api-gateway:8080 <span class="nt">-v</span> https://httpbin.org/ip
+
+<span class="c"># Test TLS handshake</span>
+<span class="nb">echo</span> <span class="s2">"Testing TLS handshake..."</span>
+openssl s_client <span class="nt">-connect</span> api-gateway:8080 <span class="nt">-servername</span> api-gateway
+
+<span class="c"># Test certificate chain</span>
+<span class="nb">echo</span> <span class="s2">"Testing certificate chain..."</span>
+openssl s_client <span class="nt">-connect</span> api-gateway:8080 <span class="nt">-showcerts</span>
+
+<span class="c"># Test proxy authentication</span>
+<span class="nb">echo</span> <span class="s2">"Testing proxy authentication..."</span>
+curl <span class="nt">-x</span> http://username:password@api-gateway:8080 <span class="nt">-v</span> https://httpbin.org/ip
+</code></pre></div></div><h2 id="contributing"> <a href="#contributing" class="anchor-heading" aria-labelledby="contributing"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Contributing</h2><p>Help improve our TLS and proxy management guidance by sharing:</p><ul><li><strong>Proxy Configurations</strong> - Working proxy configurations for TLS termination<li><strong>Certificate Management</strong> - Best practices for certificate lifecycle management<li><strong>Content Inspection</strong> - Effective content filtering and inspection techniques<li><strong>Troubleshooting Guides</strong> - Solutions to common TLS and proxy issues</ul><p><em>This page is being developed with community input. Share your TLS and proxy experience in our <a href="https://github.com/orgs/ModelContextProtocol-Security/discussions">discussions</a>.</em></p></main><hr><footer><p><a href="#top" id="back-to-top">Back to top</a></p><p class="text-small text-grey-dk-100 mb-0">This project is sponsored by the <a href="https://cloudsecurityalliance.org">Cloud Security Alliance</a> and maintained by the Model Context Protocol Security Working Group.</p><div class="d-flex mt-2"></div></footer></div></div><div class="search-overlay"></div></div>

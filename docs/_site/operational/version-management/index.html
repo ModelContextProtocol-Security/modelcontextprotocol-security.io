@@ -1,0 +1,614 @@
+<!DOCTYPE html><html lang="en-US"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=Edge"><link rel="stylesheet" href="/assets/css/just-the-docs-default.css"><link rel="stylesheet" href="/assets/css/just-the-docs-head-nav.css" id="jtd-head-nav-stylesheet"><style id="jtd-nav-activation"> .site-nav > ul.nav-list:first-child > li > a, .site-nav > ul.nav-list:first-child > li > ul > li:not(:nth-child(3)) > a, .site-nav > ul.nav-list:first-child > li > ul > li > ul > li a { background-image: none; } .site-nav > ul.nav-list:not(:first-child) a, .site-nav li.external a { background-image: none; } .site-nav > ul.nav-list:first-child > li:nth-child(9) > ul > li:nth-child(3) > a { font-weight: 600; text-decoration: none; }.site-nav > ul.nav-list:first-child > li:nth-child(9) > button svg, .site-nav > ul.nav-list:first-child > li:nth-child(9) > ul > li:nth-child(3) > button svg { transform: rotate(-90deg); }.site-nav > ul.nav-list:first-child > li.nav-list-item:nth-child(9) > ul.nav-list, .site-nav > ul.nav-list:first-child > li.nav-list-item:nth-child(9) > ul.nav-list > li.nav-list-item:nth-child(3) > ul.nav-list { display: block; }</style><script src="/assets/js/vendor/lunr.min.js"></script> <script src="/assets/js/just-the-docs.js"></script><meta name="viewport" content="width=device-width, initial-scale=1"><title>Version Management | Model Context Protocol Security</title><meta name="generator" content="Jekyll v3.9.5" /><meta property="og:title" content="Version Management" /><meta property="og:locale" content="en_US" /><meta name="description" content="A Cloud Security Alliance Community Project - Secure Autonomy: Hardening Model-Context-Protocol Servers &amp; Agents" /><meta property="og:description" content="A Cloud Security Alliance Community Project - Secure Autonomy: Hardening Model-Context-Protocol Servers &amp; Agents" /><link rel="canonical" href="http://0.0.0.0:4000/operational/version-management/" /><meta property="og:url" content="http://0.0.0.0:4000/operational/version-management/" /><meta property="og:site_name" content="Model Context Protocol Security" /><meta property="og:type" content="website" /><meta name="twitter:card" content="summary" /><meta property="twitter:title" content="Version Management" /> <script type="application/ld+json"> {"@context":"https://schema.org","@type":"WebPage","description":"A Cloud Security Alliance Community Project - Secure Autonomy: Hardening Model-Context-Protocol Servers &amp; Agents","headline":"Version Management","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"http://0.0.0.0:4000/assets/images/mcp-security-logo.svg"}},"url":"http://0.0.0.0:4000/operational/version-management/"}</script><body> <a class="skip-to-main" href="#main-content">Skip to main content</a> <svg xmlns="http://www.w3.org/2000/svg" class="d-none"> <symbol id="svg-link" viewBox="0 0 24 24"><title>Link</title><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path> </svg> </symbol> <symbol id="svg-menu" viewBox="0 0 24 24"><title>Menu</title><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line> </svg> </symbol> <symbol id="svg-arrow-right" viewBox="0 0 24 24"><title>Expand</title><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline> </svg> </symbol> <symbol id="svg-external-link" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-external-link"><title id="svg-external-link-title">(external link)</title><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line> </symbol> <symbol id="svg-doc" viewBox="0 0 24 24"><title>Document</title><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline> </svg> </symbol> <symbol id="svg-search" viewBox="0 0 24 24"><title>Search</title><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"> <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line> </svg> </symbol> <symbol id="svg-copy" viewBox="0 0 16 16"><title>Copy</title><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard" viewBox="0 0 16 16"><path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/><path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/> </svg> </symbol> <symbol id="svg-copied" viewBox="0 0 16 16"><title>Copied</title><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-clipboard-check-fill" viewBox="0 0 16 16"><path d="M6.5 0A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3Zm3 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3Z"/><path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1A2.5 2.5 0 0 1 9.5 5h-3A2.5 2.5 0 0 1 4 2.5v-1Zm6.854 7.354-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 0 1 .708-.708L7.5 10.793l2.646-2.647a.5.5 0 0 1 .708.708Z"/> </svg> </symbol> </svg><div class="side-bar"><div class="site-header" role="banner"> <a href="/" class="site-title lh-tight"><div class="site-logo" role="img" aria-label="Model Context Protocol Security"></div></a> <button id="menu-button" class="site-button btn-reset" aria-label="Toggle menu" aria-pressed="false"> <svg viewBox="0 0 24 24" class="icon" aria-hidden="true"><use xlink:href="#svg-menu"></use></svg> </button></div><nav aria-label="Main" id="site-nav" class="site-nav"><ul class="nav-list"><li class="nav-list-item"><a href="/" class="nav-list-link">Model Context Protocol Security</a><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Why MCP Security? category" aria-pressed="false"> <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/why/" class="nav-list-link">Why MCP Security?</a><ul class="nav-list"><li class="nav-list-item"><a href="/why/faq.html" class="nav-list-link">FAQ</a></ul><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in MCP Top 10 Security Risks category" aria-pressed="false"> <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/top10/" class="nav-list-link">MCP Top 10 Security Risks</a><ul class="nav-list"><li class="nav-list-item"><a href="/top10/server/" class="nav-list-link">MCP Server Top 10 Security Risks</a><li class="nav-list-item"><a href="/top10/client/" class="nav-list-link">MCP Client Top 10 Security Risks</a></ul><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in MCP Security TTPs category" aria-pressed="false"> <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/ttps/" class="nav-list-link">MCP Security TTPs</a><ul class="nav-list"><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Prompt Injection & Manipulation category" aria-pressed="false"> <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/ttps/prompt-injection/" class="nav-list-link">Prompt Injection & Manipulation</a><ul class="nav-list"><li class="nav-list-item"><a href="/ttps/prompt-injection/direct-prompt-injection/" class="nav-list-link">Direct Prompt Injection</a><li class="nav-list-item"><a href="/ttps/prompt-injection/indirect-prompt-injection/" class="nav-list-link">Indirect Prompt Injection</a><li class="nav-list-item"><a href="/ttps/prompt-injection/tool-description-poisoning/" class="nav-list-link">Tool Description Poisoning</a><li class="nav-list-item"><a href="/ttps/prompt-injection/context-shadowing/" class="nav-list-link">Context Shadowing</a><li class="nav-list-item"><a href="/ttps/prompt-injection/prompt-state-manipulation/" class="nav-list-link">Prompt-State Manipulation</a><li class="nav-list-item"><a href="/ttps/prompt-injection/ansi-escape-injection/" class="nav-list-link">ANSI Escape Code Injection</a><li class="nav-list-item"><a href="/ttps/prompt-injection/hidden-instructions/" class="nav-list-link">Hidden Instructions</a></ul><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Tool Poisoning & Metadata Attacks category" aria-pressed="false"> <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/ttps/tool-poisoning/" class="nav-list-link">Tool Poisoning & Metadata Attacks</a><ul class="nav-list"><li class="nav-list-item"><a href="/ttps/tool-poisoning/tool-poisoning/" class="nav-list-link">Tool Poisoning</a><li class="nav-list-item"><a href="/ttps/tool-poisoning/tool-mutation/" class="nav-list-link">Tool Mutation/Rug Pull Attacks</a><li class="nav-list-item"><a href="/ttps/tool-poisoning/tool-name-conflict/" class="nav-list-link">Tool Name Conflict</a><li class="nav-list-item"><a href="/ttps/tool-poisoning/tool-shadowing/" class="nav-list-link">Tool Shadowing/Name Collisions</a><li class="nav-list-item"><a href="/ttps/tool-poisoning/preference-manipulation/" class="nav-list-link">Preference Manipulation</a><li class="nav-list-item"><a href="/ttps/tool-poisoning/metadata-prompt-injection/" class="nav-list-link">Prompt Injection in Metadata</a><li class="nav-list-item"><a href="/ttps/tool-poisoning/metadata-manipulation/" class="nav-list-link">Metadata Manipulation</a><li class="nav-list-item"><a href="/ttps/tool-poisoning/tool-impersonation/" class="nav-list-link">Tool Impersonation</a></ul><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Data Exfiltration & Credential Theft category" aria-pressed="false"> <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/ttps/data-exfiltration/" class="nav-list-link">Data Exfiltration & Credential Theft</a><ul class="nav-list"><li class="nav-list-item"><a href="/ttps/data-exfiltration/data-exfiltration/" class="nav-list-link">Data Exfiltration</a><li class="nav-list-item"><a href="/ttps/data-exfiltration/credential-exfiltration/" class="nav-list-link">Credential Exfiltration</a><li class="nav-list-item"><a href="/ttps/data-exfiltration/token-theft/" class="nav-list-link">Token Theft/Overreach</a><li class="nav-list-item"><a href="/ttps/data-exfiltration/api-key-exposure/" class="nav-list-link">API Key Exposure</a><li class="nav-list-item"><a href="/ttps/data-exfiltration/conversation-history-exfiltration/" class="nav-list-link">Conversation History Exfiltration</a><li class="nav-list-item"><a href="/ttps/data-exfiltration/sensitive-information-disclosure/" class="nav-list-link">Sensitive Information Disclosure</a></ul><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Command & Code Injection category" aria-pressed="false"> <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/ttps/command-injection/" class="nav-list-link">Command & Code Injection</a><ul class="nav-list"><li class="nav-list-item"><a href="/ttps/command-injection/command-injection/" class="nav-list-link">Command Injection</a><li class="nav-list-item"><a href="/ttps/command-injection/sql-injection/" class="nav-list-link">SQL Injection</a><li class="nav-list-item"><a href="/ttps/command-injection/os-command-injection/" class="nav-list-link">OS Command Injection</a><li class="nav-list-item"><a href="/ttps/command-injection/code-injection/" class="nav-list-link">Code Injection</a><li class="nav-list-item"><a href="/ttps/command-injection/shell-command-execution/" class="nav-list-link">Shell Command Execution</a><li class="nav-list-item"><a href="/ttps/command-injection/output-prompt-injection/" class="nav-list-link">Output Prompt Injection</a><li class="nav-list-item"><a href="/ttps/command-injection/malicious-output-composition/" class="nav-list-link">Malicious Output Composition</a></ul><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Authentication & Authorization category" aria-pressed="false"> <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/ttps/authentication/" class="nav-list-link">Authentication & Authorization</a><ul class="nav-list"><li class="nav-list-item"><a href="/ttps/authentication/unauthenticated-access/" class="nav-list-link">Unauthenticated Access</a><li class="nav-list-item"><a href="/ttps/authentication/broken-authentication/" class="nav-list-link">Broken Authentication</a><li class="nav-list-item"><a href="/ttps/authentication/authorization-bypass/" class="nav-list-link">Authorization Bypass</a><li class="nav-list-item"><a href="/ttps/authentication/auth-bypass-rogue-server/" class="nav-list-link">Auth Bypass & Rogue Server Registration</a><li class="nav-list-item"><a href="/ttps/authentication/identity-subversion/" class="nav-list-link">Identity Subversion</a><li class="nav-list-item"><a href="/ttps/authentication/session-management-issues/" class="nav-list-link">Session Management Issues</a><li class="nav-list-item"><a href="/ttps/authentication/privilege-escalation/" class="nav-list-link">Privilege Escalation</a><li class="nav-list-item"><a href="/ttps/authentication/audit-bypass/" class="nav-list-link">Audit Bypass</a></ul><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Supply Chain & Dependencies category" aria-pressed="false"> <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/ttps/supply-chain/" class="nav-list-link">Supply Chain & Dependencies</a><ul class="nav-list"><li class="nav-list-item"><a href="/ttps/supply-chain/malicious-mcp-packages/" class="nav-list-link">Malicious MCP Packages</a><li class="nav-list-item"><a href="/ttps/supply-chain/supply-chain-attacks/" class="nav-list-link">Supply Chain Attacks</a><li class="nav-list-item"><a href="/ttps/supply-chain/dependency-vulnerabilities/" class="nav-list-link">Dependency Vulnerabilities</a><li class="nav-list-item"><a href="/ttps/supply-chain/installer-spoofing/" class="nav-list-link">Installer Spoofing</a><li class="nav-list-item"><a href="/ttps/supply-chain/typosquatting/" class="nav-list-link">Typosquatting</a><li class="nav-list-item"><a href="/ttps/supply-chain/drift-from-upstream/" class="nav-list-link">Drift from Upstream</a><li class="nav-list-item"><a href="/ttps/supply-chain/malicious-dependency-inclusion/" class="nav-list-link">Malicious Dependency Inclusion</a></ul><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Context Manipulation category" aria-pressed="false"> <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/ttps/context-manipulation/" class="nav-list-link">Context Manipulation</a><ul class="nav-list"><li class="nav-list-item"><a href="/ttps/context-manipulation/context-poisoning/" class="nav-list-link">Context Poisoning</a><li class="nav-list-item"><a href="/ttps/context-manipulation/context-spoofing/" class="nav-list-link">Context Spoofing</a><li class="nav-list-item"> <a href="/ttps/context-manipulation/context-manipulation/" class="nav-list-link"> ∞ </a><li class="nav-list-item"><a href="/ttps/context-manipulation/memory-references-issues/" class="nav-list-link">Memory References Issues</a><li class="nav-list-item"><a href="/ttps/context-manipulation/covert-channel-abuse/" class="nav-list-link">Covert Channel Abuse</a></ul><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Protocol Vulnerabilities category" aria-pressed="false"> <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/ttps/protocol-vulnerabilities/" class="nav-list-link">Protocol Vulnerabilities</a><ul class="nav-list"><li class="nav-list-item"><a href="/ttps/protocol-vulnerabilities/session-ids-in-urls/" class="nav-list-link">Session IDs in URLs</a><li class="nav-list-item"><a href="/ttps/protocol-vulnerabilities/lack-of-authentication-standards/" class="nav-list-link">Lack of Authentication Standards</a><li class="nav-list-item"><a href="/ttps/protocol-vulnerabilities/missing-integrity-controls/" class="nav-list-link">Missing Integrity Controls</a><li class="nav-list-item"><a href="/ttps/protocol-vulnerabilities/protocol-implementation-flaws/" class="nav-list-link">Protocol Implementation Flaws</a><li class="nav-list-item"><a href="/ttps/protocol-vulnerabilities/insecure-communication/" class="nav-list-link">Insecure Communication</a></ul><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Privilege & Access Control category" aria-pressed="false"> <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/ttps/privilege-access-control/" class="nav-list-link">Privilege & Access Control</a><ul class="nav-list"><li class="nav-list-item"><a href="/ttps/privilege-access-control/unauthorized-privilege-escalation/" class="nav-list-link">Unauthorized Privilege Escalation</a><li class="nav-list-item"><a href="/ttps/privilege-access-control/excessive-tool-permissions/" class="nav-list-link">Excessive Tool Permissions</a><li class="nav-list-item"><a href="/ttps/privilege-access-control/sandbox-escape/" class="nav-list-link">Sandbox Escape</a><li class="nav-list-item"><a href="/ttps/privilege-access-control/resource-access-control-bypass/" class="nav-list-link">Resource Access Control Bypass</a><li class="nav-list-item"><a href="/ttps/privilege-access-control/cross-context-access/" class="nav-list-link">Cross-Context Access</a><li class="nav-list-item"><a href="/ttps/privilege-access-control/process-injection/" class="nav-list-link">Process Injection</a></ul><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Economic & Infrastructure Abuse category" aria-pressed="false"> <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/ttps/economic-infrastructure-abuse/" class="nav-list-link">Economic & Infrastructure Abuse</a><ul class="nav-list"><li class="nav-list-item"><a href="/ttps/economic-infrastructure-abuse/resource-exhaustion/" class="nav-list-link">Resource Exhaustion</a><li class="nav-list-item"><a href="/ttps/economic-infrastructure-abuse/api-rate-limit-bypass/" class="nav-list-link">API Rate Limit Bypass</a><li class="nav-list-item"><a href="/ttps/economic-infrastructure-abuse/computational-resource-abuse/" class="nav-list-link">Computational Resource Abuse</a></ul><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Monitoring & Operational Security category" aria-pressed="false"> <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/ttps/monitoring-operational-security/" class="nav-list-link">Monitoring & Operational Security</a><ul class="nav-list"><li class="nav-list-item"><a href="/ttps/monitoring-operational-security/insufficient-logging/" class="nav-list-link">Insufficient Logging</a><li class="nav-list-item"><a href="/ttps/monitoring-operational-security/missing-audit-trails/" class="nav-list-link">Missing Audit Trails</a><li class="nav-list-item"><a href="/ttps/monitoring-operational-security/inadequate-monitoring/" class="nav-list-link">Inadequate Monitoring</a><li class="nav-list-item"><a href="/ttps/monitoring-operational-security/log-tampering/" class="nav-list-link">Log Tampering</a><li class="nav-list-item"><a href="/ttps/monitoring-operational-security/blind-spots-in-security/" class="nav-list-link">Blind Spots in Security</a></ul><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in AI-Specific Vulnerabilities category" aria-pressed="false"> <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/ttps/ai-specific-vulnerabilities/" class="nav-list-link">AI-Specific Vulnerabilities</a><ul class="nav-list"><li class="nav-list-item"><a href="/ttps/ai-specific-vulnerabilities/model-poisoning/" class="nav-list-link">Model Poisoning</a><li class="nav-list-item"><a href="/ttps/ai-specific-vulnerabilities/inference-attacks/" class="nav-list-link">Inference Attacks</a><li class="nav-list-item"><a href="/ttps/ai-specific-vulnerabilities/model-theft/" class="nav-list-link">Model Theft</a><li class="nav-list-item"><a href="/ttps/ai-specific-vulnerabilities/adversarial-attacks/" class="nav-list-link">Adversarial Attacks</a></ul></ul><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Hardening Guide category" aria-pressed="false"> <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/hardening/" class="nav-list-link">Hardening Guide</a><ul class="nav-list"><li class="nav-list-item"><a href="/hardening/provenance-selection.html" class="nav-list-link">Provenance & Selection</a><li class="nav-list-item"><a href="/hardening/code-integrity-auditing.html" class="nav-list-link">Code Integrity & Auditing</a><li class="nav-list-item"><a href="/hardening/runtime-isolation.html" class="nav-list-link">Runtime Isolation</a><li class="nav-list-item"><a href="/hardening/traffic-mediation.html" class="nav-list-link">Traffic Mediation</a><li class="nav-list-item"><a href="/hardening/secrets-management.html" class="nav-list-link">Secrets Management</a><li class="nav-list-item"><a href="/hardening/observability-logging.html" class="nav-list-link">Observability & Logging</a><li class="nav-list-item"><a href="/hardening/backup-versioning.html" class="nav-list-link">Backup & Versioning</a><li class="nav-list-item"><a href="/hardening/policy-guardrails.html" class="nav-list-link">Policy & Guardrails</a><li class="nav-list-item"><a href="/hardening/payments-wallets.html" class="nav-list-link">Payments & Wallets</a><li class="nav-list-item"><a href="/hardening/lifecycle-management.html" class="nav-list-link">Lifecycle Management</a><li class="nav-list-item"><a href="/hardening/checklist.html" class="nav-list-link">Security Checklist</a></ul><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Known Vulnerabilities category" aria-pressed="false"> <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/known-vulnerabilities/" class="nav-list-link">Known Vulnerabilities</a><ul class="nav-list"><li class="nav-list-item"><a href="/known-vulnerabilities/cve-2025-49596/" class="nav-list-link">CVE-2025-49596: RCE in MCP Inspector</a><li class="nav-list-item"><a href="/known-vulnerabilities/cve-2025-6514/" class="nav-list-link">CVE-2025-6514: Authentication Bypass and Session Hijacking</a></ul><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Build Security category" aria-pressed="false"> <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/build/" class="nav-list-link">Build Security</a><ul class="nav-list"><li class="nav-list-item"><a href="/build/oauth-security/" class="nav-list-link">OAuth Security Patterns</a><li class="nav-list-item"><a href="/build/authentication-strategies/" class="nav-list-link">Authentication Strategies</a><li class="nav-list-item"><a href="/build/runtime-isolation/" class="nav-list-link">Runtime Isolation</a><li class="nav-list-item"><a href="/build/architecture-patterns/" class="nav-list-link">Architecture Patterns</a><li class="nav-list-item"><a href="/build/tool-metadata-spec/" class="nav-list-link">Tool Metadata Specification</a></ul><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Operations Guide category" aria-pressed="false"> <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/operations/" class="nav-list-link">Operations Guide</a><ul class="nav-list"><li class="nav-list-item"><a href="/operations/container-operations.html" class="nav-list-link">Container Operations</a><li class="nav-list-item"><a href="/operations/network-controls.html" class="nav-list-link">Network Controls</a><li class="nav-list-item"><a href="/operations/remote-deployment.html" class="nav-list-link">Remote Deployment</a><li class="nav-list-item"><a href="/operations/monitoring-alerting.html" class="nav-list-link">Monitoring & Alerting</a><li class="nav-list-item"><a href="/operations/incident-response.html" class="nav-list-link">Incident Response</a><li class="nav-list-item"><a href="/operations/api-gateway-operations.html" class="nav-list-link">API Gateway Operations</a><li class="nav-list-item"><a href="/operations/change-management.html" class="nav-list-link">Change Management</a><li class="nav-list-item"><a href="/operations/forensics-investigation.html" class="nav-list-link">Forensics & Investigation</a><li class="nav-list-item"><a href="/operations/operational-maintenance.html" class="nav-list-link">Operational Maintenance</a><li class="nav-list-item"><a href="/operations/operational-runbooks.html" class="nav-list-link">Operational Runbooks</a><li class="nav-list-item"><a href="/operations/performance-security.html" class="nav-list-link">Performance & Security</a><li class="nav-list-item"><a href="/operations/security-troubleshooting.html" class="nav-list-link">Security Troubleshooting</a><li class="nav-list-item"><a href="/operations/security-workflows.html" class="nav-list-link">Security Workflows</a><li class="nav-list-item"><a href="/operations/tls-proxy-management.html" class="nav-list-link">TLS & Proxy Management</a><li class="nav-list-item"><a href="/operations/traffic-redirection.html" class="nav-list-link">Traffic Redirection</a></ul><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Operational Security category" aria-pressed="false"> <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/operational/" class="nav-list-link">Operational Security</a><ul class="nav-list"><li class="nav-list-item"><a href="/operational/runtime-monitoring/" class="nav-list-link">Runtime Monitoring</a><li class="nav-list-item"><a href="/operational/registry-security/" class="nav-list-link">Registry Security</a><li class="nav-list-item"><a href="/operational/version-management/" class="nav-list-link">Version Management</a></ul><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Reference Patterns category" aria-pressed="false"> <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/patterns/" class="nav-list-link">Reference Patterns</a><ul class="nav-list"><li class="nav-list-item"><a href="/patterns/enterprise-gateway.html" class="nav-list-link">Enterprise Gateway</a><li class="nav-list-item"><a href="/patterns/local-dev-container.html" class="nav-list-link">Local Dev Container</a><li class="nav-list-item"><a href="/patterns/llm-heaven-vps.html" class="nav-list-link">LLM Heaven VPS</a></ul><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Audit Tools category" aria-pressed="false"> <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/audit/" class="nav-list-link">Audit Tools</a><ul class="nav-list"><li class="nav-list-item"><a href="/audit/mcp-inspector.html" class="nav-list-link">MCP Inspector</a><li class="nav-list-item"><a href="/audit/tool-usage-auditing/" class="nav-list-link">Tool Usage Auditing</a><li class="nav-list-item"><a href="/audit/scorecard.html" class="nav-list-link">Selection Scorecard</a><li class="nav-list-item"><a href="/audit/vulnerability-tracking/" class="nav-list-link">Vulnerability Tracking</a><li class="nav-list-item"><a href="/audit/step-by-step-guide.html" class="nav-list-link">Step-by-Step Guide</a></ul><li class="nav-list-item"><a href="/tools/" class="nav-list-link">Tools & Scripts</a><li class="nav-list-item"><a href="/vulnerability-db/" class="nav-list-link">Vulnerability Database</a><li class="nav-list-item"><button class="nav-list-expander btn-reset" aria-label="toggle items in Community category" aria-pressed="false"> <svg viewBox="0 0 24 24" aria-hidden="true"><use xlink:href="#svg-arrow-right"></use></svg> </button><a href="/community/" class="nav-list-link">Community</a><ul class="nav-list"><li class="nav-list-item"><a href="/community/charter.html" class="nav-list-link">Charter</a><li class="nav-list-item"><a href="/community/code-of-conduct.html" class="nav-list-link">Code of Conduct</a></ul><li class="nav-list-item"><a href="/blog/" class="nav-list-link">Blog</a><li class="nav-list-item"><a href="/news/" class="nav-list-link">Security News</a><li class="nav-list-item"><a href="/events/" class="nav-list-link">Events</a></ul><ul class="nav-list"><li class="nav-list-item external"> <a href="https://github.com/orgs/ModelContextProtocol-Security/discussions" class="nav-list-link external" > GitHub Discussions <svg viewBox="0 0 24 24" aria-labelledby="svg-external-link-title"><use xlink:href="#svg-external-link"></use></svg> </a><li class="nav-list-item external"> <a href="https://cloudsecurityalliance.org" class="nav-list-link external" > Cloud Security Alliance <svg viewBox="0 0 24 24" aria-labelledby="svg-external-link-title"><use xlink:href="#svg-external-link"></use></svg> </a></ul></nav><footer class="site-footer"> This site uses <a href="https://github.com/just-the-docs/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.</footer></div><div class="main" id="top"><div id="main-header" class="main-header"><div class="search" role="search"><div class="search-input-wrap"> <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search Model Context Protocol Security" aria-label="Search Model Context Protocol Security" autocomplete="off"> <label for="search-input" class="search-label"><svg viewBox="0 0 24 24" class="search-icon"><use xlink:href="#svg-search"></use></svg></label></div><div id="search-results" class="search-results"></div></div><nav aria-label="Auxiliary" class="aux-nav"><ul class="aux-nav-list"><li class="aux-nav-list-item"> <a href="https://github.com/ModelContextProtocol-Security/modelcontextprotocol-security.io" class="site-button" target="_blank" rel="noopener noreferrer" > GitHub Repository </a><li class="aux-nav-list-item"> <a href="https://github.com/orgs/ModelContextProtocol-Security/discussions" class="site-button" target="_blank" rel="noopener noreferrer" > Join Discussion </a></ul></nav></div><div class="main-content-wrap"><nav aria-label="Breadcrumb" class="breadcrumb-nav"><ol class="breadcrumb-nav-list"><li class="breadcrumb-nav-list-item"><a href="/operational/">Operational Security</a><li class="breadcrumb-nav-list-item"><span>Version Management</span></ol></nav><div id="main-content" class="main-content"><main><h1 id="version-management"> <a href="#version-management" class="anchor-heading" aria-labelledby="version-management"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Version Management</h1><p><strong>Overview</strong>: Secure version control, deployment, and update management for MCP systems.</p><p>Version management is crucial for maintaining security, stability, and compliance in MCP deployments. This guide covers secure versioning practices, automated updates, and rollback procedures.</p><h2 id="secure-version-control"> <a href="#secure-version-control" class="anchor-heading" aria-labelledby="secure-version-control"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Secure Version Control</h2><h3 id="version-control-security"> <a href="#version-control-security" class="anchor-heading" aria-labelledby="version-control-security"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Version Control Security</h3><div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Secure version control implementation
+</span><span class="kn">import</span> <span class="nn">hashlib</span>
+<span class="kn">import</span> <span class="nn">json</span>
+<span class="kn">import</span> <span class="nn">time</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">List</span><span class="p">,</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Any</span>
+<span class="kn">from</span> <span class="nn">dataclasses</span> <span class="kn">import</span> <span class="n">dataclass</span>
+<span class="kn">from</span> <span class="nn">enum</span> <span class="kn">import</span> <span class="n">Enum</span>
+
+<span class="k">class</span> <span class="nc">VersionState</span><span class="p">(</span><span class="n">Enum</span><span class="p">):</span>
+    <span class="n">DEVELOPMENT</span> <span class="o">=</span> <span class="s">"development"</span>
+    <span class="n">TESTING</span> <span class="o">=</span> <span class="s">"testing"</span>
+    <span class="n">STAGING</span> <span class="o">=</span> <span class="s">"staging"</span>
+    <span class="n">PRODUCTION</span> <span class="o">=</span> <span class="s">"production"</span>
+    <span class="n">DEPRECATED</span> <span class="o">=</span> <span class="s">"deprecated"</span>
+    <span class="n">ARCHIVED</span> <span class="o">=</span> <span class="s">"archived"</span>
+
+<span class="o">@</span><span class="n">dataclass</span>
+<span class="k">class</span> <span class="nc">Version</span><span class="p">:</span>
+    <span class="n">version_number</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">state</span><span class="p">:</span> <span class="n">VersionState</span>
+    <span class="n">created_at</span><span class="p">:</span> <span class="nb">float</span>
+    <span class="n">created_by</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">changelog</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>
+    <span class="n">security_updates</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>
+    <span class="n">dependencies</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]</span>
+    <span class="n">signature</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">checksum</span><span class="p">:</span> <span class="nb">str</span>
+
+<span class="k">class</span> <span class="nc">SecureVersionManager</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">version_db</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">signature_manager</span> <span class="o">=</span> <span class="n">SignatureManager</span><span class="p">()</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">update_validator</span> <span class="o">=</span> <span class="n">UpdateValidator</span><span class="p">()</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">rollback_manager</span> <span class="o">=</span> <span class="n">RollbackManager</span><span class="p">()</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">audit_logger</span> <span class="o">=</span> <span class="n">AuditLogger</span><span class="p">()</span>
+        
+    <span class="k">def</span> <span class="nf">create_version</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tool_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">version_data</span><span class="p">:</span> <span class="n">Dict</span><span class="p">,</span> <span class="n">creator_credentials</span><span class="p">:</span> <span class="n">Dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">VersionResult</span><span class="p">:</span>
+        <span class="s">"""Create new version with security validation"""</span>
+        
+        <span class="c1"># Validate creator credentials
+</span>        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="p">.</span><span class="n">validate_creator_credentials</span><span class="p">(</span><span class="n">creator_credentials</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">VersionResult</span><span class="p">(</span>
+                <span class="n">success</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+                <span class="n">reason</span><span class="o">=</span><span class="s">"Invalid creator credentials"</span>
+            <span class="p">)</span>
+        
+        <span class="c1"># Validate version number format
+</span>        <span class="n">version_number</span> <span class="o">=</span> <span class="n">version_data</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">'version_number'</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="p">.</span><span class="n">validate_version_format</span><span class="p">(</span><span class="n">version_number</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">VersionResult</span><span class="p">(</span>
+                <span class="n">success</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+                <span class="n">reason</span><span class="o">=</span><span class="s">"Invalid version number format"</span>
+            <span class="p">)</span>
+        
+        <span class="c1"># Check for version conflicts
+</span>        <span class="k">if</span> <span class="bp">self</span><span class="p">.</span><span class="n">version_exists</span><span class="p">(</span><span class="n">tool_name</span><span class="p">,</span> <span class="n">version_number</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">VersionResult</span><span class="p">(</span>
+                <span class="n">success</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+                <span class="n">reason</span><span class="o">=</span><span class="s">"Version already exists"</span>
+            <span class="p">)</span>
+        
+        <span class="c1"># Validate dependencies
+</span>        <span class="n">dependencies</span> <span class="o">=</span> <span class="n">version_data</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">'dependencies'</span><span class="p">,</span> <span class="p">{})</span>
+        <span class="n">dependency_validation</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">validate_dependencies</span><span class="p">(</span><span class="n">dependencies</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">dependency_validation</span><span class="p">.</span><span class="n">valid</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">VersionResult</span><span class="p">(</span>
+                <span class="n">success</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+                <span class="n">reason</span><span class="o">=</span><span class="sa">f</span><span class="s">"Invalid dependencies: </span><span class="si">{</span><span class="n">dependency_validation</span><span class="p">.</span><span class="n">reason</span><span class="si">}</span><span class="s">"</span>
+            <span class="p">)</span>
+        
+        <span class="c1"># Calculate checksum
+</span>        <span class="n">checksum</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">calculate_checksum</span><span class="p">(</span><span class="n">version_data</span><span class="p">)</span>
+        
+        <span class="c1"># Generate signature
+</span>        <span class="n">signature</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">signature_manager</span><span class="p">.</span><span class="n">sign_version</span><span class="p">(</span><span class="n">version_data</span><span class="p">,</span> <span class="n">creator_credentials</span><span class="p">)</span>
+        
+        <span class="c1"># Create version object
+</span>        <span class="n">version</span> <span class="o">=</span> <span class="n">Version</span><span class="p">(</span>
+            <span class="n">version_number</span><span class="o">=</span><span class="n">version_number</span><span class="p">,</span>
+            <span class="n">state</span><span class="o">=</span><span class="n">VersionState</span><span class="p">.</span><span class="n">DEVELOPMENT</span><span class="p">,</span>
+            <span class="n">created_at</span><span class="o">=</span><span class="n">time</span><span class="p">.</span><span class="n">time</span><span class="p">(),</span>
+            <span class="n">created_by</span><span class="o">=</span><span class="n">creator_credentials</span><span class="p">[</span><span class="s">'user_id'</span><span class="p">],</span>
+            <span class="n">changelog</span><span class="o">=</span><span class="n">version_data</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">'changelog'</span><span class="p">,</span> <span class="p">[]),</span>
+            <span class="n">security_updates</span><span class="o">=</span><span class="n">version_data</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">'security_updates'</span><span class="p">,</span> <span class="p">[]),</span>
+            <span class="n">dependencies</span><span class="o">=</span><span class="n">dependencies</span><span class="p">,</span>
+            <span class="n">signature</span><span class="o">=</span><span class="n">signature</span><span class="p">,</span>
+            <span class="n">checksum</span><span class="o">=</span><span class="n">checksum</span>
+        <span class="p">)</span>
+        
+        <span class="c1"># Store version
+</span>        <span class="k">if</span> <span class="n">tool_name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="bp">self</span><span class="p">.</span><span class="n">version_db</span><span class="p">:</span>
+            <span class="bp">self</span><span class="p">.</span><span class="n">version_db</span><span class="p">[</span><span class="n">tool_name</span><span class="p">]</span> <span class="o">=</span> <span class="p">{}</span>
+        
+        <span class="bp">self</span><span class="p">.</span><span class="n">version_db</span><span class="p">[</span><span class="n">tool_name</span><span class="p">][</span><span class="n">version_number</span><span class="p">]</span> <span class="o">=</span> <span class="n">version</span>
+        
+        <span class="c1"># Log version creation
+</span>        <span class="bp">self</span><span class="p">.</span><span class="n">audit_logger</span><span class="p">.</span><span class="n">log_version_creation</span><span class="p">(</span><span class="n">tool_name</span><span class="p">,</span> <span class="n">version</span><span class="p">,</span> <span class="n">creator_credentials</span><span class="p">)</span>
+        
+        <span class="k">return</span> <span class="n">VersionResult</span><span class="p">(</span>
+            <span class="n">success</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+            <span class="n">version</span><span class="o">=</span><span class="n">version</span>
+        <span class="p">)</span>
+    
+    <span class="k">def</span> <span class="nf">promote_version</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tool_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">version_number</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">target_state</span><span class="p">:</span> <span class="n">VersionState</span><span class="p">,</span> <span class="n">credentials</span><span class="p">:</span> <span class="n">Dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">PromotionResult</span><span class="p">:</span>
+        <span class="s">"""Promote version to higher state with security checks"""</span>
+        
+        <span class="c1"># Get current version
+</span>        <span class="n">version</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">get_version</span><span class="p">(</span><span class="n">tool_name</span><span class="p">,</span> <span class="n">version_number</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">version</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">PromotionResult</span><span class="p">(</span>
+                <span class="n">success</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+                <span class="n">reason</span><span class="o">=</span><span class="s">"Version not found"</span>
+            <span class="p">)</span>
+        
+        <span class="c1"># Validate promotion permissions
+</span>        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="p">.</span><span class="n">can_promote_version</span><span class="p">(</span><span class="n">version</span><span class="p">,</span> <span class="n">target_state</span><span class="p">,</span> <span class="n">credentials</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">PromotionResult</span><span class="p">(</span>
+                <span class="n">success</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+                <span class="n">reason</span><span class="o">=</span><span class="s">"Insufficient permissions for promotion"</span>
+            <span class="p">)</span>
+        
+        <span class="c1"># Validate promotion path
+</span>        <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="p">.</span><span class="n">is_valid_promotion_path</span><span class="p">(</span><span class="n">version</span><span class="p">.</span><span class="n">state</span><span class="p">,</span> <span class="n">target_state</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">PromotionResult</span><span class="p">(</span>
+                <span class="n">success</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+                <span class="n">reason</span><span class="o">=</span><span class="s">"Invalid promotion path"</span>
+            <span class="p">)</span>
+        
+        <span class="c1"># Perform security checks for production promotion
+</span>        <span class="k">if</span> <span class="n">target_state</span> <span class="o">==</span> <span class="n">VersionState</span><span class="p">.</span><span class="n">PRODUCTION</span><span class="p">:</span>
+            <span class="n">security_check</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">perform_production_security_check</span><span class="p">(</span><span class="n">tool_name</span><span class="p">,</span> <span class="n">version_number</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">security_check</span><span class="p">.</span><span class="n">passed</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">PromotionResult</span><span class="p">(</span>
+                    <span class="n">success</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+                    <span class="n">reason</span><span class="o">=</span><span class="sa">f</span><span class="s">"Security check failed: </span><span class="si">{</span><span class="n">security_check</span><span class="p">.</span><span class="n">reason</span><span class="si">}</span><span class="s">"</span>
+                <span class="p">)</span>
+        
+        <span class="c1"># Update version state
+</span>        <span class="n">old_state</span> <span class="o">=</span> <span class="n">version</span><span class="p">.</span><span class="n">state</span>
+        <span class="n">version</span><span class="p">.</span><span class="n">state</span> <span class="o">=</span> <span class="n">target_state</span>
+        
+        <span class="c1"># Log promotion
+</span>        <span class="bp">self</span><span class="p">.</span><span class="n">audit_logger</span><span class="p">.</span><span class="n">log_version_promotion</span><span class="p">(</span>
+            <span class="n">tool_name</span><span class="p">,</span>
+            <span class="n">version_number</span><span class="p">,</span>
+            <span class="n">old_state</span><span class="p">,</span>
+            <span class="n">target_state</span><span class="p">,</span>
+            <span class="n">credentials</span>
+        <span class="p">)</span>
+        
+        <span class="k">return</span> <span class="n">PromotionResult</span><span class="p">(</span>
+            <span class="n">success</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+            <span class="n">old_state</span><span class="o">=</span><span class="n">old_state</span><span class="p">,</span>
+            <span class="n">new_state</span><span class="o">=</span><span class="n">target_state</span>
+        <span class="p">)</span>
+    
+    <span class="k">def</span> <span class="nf">validate_dependencies</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dependencies</span><span class="p">:</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">DependencyValidationResult</span><span class="p">:</span>
+        <span class="s">"""Validate version dependencies"""</span>
+        
+        <span class="n">validation_results</span> <span class="o">=</span> <span class="p">[]</span>
+        
+        <span class="k">for</span> <span class="n">dep_name</span><span class="p">,</span> <span class="n">dep_version</span> <span class="ow">in</span> <span class="n">dependencies</span><span class="p">.</span><span class="n">items</span><span class="p">():</span>
+            <span class="c1"># Check if dependency exists
+</span>            <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="p">.</span><span class="n">dependency_exists</span><span class="p">(</span><span class="n">dep_name</span><span class="p">,</span> <span class="n">dep_version</span><span class="p">):</span>
+                <span class="n">validation_results</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">DependencyValidationError</span><span class="p">(</span>
+                    <span class="n">dependency</span><span class="o">=</span><span class="n">dep_name</span><span class="p">,</span>
+                    <span class="n">version</span><span class="o">=</span><span class="n">dep_version</span><span class="p">,</span>
+                    <span class="n">error</span><span class="o">=</span><span class="s">"Dependency not found"</span>
+                <span class="p">))</span>
+                <span class="k">continue</span>
+            
+            <span class="c1"># Check for known vulnerabilities
+</span>            <span class="n">vuln_check</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">check_dependency_vulnerabilities</span><span class="p">(</span><span class="n">dep_name</span><span class="p">,</span> <span class="n">dep_version</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">vuln_check</span><span class="p">.</span><span class="n">vulnerabilities</span><span class="p">:</span>
+                <span class="n">validation_results</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">DependencyValidationError</span><span class="p">(</span>
+                    <span class="n">dependency</span><span class="o">=</span><span class="n">dep_name</span><span class="p">,</span>
+                    <span class="n">version</span><span class="o">=</span><span class="n">dep_version</span><span class="p">,</span>
+                    <span class="n">error</span><span class="o">=</span><span class="sa">f</span><span class="s">"Known vulnerabilities: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">vuln_check</span><span class="p">.</span><span class="n">vulnerabilities</span><span class="p">)</span><span class="si">}</span><span class="s">"</span>
+                <span class="p">))</span>
+            
+            <span class="c1"># Check for deprecated versions
+</span>            <span class="k">if</span> <span class="bp">self</span><span class="p">.</span><span class="n">is_deprecated_version</span><span class="p">(</span><span class="n">dep_name</span><span class="p">,</span> <span class="n">dep_version</span><span class="p">):</span>
+                <span class="n">validation_results</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">DependencyValidationError</span><span class="p">(</span>
+                    <span class="n">dependency</span><span class="o">=</span><span class="n">dep_name</span><span class="p">,</span>
+                    <span class="n">version</span><span class="o">=</span><span class="n">dep_version</span><span class="p">,</span>
+                    <span class="n">error</span><span class="o">=</span><span class="s">"Deprecated version"</span>
+                <span class="p">))</span>
+        
+        <span class="k">return</span> <span class="n">DependencyValidationResult</span><span class="p">(</span>
+            <span class="n">valid</span><span class="o">=</span><span class="nb">len</span><span class="p">(</span><span class="n">validation_results</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="n">errors</span><span class="o">=</span><span class="n">validation_results</span>
+        <span class="p">)</span>
+    
+    <span class="k">def</span> <span class="nf">perform_production_security_check</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tool_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">version_number</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">SecurityCheckResult</span><span class="p">:</span>
+        <span class="s">"""Perform comprehensive security check for production promotion"""</span>
+        
+        <span class="n">security_checks</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="bp">self</span><span class="p">.</span><span class="n">check_signature_validity</span><span class="p">,</span>
+            <span class="bp">self</span><span class="p">.</span><span class="n">check_vulnerability_scan</span><span class="p">,</span>
+            <span class="bp">self</span><span class="p">.</span><span class="n">check_dependency_security</span><span class="p">,</span>
+            <span class="bp">self</span><span class="p">.</span><span class="n">check_code_quality</span><span class="p">,</span>
+            <span class="bp">self</span><span class="p">.</span><span class="n">check_test_coverage</span><span class="p">,</span>
+            <span class="bp">self</span><span class="p">.</span><span class="n">check_compliance_requirements</span>
+        <span class="p">]</span>
+        
+        <span class="n">check_results</span> <span class="o">=</span> <span class="p">[]</span>
+        
+        <span class="k">for</span> <span class="n">check</span> <span class="ow">in</span> <span class="n">security_checks</span><span class="p">:</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="n">check</span><span class="p">(</span><span class="n">tool_name</span><span class="p">,</span> <span class="n">version_number</span><span class="p">)</span>
+            <span class="n">check_results</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+            
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">result</span><span class="p">.</span><span class="n">passed</span> <span class="ow">and</span> <span class="n">result</span><span class="p">.</span><span class="n">severity</span> <span class="o">==</span> <span class="s">"critical"</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">SecurityCheckResult</span><span class="p">(</span>
+                    <span class="n">passed</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+                    <span class="n">reason</span><span class="o">=</span><span class="sa">f</span><span class="s">"Critical security check failed: </span><span class="si">{</span><span class="n">result</span><span class="p">.</span><span class="n">check_name</span><span class="si">}</span><span class="s">"</span><span class="p">,</span>
+                    <span class="n">details</span><span class="o">=</span><span class="n">check_results</span>
+                <span class="p">)</span>
+        
+        <span class="c1"># Calculate overall security score
+</span>        <span class="n">security_score</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">result</span><span class="p">.</span><span class="n">score</span> <span class="k">for</span> <span class="n">result</span> <span class="ow">in</span> <span class="n">check_results</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">check_results</span><span class="p">)</span>
+        
+        <span class="k">return</span> <span class="n">SecurityCheckResult</span><span class="p">(</span>
+            <span class="n">passed</span><span class="o">=</span><span class="n">security_score</span> <span class="o">&gt;=</span> <span class="mi">80</span><span class="p">,</span>  <span class="c1"># 80% threshold
+</span>            <span class="n">reason</span><span class="o">=</span><span class="sa">f</span><span class="s">"Security score: </span><span class="si">{</span><span class="n">security_score</span><span class="si">}</span><span class="s">%"</span><span class="p">,</span>
+            <span class="n">score</span><span class="o">=</span><span class="n">security_score</span><span class="p">,</span>
+            <span class="n">details</span><span class="o">=</span><span class="n">check_results</span>
+        <span class="p">)</span>
+</code></pre></div></div><h2 id="automated-update-management"> <a href="#automated-update-management" class="anchor-heading" aria-labelledby="automated-update-management"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Automated Update Management</h2><h3 id="update-automation-system"> <a href="#update-automation-system" class="anchor-heading" aria-labelledby="update-automation-system"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Update Automation System</h3><div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Automated update management
+</span><span class="k">class</span> <span class="nc">AutomatedUpdateManager</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">update_scheduler</span> <span class="o">=</span> <span class="n">UpdateScheduler</span><span class="p">()</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">update_validator</span> <span class="o">=</span> <span class="n">UpdateValidator</span><span class="p">()</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">rollback_manager</span> <span class="o">=</span> <span class="n">RollbackManager</span><span class="p">()</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">notification_service</span> <span class="o">=</span> <span class="n">NotificationService</span><span class="p">()</span>
+        
+    <span class="k">def</span> <span class="nf">schedule_update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tool_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">target_version</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">update_config</span><span class="p">:</span> <span class="n">Dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">UpdateScheduleResult</span><span class="p">:</span>
+        <span class="s">"""Schedule automated update with safety checks"""</span>
+        
+        <span class="c1"># Validate update configuration
+</span>        <span class="n">config_validation</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">validate_update_config</span><span class="p">(</span><span class="n">update_config</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">config_validation</span><span class="p">.</span><span class="n">valid</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">UpdateScheduleResult</span><span class="p">(</span>
+                <span class="n">success</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+                <span class="n">reason</span><span class="o">=</span><span class="sa">f</span><span class="s">"Invalid update configuration: </span><span class="si">{</span><span class="n">config_validation</span><span class="p">.</span><span class="n">reason</span><span class="si">}</span><span class="s">"</span>
+            <span class="p">)</span>
+        
+        <span class="c1"># Check update prerequisites
+</span>        <span class="n">prerequisites_check</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">check_update_prerequisites</span><span class="p">(</span><span class="n">tool_name</span><span class="p">,</span> <span class="n">target_version</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">prerequisites_check</span><span class="p">.</span><span class="n">satisfied</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">UpdateScheduleResult</span><span class="p">(</span>
+                <span class="n">success</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+                <span class="n">reason</span><span class="o">=</span><span class="sa">f</span><span class="s">"Prerequisites not met: </span><span class="si">{</span><span class="n">prerequisites_check</span><span class="p">.</span><span class="n">reason</span><span class="si">}</span><span class="s">"</span>
+            <span class="p">)</span>
+        
+        <span class="c1"># Create update plan
+</span>        <span class="n">update_plan</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">create_update_plan</span><span class="p">(</span><span class="n">tool_name</span><span class="p">,</span> <span class="n">target_version</span><span class="p">,</span> <span class="n">update_config</span><span class="p">)</span>
+        
+        <span class="c1"># Schedule update
+</span>        <span class="n">update_job</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">update_scheduler</span><span class="p">.</span><span class="n">schedule_update</span><span class="p">(</span><span class="n">update_plan</span><span class="p">)</span>
+        
+        <span class="k">return</span> <span class="n">UpdateScheduleResult</span><span class="p">(</span>
+            <span class="n">success</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+            <span class="n">update_job_id</span><span class="o">=</span><span class="n">update_job</span><span class="p">.</span><span class="nb">id</span><span class="p">,</span>
+            <span class="n">scheduled_time</span><span class="o">=</span><span class="n">update_job</span><span class="p">.</span><span class="n">scheduled_time</span>
+        <span class="p">)</span>
+    
+    <span class="k">def</span> <span class="nf">execute_update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">update_job_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">UpdateExecutionResult</span><span class="p">:</span>
+        <span class="s">"""Execute scheduled update with safety measures"""</span>
+        
+        <span class="c1"># Get update job
+</span>        <span class="n">update_job</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">update_scheduler</span><span class="p">.</span><span class="n">get_job</span><span class="p">(</span><span class="n">update_job_id</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">update_job</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">UpdateExecutionResult</span><span class="p">(</span>
+                <span class="n">success</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+                <span class="n">reason</span><span class="o">=</span><span class="s">"Update job not found"</span>
+            <span class="p">)</span>
+        
+        <span class="c1"># Pre-update validation
+</span>        <span class="n">pre_update_validation</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">validate_pre_update_state</span><span class="p">(</span><span class="n">update_job</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">pre_update_validation</span><span class="p">.</span><span class="n">valid</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">UpdateExecutionResult</span><span class="p">(</span>
+                <span class="n">success</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+                <span class="n">reason</span><span class="o">=</span><span class="sa">f</span><span class="s">"Pre-update validation failed: </span><span class="si">{</span><span class="n">pre_update_validation</span><span class="p">.</span><span class="n">reason</span><span class="si">}</span><span class="s">"</span>
+            <span class="p">)</span>
+        
+        <span class="c1"># Create rollback point
+</span>        <span class="n">rollback_point</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">rollback_manager</span><span class="p">.</span><span class="n">create_rollback_point</span><span class="p">(</span><span class="n">update_job</span><span class="p">.</span><span class="n">tool_name</span><span class="p">)</span>
+        
+        <span class="k">try</span><span class="p">:</span>
+            <span class="c1"># Execute update steps
+</span>            <span class="n">update_result</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">execute_update_steps</span><span class="p">(</span><span class="n">update_job</span><span class="p">)</span>
+            
+            <span class="k">if</span> <span class="n">update_result</span><span class="p">.</span><span class="n">success</span><span class="p">:</span>
+                <span class="c1"># Post-update validation
+</span>                <span class="n">post_update_validation</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">validate_post_update_state</span><span class="p">(</span><span class="n">update_job</span><span class="p">)</span>
+                
+                <span class="k">if</span> <span class="n">post_update_validation</span><span class="p">.</span><span class="n">valid</span><span class="p">:</span>
+                    <span class="c1"># Update successful
+</span>                    <span class="bp">self</span><span class="p">.</span><span class="n">rollback_manager</span><span class="p">.</span><span class="n">confirm_update</span><span class="p">(</span><span class="n">rollback_point</span><span class="p">.</span><span class="nb">id</span><span class="p">)</span>
+                    <span class="bp">self</span><span class="p">.</span><span class="n">notification_service</span><span class="p">.</span><span class="n">send_update_success_notification</span><span class="p">(</span><span class="n">update_job</span><span class="p">)</span>
+                    
+                    <span class="k">return</span> <span class="n">UpdateExecutionResult</span><span class="p">(</span>
+                        <span class="n">success</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+                        <span class="n">message</span><span class="o">=</span><span class="s">"Update completed successfully"</span>
+                    <span class="p">)</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="c1"># Post-update validation failed, rollback
+</span>                    <span class="bp">self</span><span class="p">.</span><span class="n">rollback_manager</span><span class="p">.</span><span class="n">execute_rollback</span><span class="p">(</span><span class="n">rollback_point</span><span class="p">.</span><span class="nb">id</span><span class="p">)</span>
+                    
+                    <span class="k">return</span> <span class="n">UpdateExecutionResult</span><span class="p">(</span>
+                        <span class="n">success</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+                        <span class="n">reason</span><span class="o">=</span><span class="sa">f</span><span class="s">"Post-update validation failed: </span><span class="si">{</span><span class="n">post_update_validation</span><span class="p">.</span><span class="n">reason</span><span class="si">}</span><span class="s">"</span><span class="p">,</span>
+                        <span class="n">rolled_back</span><span class="o">=</span><span class="bp">True</span>
+                    <span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="c1"># Update failed, rollback
+</span>                <span class="bp">self</span><span class="p">.</span><span class="n">rollback_manager</span><span class="p">.</span><span class="n">execute_rollback</span><span class="p">(</span><span class="n">rollback_point</span><span class="p">.</span><span class="nb">id</span><span class="p">)</span>
+                
+                <span class="k">return</span> <span class="n">UpdateExecutionResult</span><span class="p">(</span>
+                    <span class="n">success</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+                    <span class="n">reason</span><span class="o">=</span><span class="sa">f</span><span class="s">"Update execution failed: </span><span class="si">{</span><span class="n">update_result</span><span class="p">.</span><span class="n">reason</span><span class="si">}</span><span class="s">"</span><span class="p">,</span>
+                    <span class="n">rolled_back</span><span class="o">=</span><span class="bp">True</span>
+                <span class="p">)</span>
+                
+        <span class="k">except</span> <span class="nb">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="c1"># Exception during update, rollback
+</span>            <span class="bp">self</span><span class="p">.</span><span class="n">rollback_manager</span><span class="p">.</span><span class="n">execute_rollback</span><span class="p">(</span><span class="n">rollback_point</span><span class="p">.</span><span class="nb">id</span><span class="p">)</span>
+            
+            <span class="k">return</span> <span class="n">UpdateExecutionResult</span><span class="p">(</span>
+                <span class="n">success</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+                <span class="n">reason</span><span class="o">=</span><span class="sa">f</span><span class="s">"Update exception: </span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="si">}</span><span class="s">"</span><span class="p">,</span>
+                <span class="n">rolled_back</span><span class="o">=</span><span class="bp">True</span>
+            <span class="p">)</span>
+    
+    <span class="k">def</span> <span class="nf">validate_update_config</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">update_config</span><span class="p">:</span> <span class="n">Dict</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ConfigValidationResult</span><span class="p">:</span>
+        <span class="s">"""Validate update configuration"""</span>
+        
+        <span class="n">required_fields</span> <span class="o">=</span> <span class="p">[</span><span class="s">'update_strategy'</span><span class="p">,</span> <span class="s">'validation_checks'</span><span class="p">,</span> <span class="s">'rollback_policy'</span><span class="p">]</span>
+        
+        <span class="k">for</span> <span class="n">field</span> <span class="ow">in</span> <span class="n">required_fields</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">field</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">update_config</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">ConfigValidationResult</span><span class="p">(</span>
+                    <span class="n">valid</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+                    <span class="n">reason</span><span class="o">=</span><span class="sa">f</span><span class="s">"Missing required field: </span><span class="si">{</span><span class="n">field</span><span class="si">}</span><span class="s">"</span>
+                <span class="p">)</span>
+        
+        <span class="c1"># Validate update strategy
+</span>        <span class="n">valid_strategies</span> <span class="o">=</span> <span class="p">[</span><span class="s">'rolling'</span><span class="p">,</span> <span class="s">'blue_green'</span><span class="p">,</span> <span class="s">'canary'</span><span class="p">,</span> <span class="s">'immediate'</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">update_config</span><span class="p">[</span><span class="s">'update_strategy'</span><span class="p">]</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">valid_strategies</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">ConfigValidationResult</span><span class="p">(</span>
+                <span class="n">valid</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+                <span class="n">reason</span><span class="o">=</span><span class="sa">f</span><span class="s">"Invalid update strategy: </span><span class="si">{</span><span class="n">update_config</span><span class="p">[</span><span class="s">'update_strategy'</span><span class="p">]</span><span class="si">}</span><span class="s">"</span>
+            <span class="p">)</span>
+        
+        <span class="c1"># Validate rollback policy
+</span>        <span class="n">rollback_policy</span> <span class="o">=</span> <span class="n">update_config</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">'rollback_policy'</span><span class="p">,</span> <span class="p">{})</span>
+        <span class="k">if</span> <span class="s">'automatic_rollback'</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">rollback_policy</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">ConfigValidationResult</span><span class="p">(</span>
+                <span class="n">valid</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+                <span class="n">reason</span><span class="o">=</span><span class="s">"Rollback policy must specify automatic_rollback"</span>
+            <span class="p">)</span>
+        
+        <span class="k">return</span> <span class="n">ConfigValidationResult</span><span class="p">(</span>
+            <span class="n">valid</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+            <span class="n">reason</span><span class="o">=</span><span class="s">"Configuration valid"</span>
+        <span class="p">)</span>
+</code></pre></div></div><h2 id="rollback-management"> <a href="#rollback-management" class="anchor-heading" aria-labelledby="rollback-management"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Rollback Management</h2><h3 id="rollback-system-implementation"> <a href="#rollback-system-implementation" class="anchor-heading" aria-labelledby="rollback-system-implementation"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Rollback System Implementation</h3><div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Rollback management system
+</span><span class="k">class</span> <span class="nc">RollbackManager</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">rollback_points</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">rollback_history</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">state_manager</span> <span class="o">=</span> <span class="n">StateManager</span><span class="p">()</span>
+        
+    <span class="k">def</span> <span class="nf">create_rollback_point</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tool_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">RollbackPoint</span><span class="p">:</span>
+        <span class="s">"""Create rollback point before update"""</span>
+        
+        <span class="c1"># Capture current state
+</span>        <span class="n">current_state</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">state_manager</span><span class="p">.</span><span class="n">capture_state</span><span class="p">(</span><span class="n">tool_name</span><span class="p">)</span>
+        
+        <span class="c1"># Create rollback point
+</span>        <span class="n">rollback_point</span> <span class="o">=</span> <span class="n">RollbackPoint</span><span class="p">(</span>
+            <span class="nb">id</span><span class="o">=</span><span class="bp">self</span><span class="p">.</span><span class="n">generate_rollback_id</span><span class="p">(),</span>
+            <span class="n">tool_name</span><span class="o">=</span><span class="n">tool_name</span><span class="p">,</span>
+            <span class="n">created_at</span><span class="o">=</span><span class="n">time</span><span class="p">.</span><span class="n">time</span><span class="p">(),</span>
+            <span class="n">state_snapshot</span><span class="o">=</span><span class="n">current_state</span><span class="p">,</span>
+            <span class="n">status</span><span class="o">=</span><span class="s">"active"</span>
+        <span class="p">)</span>
+        
+        <span class="c1"># Store rollback point
+</span>        <span class="bp">self</span><span class="p">.</span><span class="n">rollback_points</span><span class="p">[</span><span class="n">rollback_point</span><span class="p">.</span><span class="nb">id</span><span class="p">]</span> <span class="o">=</span> <span class="n">rollback_point</span>
+        
+        <span class="k">return</span> <span class="n">rollback_point</span>
+    
+    <span class="k">def</span> <span class="nf">execute_rollback</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rollback_point_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">RollbackResult</span><span class="p">:</span>
+        <span class="s">"""Execute rollback to previous state"""</span>
+        
+        <span class="c1"># Get rollback point
+</span>        <span class="n">rollback_point</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">rollback_points</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="n">rollback_point_id</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">rollback_point</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">RollbackResult</span><span class="p">(</span>
+                <span class="n">success</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+                <span class="n">reason</span><span class="o">=</span><span class="s">"Rollback point not found"</span>
+            <span class="p">)</span>
+        
+        <span class="k">if</span> <span class="n">rollback_point</span><span class="p">.</span><span class="n">status</span> <span class="o">!=</span> <span class="s">"active"</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">RollbackResult</span><span class="p">(</span>
+                <span class="n">success</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+                <span class="n">reason</span><span class="o">=</span><span class="s">"Rollback point is not active"</span>
+            <span class="p">)</span>
+        
+        <span class="k">try</span><span class="p">:</span>
+            <span class="c1"># Restore state
+</span>            <span class="n">restore_result</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">state_manager</span><span class="p">.</span><span class="n">restore_state</span><span class="p">(</span>
+                <span class="n">rollback_point</span><span class="p">.</span><span class="n">tool_name</span><span class="p">,</span>
+                <span class="n">rollback_point</span><span class="p">.</span><span class="n">state_snapshot</span>
+            <span class="p">)</span>
+            
+            <span class="k">if</span> <span class="n">restore_result</span><span class="p">.</span><span class="n">success</span><span class="p">:</span>
+                <span class="c1"># Mark rollback point as used
+</span>                <span class="n">rollback_point</span><span class="p">.</span><span class="n">status</span> <span class="o">=</span> <span class="s">"used"</span>
+                <span class="n">rollback_point</span><span class="p">.</span><span class="n">used_at</span> <span class="o">=</span> <span class="n">time</span><span class="p">.</span><span class="n">time</span><span class="p">()</span>
+                
+                <span class="c1"># Record rollback in history
+</span>                <span class="bp">self</span><span class="p">.</span><span class="n">rollback_history</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">RollbackHistoryEntry</span><span class="p">(</span>
+                    <span class="n">rollback_point_id</span><span class="o">=</span><span class="n">rollback_point_id</span><span class="p">,</span>
+                    <span class="n">tool_name</span><span class="o">=</span><span class="n">rollback_point</span><span class="p">.</span><span class="n">tool_name</span><span class="p">,</span>
+                    <span class="n">executed_at</span><span class="o">=</span><span class="n">time</span><span class="p">.</span><span class="n">time</span><span class="p">(),</span>
+                    <span class="n">success</span><span class="o">=</span><span class="bp">True</span>
+                <span class="p">))</span>
+                
+                <span class="k">return</span> <span class="n">RollbackResult</span><span class="p">(</span>
+                    <span class="n">success</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+                    <span class="n">message</span><span class="o">=</span><span class="s">"Rollback completed successfully"</span>
+                <span class="p">)</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="k">return</span> <span class="n">RollbackResult</span><span class="p">(</span>
+                    <span class="n">success</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+                    <span class="n">reason</span><span class="o">=</span><span class="sa">f</span><span class="s">"State restore failed: </span><span class="si">{</span><span class="n">restore_result</span><span class="p">.</span><span class="n">reason</span><span class="si">}</span><span class="s">"</span>
+                <span class="p">)</span>
+                
+        <span class="k">except</span> <span class="nb">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">RollbackResult</span><span class="p">(</span>
+                <span class="n">success</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+                <span class="n">reason</span><span class="o">=</span><span class="sa">f</span><span class="s">"Rollback execution failed: </span><span class="si">{</span><span class="nb">str</span><span class="p">(</span><span class="n">e</span><span class="p">)</span><span class="si">}</span><span class="s">"</span>
+            <span class="p">)</span>
+    
+    <span class="k">def</span> <span class="nf">validate_rollback_point</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">rollback_point_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">RollbackValidationResult</span><span class="p">:</span>
+        <span class="s">"""Validate rollback point integrity"""</span>
+        
+        <span class="n">rollback_point</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">rollback_points</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="n">rollback_point_id</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">rollback_point</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">RollbackValidationResult</span><span class="p">(</span>
+                <span class="n">valid</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+                <span class="n">reason</span><span class="o">=</span><span class="s">"Rollback point not found"</span>
+            <span class="p">)</span>
+        
+        <span class="c1"># Check rollback point age
+</span>        <span class="n">max_age</span> <span class="o">=</span> <span class="mi">7</span> <span class="o">*</span> <span class="mi">24</span> <span class="o">*</span> <span class="mi">3600</span>  <span class="c1"># 7 days
+</span>        <span class="k">if</span> <span class="n">time</span><span class="p">.</span><span class="n">time</span><span class="p">()</span> <span class="o">-</span> <span class="n">rollback_point</span><span class="p">.</span><span class="n">created_at</span> <span class="o">&gt;</span> <span class="n">max_age</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">RollbackValidationResult</span><span class="p">(</span>
+                <span class="n">valid</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+                <span class="n">reason</span><span class="o">=</span><span class="s">"Rollback point too old"</span>
+            <span class="p">)</span>
+        
+        <span class="c1"># Validate state snapshot integrity
+</span>        <span class="n">snapshot_validation</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">state_manager</span><span class="p">.</span><span class="n">validate_snapshot</span><span class="p">(</span><span class="n">rollback_point</span><span class="p">.</span><span class="n">state_snapshot</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">snapshot_validation</span><span class="p">.</span><span class="n">valid</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">RollbackValidationResult</span><span class="p">(</span>
+                <span class="n">valid</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+                <span class="n">reason</span><span class="o">=</span><span class="sa">f</span><span class="s">"State snapshot invalid: </span><span class="si">{</span><span class="n">snapshot_validation</span><span class="p">.</span><span class="n">reason</span><span class="si">}</span><span class="s">"</span>
+            <span class="p">)</span>
+        
+        <span class="k">return</span> <span class="n">RollbackValidationResult</span><span class="p">(</span>
+            <span class="n">valid</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+            <span class="n">reason</span><span class="o">=</span><span class="s">"Rollback point is valid"</span>
+        <span class="p">)</span>
+</code></pre></div></div><h2 id="version-compliance"> <a href="#version-compliance" class="anchor-heading" aria-labelledby="version-compliance"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Version Compliance</h2><h3 id="compliance-management"> <a href="#compliance-management" class="anchor-heading" aria-labelledby="compliance-management"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Compliance Management</h3><div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Version compliance management
+</span><span class="k">class</span> <span class="nc">VersionComplianceManager</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">compliance_rules</span> <span class="o">=</span> <span class="p">{}</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">compliance_checker</span> <span class="o">=</span> <span class="n">ComplianceChecker</span><span class="p">()</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">policy_engine</span> <span class="o">=</span> <span class="n">PolicyEngine</span><span class="p">()</span>
+        
+    <span class="k">def</span> <span class="nf">check_version_compliance</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tool_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">version_number</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ComplianceResult</span><span class="p">:</span>
+        <span class="s">"""Check version compliance against policies"""</span>
+        
+        <span class="c1"># Get applicable compliance rules
+</span>        <span class="n">applicable_rules</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">get_applicable_rules</span><span class="p">(</span><span class="n">tool_name</span><span class="p">)</span>
+        
+        <span class="n">compliance_results</span> <span class="o">=</span> <span class="p">[]</span>
+        
+        <span class="k">for</span> <span class="n">rule</span> <span class="ow">in</span> <span class="n">applicable_rules</span><span class="p">:</span>
+            <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">compliance_checker</span><span class="p">.</span><span class="n">check_rule</span><span class="p">(</span><span class="n">tool_name</span><span class="p">,</span> <span class="n">version_number</span><span class="p">,</span> <span class="n">rule</span><span class="p">)</span>
+            <span class="n">compliance_results</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+        
+        <span class="c1"># Determine overall compliance
+</span>        <span class="n">failed_rules</span> <span class="o">=</span> <span class="p">[</span><span class="n">r</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">compliance_results</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">r</span><span class="p">.</span><span class="n">compliant</span><span class="p">]</span>
+        <span class="n">critical_failures</span> <span class="o">=</span> <span class="p">[</span><span class="n">r</span> <span class="k">for</span> <span class="n">r</span> <span class="ow">in</span> <span class="n">failed_rules</span> <span class="k">if</span> <span class="n">r</span><span class="p">.</span><span class="n">severity</span> <span class="o">==</span> <span class="s">"critical"</span><span class="p">]</span>
+        
+        <span class="n">overall_compliant</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">critical_failures</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
+        
+        <span class="k">return</span> <span class="n">ComplianceResult</span><span class="p">(</span>
+            <span class="n">compliant</span><span class="o">=</span><span class="n">overall_compliant</span><span class="p">,</span>
+            <span class="n">rule_results</span><span class="o">=</span><span class="n">compliance_results</span><span class="p">,</span>
+            <span class="n">critical_failures</span><span class="o">=</span><span class="n">critical_failures</span>
+        <span class="p">)</span>
+    
+    <span class="k">def</span> <span class="nf">enforce_compliance_policy</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tool_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">version_number</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">EnforcementResult</span><span class="p">:</span>
+        <span class="s">"""Enforce compliance policy on version"""</span>
+        
+        <span class="c1"># Check compliance
+</span>        <span class="n">compliance_result</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">check_version_compliance</span><span class="p">(</span><span class="n">tool_name</span><span class="p">,</span> <span class="n">version_number</span><span class="p">)</span>
+        
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">compliance_result</span><span class="p">.</span><span class="n">compliant</span><span class="p">:</span>
+            <span class="c1"># Determine enforcement actions
+</span>            <span class="n">enforcement_actions</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">policy_engine</span><span class="p">.</span><span class="n">determine_enforcement_actions</span><span class="p">(</span>
+                <span class="n">compliance_result</span><span class="p">.</span><span class="n">critical_failures</span>
+            <span class="p">)</span>
+            
+            <span class="c1"># Execute enforcement actions
+</span>            <span class="n">execution_results</span> <span class="o">=</span> <span class="p">[]</span>
+            <span class="k">for</span> <span class="n">action</span> <span class="ow">in</span> <span class="n">enforcement_actions</span><span class="p">:</span>
+                <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">execute_enforcement_action</span><span class="p">(</span><span class="n">tool_name</span><span class="p">,</span> <span class="n">version_number</span><span class="p">,</span> <span class="n">action</span><span class="p">)</span>
+                <span class="n">execution_results</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+            
+            <span class="k">return</span> <span class="n">EnforcementResult</span><span class="p">(</span>
+                <span class="n">enforced</span><span class="o">=</span><span class="bp">True</span><span class="p">,</span>
+                <span class="n">actions_taken</span><span class="o">=</span><span class="n">enforcement_actions</span><span class="p">,</span>
+                <span class="n">execution_results</span><span class="o">=</span><span class="n">execution_results</span>
+            <span class="p">)</span>
+        
+        <span class="k">return</span> <span class="n">EnforcementResult</span><span class="p">(</span>
+            <span class="n">enforced</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span>
+            <span class="n">reason</span><span class="o">=</span><span class="s">"Version is compliant"</span>
+        <span class="p">)</span>
+    
+    <span class="k">def</span> <span class="nf">get_applicable_rules</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tool_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">ComplianceRule</span><span class="p">]:</span>
+        <span class="s">"""Get compliance rules applicable to tool"""</span>
+        
+        <span class="n">applicable_rules</span> <span class="o">=</span> <span class="p">[]</span>
+        
+        <span class="c1"># Global rules
+</span>        <span class="n">global_rules</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">compliance_rules</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="s">'global'</span><span class="p">,</span> <span class="p">[])</span>
+        <span class="n">applicable_rules</span><span class="p">.</span><span class="n">extend</span><span class="p">(</span><span class="n">global_rules</span><span class="p">)</span>
+        
+        <span class="c1"># Tool-specific rules
+</span>        <span class="n">tool_rules</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">compliance_rules</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="n">tool_name</span><span class="p">,</span> <span class="p">[])</span>
+        <span class="n">applicable_rules</span><span class="p">.</span><span class="n">extend</span><span class="p">(</span><span class="n">tool_rules</span><span class="p">)</span>
+        
+        <span class="c1"># Category-based rules
+</span>        <span class="n">tool_category</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">get_tool_category</span><span class="p">(</span><span class="n">tool_name</span><span class="p">)</span>
+        <span class="n">category_rules</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">compliance_rules</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="sa">f</span><span class="s">'category_</span><span class="si">{</span><span class="n">tool_category</span><span class="si">}</span><span class="s">'</span><span class="p">,</span> <span class="p">[])</span>
+        <span class="n">applicable_rules</span><span class="p">.</span><span class="n">extend</span><span class="p">(</span><span class="n">category_rules</span><span class="p">)</span>
+        
+        <span class="k">return</span> <span class="n">applicable_rules</span>
+</code></pre></div></div><h2 id="monitoring-and-alerting"> <a href="#monitoring-and-alerting" class="anchor-heading" aria-labelledby="monitoring-and-alerting"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Monitoring and Alerting</h2><h3 id="version-monitoring-system"> <a href="#version-monitoring-system" class="anchor-heading" aria-labelledby="version-monitoring-system"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Version Monitoring System</h3><div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Version monitoring system
+</span><span class="k">class</span> <span class="nc">VersionMonitor</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">metrics_collector</span> <span class="o">=</span> <span class="n">MetricsCollector</span><span class="p">()</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">alert_manager</span> <span class="o">=</span> <span class="n">AlertManager</span><span class="p">()</span>
+        <span class="bp">self</span><span class="p">.</span><span class="n">anomaly_detector</span> <span class="o">=</span> <span class="n">AnomalyDetector</span><span class="p">()</span>
+        
+    <span class="k">def</span> <span class="nf">monitor_version_health</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tool_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">version_number</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="s">"""Monitor version health and performance"""</span>
+        
+        <span class="c1"># Collect version metrics
+</span>        <span class="n">version_metrics</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">metrics_collector</span><span class="p">.</span><span class="n">collect_version_metrics</span><span class="p">(</span><span class="n">tool_name</span><span class="p">,</span> <span class="n">version_number</span><span class="p">)</span>
+        
+        <span class="c1"># Check for anomalies
+</span>        <span class="n">anomalies</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">anomaly_detector</span><span class="p">.</span><span class="n">detect_version_anomalies</span><span class="p">(</span><span class="n">version_metrics</span><span class="p">)</span>
+        
+        <span class="c1"># Process anomalies
+</span>        <span class="k">for</span> <span class="n">anomaly</span> <span class="ow">in</span> <span class="n">anomalies</span><span class="p">:</span>
+            <span class="bp">self</span><span class="p">.</span><span class="n">handle_version_anomaly</span><span class="p">(</span><span class="n">tool_name</span><span class="p">,</span> <span class="n">version_number</span><span class="p">,</span> <span class="n">anomaly</span><span class="p">)</span>
+        
+        <span class="c1"># Check alert conditions
+</span>        <span class="n">alert_conditions</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">check_alert_conditions</span><span class="p">(</span><span class="n">version_metrics</span><span class="p">)</span>
+        
+        <span class="c1"># Generate alerts
+</span>        <span class="k">for</span> <span class="n">condition</span> <span class="ow">in</span> <span class="n">alert_conditions</span><span class="p">:</span>
+            <span class="bp">self</span><span class="p">.</span><span class="n">alert_manager</span><span class="p">.</span><span class="n">create_alert</span><span class="p">(</span>
+                <span class="n">alert_type</span><span class="o">=</span><span class="s">"version_health"</span><span class="p">,</span>
+                <span class="n">severity</span><span class="o">=</span><span class="n">condition</span><span class="p">.</span><span class="n">severity</span><span class="p">,</span>
+                <span class="n">message</span><span class="o">=</span><span class="n">condition</span><span class="p">.</span><span class="n">message</span><span class="p">,</span>
+                <span class="n">tool_name</span><span class="o">=</span><span class="n">tool_name</span><span class="p">,</span>
+                <span class="n">version_number</span><span class="o">=</span><span class="n">version_number</span>
+            <span class="p">)</span>
+    
+    <span class="k">def</span> <span class="nf">track_version_adoption</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">tool_name</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="s">"""Track version adoption patterns"""</span>
+        
+        <span class="c1"># Get version usage statistics
+</span>        <span class="n">version_stats</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">metrics_collector</span><span class="p">.</span><span class="n">get_version_usage_stats</span><span class="p">(</span><span class="n">tool_name</span><span class="p">)</span>
+        
+        <span class="c1"># Analyze adoption patterns
+</span>        <span class="n">adoption_analysis</span> <span class="o">=</span> <span class="bp">self</span><span class="p">.</span><span class="n">analyze_adoption_patterns</span><span class="p">(</span><span class="n">version_stats</span><span class="p">)</span>
+        
+        <span class="c1"># Check for concerning patterns
+</span>        <span class="k">if</span> <span class="n">adoption_analysis</span><span class="p">.</span><span class="n">slow_adoption</span><span class="p">:</span>
+            <span class="bp">self</span><span class="p">.</span><span class="n">alert_manager</span><span class="p">.</span><span class="n">create_alert</span><span class="p">(</span>
+                <span class="n">alert_type</span><span class="o">=</span><span class="s">"slow_version_adoption"</span><span class="p">,</span>
+                <span class="n">severity</span><span class="o">=</span><span class="s">"medium"</span><span class="p">,</span>
+                <span class="n">message</span><span class="o">=</span><span class="sa">f</span><span class="s">"Slow adoption of latest version for </span><span class="si">{</span><span class="n">tool_name</span><span class="si">}</span><span class="s">"</span><span class="p">,</span>
+                <span class="n">details</span><span class="o">=</span><span class="n">adoption_analysis</span>
+            <span class="p">)</span>
+        
+        <span class="k">if</span> <span class="n">adoption_analysis</span><span class="p">.</span><span class="n">fragmented_versions</span><span class="p">:</span>
+            <span class="bp">self</span><span class="p">.</span><span class="n">alert_manager</span><span class="p">.</span><span class="n">create_alert</span><span class="p">(</span>
+                <span class="n">alert_type</span><span class="o">=</span><span class="s">"version_fragmentation"</span><span class="p">,</span>
+                <span class="n">severity</span><span class="o">=</span><span class="s">"low"</span><span class="p">,</span>
+                <span class="n">message</span><span class="o">=</span><span class="sa">f</span><span class="s">"High version fragmentation for </span><span class="si">{</span><span class="n">tool_name</span><span class="si">}</span><span class="s">"</span><span class="p">,</span>
+                <span class="n">details</span><span class="o">=</span><span class="n">adoption_analysis</span>
+            <span class="p">)</span>
+</code></pre></div></div><h2 id="best-practices"> <a href="#best-practices" class="anchor-heading" aria-labelledby="best-practices"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Best Practices</h2><h3 id="version-management-guidelines"> <a href="#version-management-guidelines" class="anchor-heading" aria-labelledby="version-management-guidelines"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Version Management Guidelines</h3><ol><li><strong>Semantic Versioning</strong>: Use semantic versioning (SemVer) for clear version communication<li><strong>Automated Testing</strong>: Implement comprehensive automated testing for all versions<li><strong>Gradual Rollouts</strong>: Use gradual rollout strategies for production deployments<li><strong>Rollback Readiness</strong>: Always maintain rollback capabilities<li><strong>Security Scanning</strong>: Scan all versions for security vulnerabilities<li><strong>Dependency Management</strong>: Carefully manage and monitor dependencies<li><strong>Compliance Checking</strong>: Ensure all versions meet compliance requirements<li><strong>Monitoring</strong>: Implement comprehensive version monitoring and alerting</ol><h3 id="common-pitfalls"> <a href="#common-pitfalls" class="anchor-heading" aria-labelledby="common-pitfalls"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Common Pitfalls</h3><ul><li><strong>Incomplete Rollback Plans</strong>: Inadequate rollback procedures<li><strong>Version Sprawl</strong>: Too many active versions in production<li><strong>Dependency Conflicts</strong>: Conflicting dependency versions<li><strong>Security Debt</strong>: Delayed security updates<li><strong>Insufficient Testing</strong>: Inadequate testing before promotion<li><strong>Poor Documentation</strong>: Insufficient changelog and update documentation</ul><hr /><p><em>Version Management provides the framework for secure, reliable, and compliant version control and deployment of MCP systems.</em></p></main><hr><footer><p><a href="#top" id="back-to-top">Back to top</a></p><p class="text-small text-grey-dk-100 mb-0">This project is sponsored by the <a href="https://cloudsecurityalliance.org">Cloud Security Alliance</a> and maintained by the Model Context Protocol Security Working Group.</p><div class="d-flex mt-2"></div></footer></div></div><div class="search-overlay"></div></div>
