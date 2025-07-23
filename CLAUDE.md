@@ -71,21 +71,21 @@ The site is organized around comprehensive security guidance for MCP deployments
 - **Monitoring & Logging** (`docs/monitoring/`) - Security monitoring and incident response
 
 #### Threat Intelligence & Vulnerability Management
-- **TTPs (Tactics, Techniques, Procedures)** (`docs/ttps/`) - Comprehensive threat framework with categories:
-  - Initial Access (T1001-T1008)
-  - Execution (T2001-T2007) 
-  - Persistence (T3001-T3006)
-  - Privilege Escalation (T4001-T4005)
-  - Defense Evasion (T5001-T5008)
-  - Credential Access (T6001-T6006)
-  - Discovery (T7001-T7007)
-  - Lateral Movement (T8001-T8005)
-  - Collection (T9001-T9006)
-  - Command & Control (T10001-T10007)
-  - Exfiltration (T11001-T11005)
-  - Impact (T12001-T12006)
-- **Known Vulnerabilities** (`docs/vulnerabilities/`) - CVE database and vulnerability assessments
-- **Incident Response** (`docs/incident-response/`) - Security incident handling procedures
+- **TTPs (Tactics, Techniques, Procedures)** (`docs/ttps/`) - Comprehensive threat framework with 12 categories:
+  - Prompt Injection & Manipulation
+  - Tool Poisoning & Metadata Attacks
+  - Data Exfiltration & Credential Theft
+  - Command & Code Injection
+  - Authentication & Authorization
+  - Supply Chain & Dependencies
+  - Context Manipulation
+  - Protocol Vulnerabilities
+  - Privilege & Access Control
+  - Economic & Infrastructure Abuse
+  - Monitoring & Operational Security
+  - AI-Specific Vulnerabilities
+- **TTP Matrix View** (`docs/ttps-view.md`) - Interactive matrix interface for browsing all techniques
+- **Known Vulnerabilities** (`docs/known-vulnerabilities/`) - CVE database and vulnerability assessments
 
 #### Tools & Automation
 - **Audit Tools** (`docs/audit/`) - Security assessment tools and procedures
@@ -93,16 +93,16 @@ The site is organized around comprehensive security guidance for MCP deployments
 - **Automation** (`docs/automation/`) - Security automation and orchestration
 
 #### Support Sections
+- **Community Projects** (`docs/projects.md`) - Showcase of open-source MCP security tools and resources
 - **Community Resources** (`docs/community/`) - Contribution guidelines and working group info
-- **Training** (`docs/training/`) - Security training materials and resources
-- **Compliance** (`docs/compliance/`) - Regulatory compliance guidance
-- **Best Practices** (`docs/best-practices/`) - General security best practices
 - **News** (`docs/news/`) - Security updates and announcements
+- **Tools** (`docs/tools/`) - Security automation tools and utilities
 
 ### Navigation Structure
 - Each major section has an `index.md` file with `has_children: true`
 - Individual pages use `nav_order` for positioning within sections
-- TTP entries use standardized naming: `T[category][number]-[technique-name].md`
+- **Current navigation order**: Home (1), Why MCP Security (2), TTP Matrix View (3), MCP Security TTPs (4), etc.
+- TTP Matrix View provides interactive interface for browsing all security techniques
 - External links configured in `_config.yml` for GitHub and CSA resources
 
 ## Theme and Styling
@@ -112,7 +112,9 @@ The site is organized around comprehensive security guidance for MCP deployments
 - **Color Scheme**: CSA-inspired theme (defined in `docs/_sass/color_schemes/csa.scss`)
 - **Custom Components**: Reusable includes in `docs/_includes/` for consistent formatting
 - **Homepage Styling**: Custom CSS for feature cards and navigation elements
-- **Logo**: CSA and MCP Security branding elements
+- **TTP Matrix Styling**: Interactive matrix view with hover effects (`docs/assets/css/matrix-view.css`)
+- **Project Cards**: Styled project showcase for community tools (`docs/projects.md`)
+- **Clean Design**: No emojis or external framework references - professional appearance
 
 ## Content Management
 
@@ -159,6 +161,8 @@ The site uses Jekyll collections for specialized content organization:
 - Use appropriate front matter for proper navigation
 - Include cross-references to related content
 - Maintain security-focused perspective in all content
+- **No emojis or external framework references** - keep content professional
+- **No references to other security frameworks** - maintain independence
 - Test all internal and external links before publishing
 
 ## Key Files for Understanding the Codebase
@@ -169,7 +173,9 @@ The site uses Jekyll collections for specialized content organization:
 - `docs/_sass/color_schemes/csa.scss` - Custom color scheme definition
 
 ### Content Structure Files  
-- `docs/index.md` - Homepage with feature overview and navigation
+- `docs/index.md` - Homepage with feature cards including Community Projects
+- `docs/ttps-view.md` - Interactive TTP matrix view page
+- `docs/projects.md` - Community projects showcase page
 - `docs/*/index.md` - Section landing pages with child page listings
 - Major section indexes provide navigation to sub-content
 
@@ -201,6 +207,21 @@ The site uses Jekyll collections for specialized content organization:
 - Use sequential `nav_order` values within each section
 - External navigation links go in `_config.yml` under `aux_links`
 
+## Community Projects Integration
+
+The site showcases the comprehensive MCP Security ecosystem:
+
+### GitHub Organization
+- **Main Organization**: https://github.com/ModelContextProtocol-Security
+- **Website Repository**: modelcontextprotocol-security.io
+- **Tool Repositories**: mcpserver-audit, mcpserver-finder, mcpserver-builder, mcpserver-operator
+- **Database Repositories**: vulnerability-db, audit-db
+
+### Projects Page Structure
+- **MCP Security Tools**: Expert tools for audit, discovery, development, and operations
+- **Community Databases**: Vulnerability tracking and audit result databases
+- **Documentation Hub**: This website and associated resources
+
 ## Security Context
 
 This is a defensive security project exclusively focused on:
@@ -209,7 +230,6 @@ This is a defensive security project exclusively focused on:
 - Security audit tools and vulnerability assessment procedures
 - Threat intelligence and TTP analysis for defensive purposes
 - Community-driven security guidance and best practices
-- Compliance and regulatory security requirements
-- Incident response and security monitoring procedures
+- Open-source tool ecosystem for MCP security
 
 **Important**: The content focuses exclusively on defensive security measures and does not include offensive security tools, techniques, or procedures. All guidance is oriented toward protecting MCP deployments and improving security posture.

@@ -25,22 +25,39 @@ This is a **Cloud Security Alliance (CSA) Community Project** focused exclusivel
 - **[Operations Guide](/operations/)** - Production deployment best practices
 - **[Reference Patterns](/patterns/)** - Proven secure architecture templates
 
-### **Security Tools & Resources**
+### **Threat Intelligence & Assessment**
+- **[Security TTPs](/ttps/)** - Comprehensive database of MCP security tactics, techniques, and procedures
+- **[TTP Matrix View](/ttps-view/)** - Interactive matrix interface for browsing all security techniques
+- **[Known Vulnerabilities](/known-vulnerabilities/)** - CVE database and security advisories
 - **[Audit Tools](/audit/)** - Security assessment utilities and procedures
+
+### **Community Projects & Tools**
+- **[Community Projects](/projects/)** - Open-source MCP security tool ecosystem
 - **[Tools & Scripts](/tools/)** - Security automation and monitoring utilities
-- **[Vulnerability Database](/vulnerability-db/)** - Community-maintained security advisories
 
 ### **Community Resources**
 - **[GitHub Discussions](https://github.com/orgs/ModelContextProtocol-Security/discussions)** - Security discussions and Q&A
 - **[Working Group Meetings](/events/)** - Bi-weekly technical sessions
 - **[Community Guidelines](/community/)** - How to contribute and collaborate
 
-## Related Repositories
+## MCP Security Ecosystem
 
-This project is part of the larger MCP Security ecosystem:
+This documentation hub is part of a comprehensive security ecosystem:
 
-- **[vulnerability-db](https://github.com/ModelContextProtocol-Security/vulnerability-db)** - Community-maintained database of MCP security vulnerabilities and advisories
-- **[audit-db](https://github.com/ModelContextProtocol-Security/audit-db)** - Community-maintained database of MCP security audit results and findings
+### **Documentation & Website**
+- **[modelcontextprotocol-security.io](https://github.com/ModelContextProtocol-Security/modelcontextprotocol-security.io)** - This website and documentation hub
+
+### **Security Tools**
+- **[mcpserver-audit](https://github.com/ModelContextProtocol-Security/mcpserver-audit)** - MCP Security Expert for risk assessment and security evaluation
+- **[mcpserver-finder](https://github.com/ModelContextProtocol-Security/mcpserver-finder)** - MCP Discovery Expert for finding and evaluating servers
+- **[mcpserver-builder](https://github.com/ModelContextProtocol-Security/mcpserver-builder)** - MCP Development Expert for secure server development
+- **[mcpserver-operator](https://github.com/ModelContextProtocol-Security/mcpserver-operator)** - MCP Operations Expert for secure deployment
+
+### **Community Databases**
+- **[vulnerability-db](https://github.com/ModelContextProtocol-Security/vulnerability-db)** - Comprehensive vulnerability database with CVE tracking
+- **[audit-db](https://github.com/ModelContextProtocol-Security/audit-db)** - Community audit results and security assessments
+
+*All projects are actively maintained and available under open-source licenses.*
 
 ## Why MCP Security Matters
 
@@ -55,10 +72,21 @@ Recent security research has highlighted critical vulnerabilities in MCP tools, 
 
 ## Getting Started
 
-1. **Read the Overview**: Start with [Why MCP Security?](https://modelcontextprotocol-security.io/why/)
-2. **Follow the Hardening Guide**: Implement security controls with our [Hardening Guide](https://modelcontextprotocol-security.io/hardening/)
-3. **Use Reference Patterns**: Deploy proven architectures from our [Reference Patterns](https://modelcontextprotocol-security.io/patterns/)
-4. **Audit Your Deployment**: Assess security posture with our [Audit Tools](https://modelcontextprotocol-security.io/audit/)
+### **For Security Teams**
+1. **Understand the Risks**: Start with [Why MCP Security?](https://modelcontextprotocol-security.io/why/)
+2. **Assess Current Deployments**: Use [MCP Security Expert](https://github.com/ModelContextProtocol-Security/mcpserver-audit) for risk assessment
+3. **Review Threat Landscape**: Explore the [TTP Matrix View](https://modelcontextprotocol-security.io/ttps-view/)
+4. **Check Vulnerabilities**: Review [Known Vulnerabilities](https://modelcontextprotocol-security.io/known-vulnerabilities/)
+
+### **For Developers**
+1. **Secure Development**: Use [MCP Development Expert](https://github.com/ModelContextProtocol-Security/mcpserver-builder)
+2. **Follow Best Practices**: Implement controls from our [Hardening Guide](https://modelcontextprotocol-security.io/hardening/)
+3. **Use Reference Patterns**: Deploy proven architectures from [Reference Patterns](https://modelcontextprotocol-security.io/patterns/)
+
+### **For Operations Teams**
+1. **Secure Deployment**: Use [MCP Operations Expert](https://github.com/ModelContextProtocol-Security/mcpserver-operator)
+2. **Operational Security**: Follow our [Operations Guide](https://modelcontextprotocol-security.io/operations/)
+3. **Find Secure Servers**: Discover vetted servers with [MCP Discovery Expert](https://github.com/ModelContextProtocol-Security/mcpserver-finder)
 
 ## Contributing
 
@@ -67,9 +95,10 @@ We welcome contributions from security professionals, developers, and organizati
 ### Ways to Contribute
 - **Join Discussions**: Share experiences in [GitHub Discussions](https://github.com/orgs/ModelContextProtocol-Security/discussions)
 - **Improve Documentation**: Enhance security guides with real-world examples
-- **Contribute Tools**: Develop security automation and monitoring utilities
-- **Report Vulnerabilities**: Help identify and address security issues
-- **Share Audit Results**: Contribute to the community audit database
+- **Develop Security Tools**: Contribute to our [open-source tool ecosystem](https://modelcontextprotocol-security.io/projects/)
+- **Report Vulnerabilities**: Submit findings to our [vulnerability database](https://github.com/ModelContextProtocol-Security/vulnerability-db)
+- **Share Audit Results**: Contribute to the [community audit database](https://github.com/ModelContextProtocol-Security/audit-db)
+- **Expand TTPs**: Help document new attack techniques and defenses
 
 ### Getting Help
 - **Questions**: Use [GitHub Discussions](https://github.com/orgs/ModelContextProtocol-Security/discussions)
@@ -97,7 +126,7 @@ See [docs/README.md](docs/README.md) for detailed development instructions.
 
 ## License
 
-This project is open source and available under the same terms as the broader MCP Security project.
+This documentation website is released under CC0-1.0 (Creative Commons). Individual tools in the MCP Security ecosystem use Apache-2.0 licenses. See individual repository README files for specific licensing details.
 
 ## Sponsorship
 
