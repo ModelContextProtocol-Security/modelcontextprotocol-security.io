@@ -129,11 +129,19 @@ This comprehensive resource provides security guidance, best practices, and tool
   </div>
 
   <div class="card">
-    <div class="card-title">📰 Security News</div>
+    <div class="card-title">Security News</div>
     <div class="card-description">
       Latest security research, protocol updates, and threat intelligence affecting MCP deployments.
     </div>
     <a href="/news/" class="card-link">View News →</a>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Community Projects</div>
+    <div class="card-description">
+      Open-source security tools, databases, and educational resources developed by the MCP Security community.
+    </div>
+    <a href="/projects/" class="card-link">Explore Projects →</a>
   </div>
 </div>
 
