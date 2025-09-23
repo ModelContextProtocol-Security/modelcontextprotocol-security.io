@@ -25,7 +25,8 @@ Welcome to the MCP Security community! This section provides information about h
 ## Community Channels
 
 ### Primary Communication
-- **[GitHub Discussions](https://github.com/orgs/ModelContextProtocol-Security/discussions)** - Main community forum
+- **[#mcp Slack Channel](https://csaurl.org/mcp-invite)** - Real-time discussions on CSA Public Slack
+- **[GitHub Discussions](https://github.com/orgs/ModelContextProtocol-Security/discussions)** - Structured community forum
 - **[Working Group Meetings](../events/)** - Regular technical discussions
 - **[GitHub Issues](https://github.com/ModelContextProtocol-Security/)** - Bug reports and feature requests
 
