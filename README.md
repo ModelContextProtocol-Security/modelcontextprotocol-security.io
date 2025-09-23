@@ -132,6 +132,10 @@ This documentation website is released under CC0-1.0 (Creative Commons). Individ
 
 This project is sponsored by the **[Cloud Security Alliance (CSA)](https://cloudsecurityalliance.org)** and maintained by the **Model Context Protocol Security Working Group**.
 
+## Get Involved
+
+Join our community: [GitHub Discussions](https://github.com/orgs/ModelContextProtocol-Security/discussions) • [Slack #mcp channel](https://csaurl.org/mcp-invite) • [Contribute on GitHub](https://github.com/ModelContextProtocol-Security)
+
 ---
 
 **Start securing your MCP deployment today at [modelcontextprotocol-security.io](https://modelcontextprotocol-security.io)**
