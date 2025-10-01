@@ -1,0 +1,5 @@
+# Code owners for this repository
+# The admin team is required to review and approve all pull requests
+
+# Default owners for everything in the repo
+* @modelcontextprotocol-security/SecurityGuidanceAdmin
