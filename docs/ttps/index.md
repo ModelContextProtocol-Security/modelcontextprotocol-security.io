@@ -7,7 +7,7 @@ has_children: true
 custom_css: /assets/css/ttp-cards.css
 ---
 
-<link rel="stylesheet" href="{{ '/assets/css/ttp-cards.css' | relative_url }}".
+<link rel="stylesheet" href="{{ '/assets/css/ttp-cards.css' | relative_url }}">
 
 # MCP Security Tactics, Techniques, and Procedures (TTPs)
 
