@@ -1,21 +1,21 @@
 ---
-title: "LLM Heaven VPS"
+title: "Cloud-based Container or VPS"
 parent: "Reference Patterns"
 nav_order: 3
 ---
 
-# LLM Heaven VPS Pattern
+# Cloud-based Container / VPS Pattern
 
-This pattern implements an isolated cloud-based development and execution environment for MCP servers using dedicated virtual private servers (VPS) with comprehensive security controls and monitoring.
+This pattern implements an isolated cloud-based development and execution environment for MCP servers using a container or dedicated virtual private servers (VPS) with comprehensive security controls and monitoring.
 
 ## Overview
 
-The LLM Heaven VPS pattern provides maximum isolation by running MCP servers in dedicated cloud instances that can be easily created, monitored, and destroyed. This approach is ideal for high-risk workloads or when complete isolation from other systems is required.
+The Cloud-based Container / VPS pattern provides maximum isolation by running MCP servers in dedicated cloud instances that can be easily created, monitored, and destroyed. This approach is ideal for high-risk workloads or when complete isolation from other systems is required.
 
 ## Architecture
 
 This section will detail:
-- VPS provisioning and configuration automation
+- Container/VPS provisioning and configuration automation
 - Network security and access controls
 - Multi-tenancy and resource isolation
 - Monitoring and logging infrastructure
