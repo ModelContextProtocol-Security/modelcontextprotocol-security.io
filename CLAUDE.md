@@ -64,11 +64,11 @@ bundle exec jekyll build --verbose   # Build static site
 The site is organized around comprehensive security guidance for MCP deployments:
 
 #### Core Security Sections
-- **Hardening Guide** (`docs/hardening/`) - 10-part comprehensive security framework
-- **Operations Guide** (`docs/operations/`) - Production deployment and operational security
-- **Build Security** (`docs/build-security/`) - CI/CD pipeline security
-- **Configuration Management** (`docs/configuration/`) - Secure configuration practices
-- **Monitoring & Logging** (`docs/monitoring/`) - Security monitoring and incident response
+- **Why MCP Security** (`docs/why/`) - Motivation and threat context
+- **MCP Top 10** (`docs/top10/`) - The MCP security top-10 risks
+- **Hardening Guide** (`docs/hardening/`) - Comprehensive security hardening framework
+- **Build Security** (`docs/build/`) - CI/CD pipeline and build-time security
+- **Operations** (`docs/operations/`) and **Operational** (`docs/operational/`) - Production deployment and operational security
 
 #### Threat Intelligence & Vulnerability Management
 - **TTPs (Tactics, Techniques, Procedures)** (`docs/ttps/`) - Comprehensive threat framework with 12 categories:
@@ -87,16 +87,17 @@ The site is organized around comprehensive security guidance for MCP deployments
 - **TTP Matrix View** (`docs/ttps-view.md`) - Interactive matrix interface for browsing all techniques
 - **Known Vulnerabilities** (`docs/known-vulnerabilities/`) - CVE database and vulnerability assessments
 
-#### Tools & Automation
+#### Tools & Patterns
 - **Audit Tools** (`docs/audit/`) - Security assessment tools and procedures
 - **Reference Patterns** (`docs/patterns/`) - Architecture patterns and deployment templates
-- **Automation** (`docs/automation/`) - Security automation and orchestration
+- **Tools** (`docs/tools/`) - Security tools and utilities
+- **Vulnerability DB mirror** (`docs/vulnerability-db/`) - Site-rendered vulnerability content
 
 #### Support Sections
 - **Community Projects** (`docs/projects.md`) - Showcase of open-source MCP security tools and resources
+- **Get Involved** (`docs/get-involved.md`) - How to contribute
 - **Community Resources** (`docs/community/`) - Contribution guidelines and working group info
-- **News** (`docs/news/`) - Security updates and announcements
-- **Tools** (`docs/tools/`) - Security automation tools and utilities
+- **News** (`docs/news/`), **Blog** (`docs/blog/`), **Events** (`docs/events/`) - Updates, articles, and announcements
 
 ### Navigation Structure
 - Each major section has an `index.md` file with `has_children: true`
@@ -214,7 +215,7 @@ The site showcases the comprehensive MCP Security ecosystem:
 ### GitHub Organization
 - **Main Organization**: https://github.com/ModelContextProtocol-Security
 - **Website Repository**: modelcontextprotocol-security.io
-- **Tool Repositories**: mcpserver-audit, mcpserver-finder, mcpserver-builder, mcpserver-operator
+- **Tool Repositories**: mcpserver-finder, mcpserver-audit, mcpserver-builder, mcpserver-operator, mcpserver-hosting, mcpserver-security-orchestrator, mcpserver-security-tools, mcpserver-marketplace, mcpclient-security
 - **Database Repositories**: vulnerability-db, audit-db
 
 ### Projects Page Structure
